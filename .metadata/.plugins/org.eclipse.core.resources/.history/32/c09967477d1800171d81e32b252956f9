@@ -1,0 +1,183 @@
+package exit.services.principal.peticiones;
+
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileWriter;
+import java.io.PrintWriter;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.concurrent.Callable;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+
+import org.json.simple.JSONArray;
+import org.json.simple.JSONObject;
+
+import exit.services.fileHandler.CSVHandler;
+import exit.services.fileHandler.DirectorioManager;
+import exit.services.singletons.RecuperadorEspecificacionesCSV;
+import exit.services.singletons.RecuperadorMapeoCsv;
+import exit.services.singletons.RecuperadorPropiedadedConfiguracionEntidad;
+import exit.services.singletos.funciones.FuncionesWhirpool;
+
+
+	
+public class GetOrdenesVTEX extends GetAbstractoGenerico{
+
+	private String[] getArrayTipos(String accesoAlJson){
+		String datos[]=accesoAlJson.split("\\.");
+		String[] tipoDatos= new String[datos.length];
+		for(int i=0;i<datos.length;i++){
+			String dato=datos[i];
+			String[] partes=dato.split("\\[");
+			if(partes.length>1){
+			   	tipoDatos[i]="JSONArray";
+			}
+			else
+			   	tipoDatos[i]="JSONObject";
+		}
+		return tipoDatos;
+	}
+	
+	private boolean isJsonObject(String valor){
+		return valor.equalsIgnoreCase("JSONObject");
+	}
+	
+	private Object getObjectJSONObject(Object json, String key){
+		return ((JSONObject)json).get(key);
+	}
+	
+	private Object getObjectJSONArray(Object jsonArr, String datos){
+		String[] datosPartidos=datos.split("\\[");
+		Integer indice=Integer.parseInt(datosPartidos[1].substring(0, datosPartidos[1].length()-1));
+		return ((JSONArray)((JSONObject)jsonArr).get(datosPartidos[0])).get(indice);	
+	}
+	
+	private Object getValue(String accesoAlJson, String[] tiposDatos, JSONObject json){
+		try{
+		String datos[]=accesoAlJson.split("\\.");
+		Object posicionActual=json;
+		Object resultado;
+		for(int i=0;i<tiposDatos.length-1;i++){
+			int siguiente=i+1;
+			if(isJsonObject(tiposDatos[i]))/*Es jsonObject*/
+					posicionActual=getObjectJSONObject(posicionActual,datos[i]);
+			else/*Es un array*/
+				posicionActual=getObjectJSONArray(posicionActual,datos[i]);
+		}
+		if(isJsonObject(tiposDatos[tiposDatos.length-1]))
+			resultado=getObjectJSONObject(posicionActual,datos[tiposDatos.length-1]);
+		else/*Es un array*/
+			resultado=getObjectJSONArray(posicionActual,datos[tiposDatos.length-1]);
+		return resultado;
+		}
+		catch(Exception e){
+			return null;
+		}
+		}
+
+	private String procesarPorFunciones(Object o, String cabecera){
+		String salida=o.toString();
+		JSONArray jsonArr= RecuperadorEspecificacionesCSV.getInstancia().getFuncion(cabecera);	
+		if(jsonArr==null)
+			return o.toString();
+		for(int j=0;j<jsonArr.size();j++){
+			JSONObject json= (JSONObject)jsonArr.get(j);
+			String name= (String)json.get("name");
+				if(name.equalsIgnoreCase("splitearOrden")){
+					FuncionesWhirpool f= new FuncionesWhirpool();
+					salida=f.splitearOrden(salida);
+					System.out.println(salida);
+				}
+		}
+		return salida;
+	}
+	
+	@Override
+	Object procesarPeticionOK(BufferedReader in, String id, int responseCode) throws Exception {
+		JSONObject jsonObject = ConvertidorJson.convertir(in);
+		String[] buscar=RecuperadorMapeoCsv.getInstancia().getCuerpo().split(RecuperadorPropiedadedConfiguracionEntidad.getInstance().getSeparadorCSVREGEX());
+		ArrayList<Object> listaObjetos=new ArrayList<Object>();
+		for(int i=0;i<buscar.length;i++){
+			String[] arrayTipos=getArrayTipos(buscar[i]);
+			listaObjetos.add(getValue(buscar[i],arrayTipos,jsonObject));
+		}
+		String[] cabeceras=RecuperadorMapeoCsv.getInstancia().getCabecera().split(RecuperadorPropiedadedConfiguracionEntidad.getInstance().getSeparadorCSVREGEX());		
+		StringBuilder sb = new StringBuilder();
+		int i=0;
+		for(Object o:listaObjetos){
+			String value = "";
+			if(o!=null){
+				if(cabeceras.length>i)
+					value=procesarPorFunciones(o,cabeceras[i]);
+				else
+					value=o.toString();
+				sb.append(value+RecuperadorPropiedadedConfiguracionEntidad.getInstance().getSeparadorCSV());
+			}
+			else
+				sb.append(RecuperadorPropiedadedConfiguracionEntidad.getInstance().getSeparadorCSV());
+			i++;
+		}
+		String lineaAGuardar=sb.toString();
+		if(lineaAGuardar.length()!=0)
+			lineaAGuardar=lineaAGuardar.substring(0, lineaAGuardar.length()-1);
+		CSVHandler csv= new CSVHandler();
+		csv.escribirCSV("salida.csv", lineaAGuardar,RecuperadorMapeoCsv.getInstancia().getCabecera(),false);
+		//System.out.println((String)jsonObject.get("sequence"));
+		
+		return null;
+	}
+
+	@Override
+	Object procesarPeticionError(BufferedReader in, String id, int responseCode) throws Exception {
+		String path=("error_get_orden_responsecode_"+responseCode+".txt");
+	    File fichero = DirectorioManager.getDirectorioFechaYHoraInicio(path);
+	    PrintWriter out = new PrintWriter(new BufferedWriter(new FileWriter(fichero, true)));
+        String inputLine;
+        while ((inputLine = in.readLine()) != null) {
+         	out.println(inputLine);
+        }
+        out.close();
+        return null;
+	}
+
+	@Override
+	Object procesarPeticionOK(BufferedReader in, int responseCode) throws Exception {
+		JSONObject jsonObject = ConvertidorJson.convertir(in);
+		JSONArray jsonArrayItems= (JSONArray) jsonObject.get(("list"));
+		ExecutorService workers = Executors.newFixedThreadPool(RecuperadorPropiedadedConfiguracionEntidad.getInstance().getNivelParalelismo());      	
+	    List<Callable<Void>> tasks = new ArrayList<>();
+		System.out.println("Subiendo el paralelismo a "+RecuperadorPropiedadedConfiguracionEntidad.getInstance().getNivelParalelismo());
+		for(int i=0;i<jsonArrayItems.size();i++){
+			final Integer j=i;
+			final GetOrdenesVTEX getOrdenes= this;
+			tasks.add(new Callable<Void>() {
+		        public Void call() {
+    		JSONObject jsonItem=(JSONObject)jsonArrayItems.get(j);
+			String id=(String)jsonItem.get("orderId");
+			getOrdenes.realizarPeticion(RecuperadorPropiedadedConfiguracionEntidad.getInstance().getUrl(), id);
+			return null;
+		        }
+			});
+		}
+		System.out.println(jsonArrayItems.size());
+	    workers.invokeAll(tasks);
+	    workers.shutdown();
+		return jsonArrayItems.size(); //Devuelve la cantidad de registros encontradas
+		}
+
+	@Override
+	Object procesarPeticionError(BufferedReader in, int responseCode) throws Exception {
+		String path=("error_get_list_orden_responsecode_"+responseCode+".txt");
+	    File fichero = DirectorioManager.getDirectorioFechaYHoraInicio(path);
+	    PrintWriter out = new PrintWriter(new BufferedWriter(new FileWriter(fichero, true)));
+        String inputLine;
+        while ((inputLine = in.readLine()) != null) {
+         	out.println(inputLine);
+        }
+        out.close();
+		return 0;
+	}
+
+}

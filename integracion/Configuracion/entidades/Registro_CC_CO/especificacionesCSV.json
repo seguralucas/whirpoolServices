@@ -1,0 +1,16 @@
+{
+	"orderId":{ 
+		"functions":[ 
+			{
+				"name":"splitearOrden" 
+			}
+		]
+	},
+	"REGISTRO":{
+		"functions":[ 
+			{
+				"name":"procesarFechaVTEX" 
+			}
+		]
+	}
+}

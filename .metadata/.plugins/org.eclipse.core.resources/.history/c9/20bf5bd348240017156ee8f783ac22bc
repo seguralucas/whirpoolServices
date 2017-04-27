@@ -1,0 +1,38 @@
+package exit.services.principal.peticiones.funciones;
+
+import org.json.simple.JSONArray;
+
+public class FuncionesWhirpool {
+
+	public String splitearOrden(String cadena) {
+		char[] chars=cadena.toCharArray();
+		String salida="";
+		boolean bandera=false;
+		for(int i=0;i<chars.length;i++){
+			if(chars[i] >='0' && chars[i]<='9'){
+				bandera=true;
+				salida+=chars[i];
+			}
+			else if(bandera)
+				return salida;
+		}
+		return salida;
+	}
+	
+	public String procesarFechaVTEX(String  dateOMS){
+		/*Busca transformar la fecha del formato 2017-04-28T10:25:22.0000000+00:00
+		al formato 2017-04-28T10 10:25:22*/
+		String[] aux=dateOMS.split("T");
+		String fecha=aux[0];
+		String[] time=aux[1].split(":");
+		String seconds=time[2].split("\\.")[0];
+		return fecha+" "+time[0]+":"+time[1]+":"+seconds;
+	}
+	
+	public String descriptarEmailVtex(String emailEncriptado, JSONArray params){
+		String instancia=(String)params.get(0);
+		System.out.println(emailEncriptado+"-"+instancia);
+		return emailEncriptado;
+		
+	}
+}

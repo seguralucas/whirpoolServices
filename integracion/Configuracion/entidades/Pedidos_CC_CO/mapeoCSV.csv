@@ -1,0 +1,2 @@
+ORDER_ID;PURCHASE_DATE;STATUS_DESCRIPTION;TOTAL_VALUE;EMAIL_ADDRESS_;ITEM_NAME;SKU;QUANTITY;SELLER_NAME;ITEM_PRICE
+sequence;creationDate;statusDescription;TOTAL_VALUE;clientProfileData.email;items[0].name;items[0].id;items[0].quantity;items[0].seller;items[0].price

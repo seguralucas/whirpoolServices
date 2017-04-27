@@ -1,0 +1,30 @@
+package exit.services.fileHandler;
+
+import java.io.File;
+import java.net.URISyntaxException;
+
+import exit.services.principal.Principal;
+
+public class ConstantesGenerales {
+	 public final static String SEPARADOR_ERROR_PETICION = "##############################################################################################";
+	 public final static String SEPARADOR_ERROR_JSON = "**********************************************************************************************";
+	 public final static String SEPARADOR_ERROR_TRYCATCH = "---------------------------------------------------------------------";
+	 private static String PATH_EJECUCION;
+	 public final static String PATH_CONFIGURACION_ENTIDADES=PATH_EJECUCION+"/Configuracion/entidades";
+	 public final static String PATH_CONFIGURACION=PATH_EJECUCION+"/Configuracion";
+	 public final static String PATH_PETICIONES_GET="Configuracion/peticiones/GET.properties";
+	 public final static String PATH_PETICIONES_UPDATE="Configuracion/peticiones/UPDATE.properties";
+	 public final static String PATH_PETICIONES_DELETE="Configuracion/peticiones/DELETE.properties";
+	 public final static String PATH_PETICIONES_POST="Configuracion/peticiones/POST.properties";
+	 
+	 static{
+		 try {
+			PATH_EJECUCION=new File(Principal.class.getProtectionDomain().getCodeSource().getLocation().toURI().getPath()).getAbsolutePath();
+		} catch (URISyntaxException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	 }
+	 
+	 
+}

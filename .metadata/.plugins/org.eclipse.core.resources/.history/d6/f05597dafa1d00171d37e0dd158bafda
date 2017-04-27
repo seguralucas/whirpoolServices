@@ -1,0 +1,26 @@
+filtros=per_page=99&page=#NRO_PAG#&
+url=http://compraciertacol.vtexcommercestable.com.br/api/oms/pvt/orders
+cabecera={       "X-VTEX-API-AppKey" : "Smarino@biactiva.com",       "X-VTEX-API-AppToken" : "M4nu37!!",       "Content-Type" : "application/json"     }
+
+usaProxy=NO
+ipProxy=10.152.140.252
+puertoProxy=8080
+paaginado=true
+
+separadorCSV=;
+identificadorAtributo=#
+iterarSobre=list
+idIteracion=orderId
+
+metodoEjecutor=ejecutorServicioACsvVTEXOMS
+parametroEjecutor=5
+action=SERVICIOAACSV
+nivelParalelismo=10
+
+output=SFTP
+user=compracierta_scp
+host=files.dc2.responsys.net
+puerto=22
+keyFile=./Configuracion/server.pem
+outputPath=/home/cli/compracierta_scp/test/
+outputFile=pedido_CC_CO.csv

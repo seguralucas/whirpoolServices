@@ -1,0 +1,5 @@
+package exit.services.principal.peticiones;
+
+public class GetVTEXEmailDesencriptado {
+
+}

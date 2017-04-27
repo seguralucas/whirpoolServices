@@ -1,0 +1,16 @@
+pathCSVRegistros=D\:/Exit/producto.csv
+url=https://help365.custhelp.com/services/rest/connect/v1.3/CO.Productos
+cabecera={ "OSvC-CREST-Suppress-All": "true", "Authorization":"Basic bHVjYXMuc2VndXJhOkx1Y2FzMTIz"}
+
+separadorCSV=,
+usaProxy=NO
+ipProxy=10.152.140.252
+puertoProxy=8080
+
+
+identificadorAtributo=#
+
+
+metodoPreEjecutor=borrarEntidadRightNow
+action=GENERICA
+nivelParalelismo=10

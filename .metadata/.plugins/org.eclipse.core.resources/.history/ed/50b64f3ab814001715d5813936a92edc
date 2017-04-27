@@ -1,0 +1,15 @@
+pathCSVRegistros=D\:/Exit/nada.csv
+url=https://whirlpool.custhelp.com/services/rest/connect/v1.3/contacts
+cabecera={       "X-VTEX-API-AppKey" : "dcarrivale@biactiva.com",       "X-VTEX-API-AppToken" : "Whirlpool1",       "Accept" : "application/json"     }
+separadorCSV=;
+usaProxy=NO
+ipProxy=10.152.140.252
+puertoProxy=8080
+
+
+identificadorAtributo=#
+
+
+metodoPreEjecutor=borrarEntidadRightNow
+action=GENERICA
+nivelParalelismo=10

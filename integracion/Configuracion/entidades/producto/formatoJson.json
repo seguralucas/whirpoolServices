@@ -1,0 +1,13 @@
+{
+    "BpSapId": "#BP_SAP_ID#",
+    "CantDomingo": "#CANT_DOMINGOS#",
+    "CantJueves": "#CANT_JUEVES#",
+    "CantLunes": "#CANT_LUNES#",
+    "CantMartes": "#CANT_MARTES#",
+    "CantMiercoles": "#CANT_MIERCOLES#",
+    "CantSabados": "#CANT_SABADOS#",
+    "CantViernes": "#CANT_VIERNES#",
+    "CantidadEjemplares": "#CANTIDAD_EJEMPLARES#",
+    "Familia": "#FAMILIA#",
+    "Producto": "#PRODUCTO#"
+}

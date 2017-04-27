@@ -1,0 +1,47 @@
+{
+"Categorizacion Comercio":{
+"tipo":"cadena"
+},
+"Codigo Marca":{
+"tipo":"entero"
+},
+"Cuenta (Razón Social)":{
+"tipo":"cadena"
+},
+"Tienda Online":{
+"tipo":"cadena"
+},
+"Top tracker":{
+"tipo":"cadena"
+},
+"Estado":{
+"tipo":"cadena"
+},
+"Id. de la cuenta":{
+"tipo":"cadena"
+},
+"Sexo":{
+"tipo":"cadena"
+},
+"Target 1":{
+"tipo":"cadena"
+},
+"Target 2":{
+"tipo":"cadena"
+},
+"Target 3":{
+"tipo":"cadena"
+},
+"Valor de cluster":{
+"tipo":"cadena"
+},
+"Valoracion Marca":{
+"tipo":"cadena"
+},
+"Zona":{
+"tipo":"cadena"
+},
+"Zonal":{
+"tipo":"cadena"
+}
+}

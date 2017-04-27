@@ -1,0 +1,14 @@
+{
+    "AhorroPotencialMensual": "#AHORRO_POTENCIAL_MENSUAL#",
+    "BeneficioCategoria": "#BENEFICIO_CATEGORIA#",
+    "BeneficioEstado": "#BENEFICIO_ESTADO#",
+    "DescripcionPorcentaje": "#DESCRIPCION DEL PORCENTAJE#",
+    "DiaSemana": "#DIA_SEMANA#",
+    "GastoPromedioConsumo": "#GASTO_PROMEDIO_CONSUMO#",
+    "Marca": "#MARCA#",
+    "MarcaAparnetId": "#MARCA_APERNET_ID#",
+    "Porcentaje": "#PORCENTAJE#",
+    "Rubro": "#RUBRO#",
+    "Sucursal": "#SUCURSAL#",
+    "SucursalApernetId": "#SUCURSAL_APERNET_ID#"
+}

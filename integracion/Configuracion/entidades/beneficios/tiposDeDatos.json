@@ -1,0 +1,45 @@
+{
+	"AHORRO_POTENCIAL_MENSUAL":{
+		"tipo":"cadena"
+	},
+	"BENEFICIO_CATEGORIA":{
+		"tipo":"cadena",
+		"reemplazarCarEspanol":true
+		"valoresPermitidos":{
+			"lista":["Clasico","Plus"],
+			"caseSensitive":true
+		}
+	},
+	"BENEFICIO_ESTADO":{
+		"tipo":"cadena"
+	},
+	"DESCRIPCION DEL PORCENTAJE":{
+		"tipo":"cadena"
+	},
+	"DIA_SEMANA":{
+		"tipo":"cadena"
+	},
+	"GASTO_PROMEDIO_CONSUMO":{
+		"tipo":"cadena"
+	},
+	"MARCA":{
+		"tipo":"cadena"
+	},
+	"MARCA_APERNET_ID":{
+		"tipo":"cadena",
+		"borrarCarNoNumericos":true
+	},
+	"PORCENTAJE":{
+		"tipo":"cadena"
+	},
+	"RUBRO":{
+		"tipo":"cadena"
+	},
+	"SUCURSAL":{
+		"tipo":"cadena"
+	},
+	"SUCURSAL_APERNET_ID":{
+		"tipo":"cadena",
+		"borrarCarNoNumericos":true
+	}
+}

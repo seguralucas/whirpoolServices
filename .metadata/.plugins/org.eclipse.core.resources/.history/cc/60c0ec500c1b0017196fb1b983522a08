@@ -1,0 +1,18 @@
+filtros=_fields=id&_where=createdIn%20between%202017-04-04%20AND%202017-04-05
+url=http://api.vtex.com/compraciertacol/dataentities/CL
+cabecera={"X-VTEX-API-AppKey" : "Smarino@biactiva.com",       "X-VTEX-API-AppToken" : "M4nu37!!",       "Content-Type" : "application/json" , "Accept": "application/vnd.vtex.ds.v10+json", "REST-Range":"resources=0-10"}
+paaginado=false
+
+usaProxy=NO
+ipProxy=10.152.140.252
+puertoProxy=8080
+
+separadorCSV=;
+identificadorAtributo=#
+
+idIteracion=id
+
+metodoEjecutor=ssss 
+parametroEjecutor=-1
+action=SERVICIOAACSV
+nivelParalelismo=10

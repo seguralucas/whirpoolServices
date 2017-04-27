@@ -1,0 +1,13 @@
+{
+    "BpSapId": "#BP_SAP_ID#",
+    "Campana": "#CAMPANA#",
+    "EstadoSuscDet": "#ESTADO_SUSC_DET#",
+    "GrupoCliente": "#GRUPO_DE_CLIENTE#",
+    "MesFacturacion": "#MES_FACTURACION#",
+    "NumDocumento": "#NRO_DOCUMENTO#",
+    "Producto": "#PRODUCTO#",
+    "Promocion": "#PROMOCION#",
+    "TipoDocumento": "#TIPO_DOCUMENTO#",
+    "ValorBruto": "#VALOR_BRUTO#",
+    "ValorNeto": "#VALOR_NETO#"
+}

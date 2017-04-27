@@ -1,0 +1,16 @@
+{
+    "AhorroPotencialMensual": "0",
+    "GastoPromedioConsumo": "0",
+    "Latitud": "#LATITUD#",
+    "Longitud": "#LONGITUD#",
+    "Marca": "#MARCA#",
+    "MarcaApernetId": "#MARCA_APERNET_ID#",
+    "Rubro": "#RUBRO#",
+    "Subrubro": "#SUB_RUBRO#",
+    "Sucursal": "#SUCURSAL#",
+    "SucursalApernetId": "#SUCURSAL_APERNET_ID#",
+    "SucursalCalle": "#CALLE#",
+    "SucursalLocalidad": "#LOCALIDAD#",
+    "SucursalNroCalle": "#NRO#",
+    "Zona": "#LOCALIDAD_ZONA#"
+}

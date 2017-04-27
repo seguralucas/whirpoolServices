@@ -1,0 +1,17 @@
+paginado=true
+paginadoEstructura=?per_page=99&page=#NRO_PAG#
+url=http://whirlpoolarg.vtexcommercestable.com.br/api/oms/pvt/orders
+cabecera={       "X-VTEX-API-AppKey" : "dcarrivale@biactiva.com",       "X-VTEX-API-AppToken" : "Whirlpool1",       "Accept" : "application/json"     }
+separadorCSV=;
+usaProxy=NO
+ipProxy=10.152.140.252
+puertoProxy=8080
+
+
+identificadorAtributo=#
+
+
+metodoPreEjecutor=borrarEntidadRightNow
+metodoEjecutor=ejecutorServicioACsvVTEX
+action=SERVICIOAACSV
+nivelParalelismo=10

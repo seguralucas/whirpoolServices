@@ -1,0 +1,17 @@
+pathCSVRegistros=D\:/Exit/contact1.csv
+url=https://help365.custhelp.com/services/rest/connect/v1.3/contacts
+cabecera={ "OSvC-CREST-Suppress-All": "true"}
+
+user=lucas.segura
+password=Lucas123
+separadorCSV=;
+usaProxy=NO
+ipProxy=10.152.140.252
+puertoProxy=8080
+
+identificadorAtributo=#
+
+metodoEjecutor=updateRecuperandoIdPorQuery
+parametroEjecutor=https://help365.custhelp.com/services/rest/connect/v1.3/queryResults/?query=select%20contacts.id%20from%20contacts%20where%20contacts.customFields.CO.BpSapId=%27#BP_SAP_ID#%27
+action=GENERICA
+nivelParalelismo=10

@@ -1,0 +1,27 @@
+{
+	"orderId":{ 
+		"functions":[ 
+			{
+				"name":"splitearOrden" 
+			}
+		]
+	},
+	"PURCHASE_DATE":{
+		"functions":[ 
+			{
+				"name":"procesarFechaVTEX" 
+			}
+		]
+	},
+	"EMAIL_ADDRESS_" :{
+		"functions":[ 
+			{
+				"name":"descriptarEmailVtex",
+				"params":{
+					"url":"http://conversationtracker.vtex.com.br/api/pvt/emailMapping",
+					"instancia":"compraciertacol"
+				}
+			}
+		]
+	}
+}

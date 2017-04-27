@@ -1,0 +1,24 @@
+{
+	"orderId":{ 
+		"functions":[ 
+			{
+				"name":"splitearOrden" 
+			}
+		]
+	},
+	"PURCHASE_DATE":{
+		"functions":[ 
+			{
+				"name":"procesarFechaVTEX" 
+			}
+		]
+	},
+	"EMAIL_ADDRESS_" :{
+		"functions":[ 
+			{
+				"name":"descriptarEmailVtex",
+				"params":["compraciertacol"]
+			}
+		]
+	}
+}

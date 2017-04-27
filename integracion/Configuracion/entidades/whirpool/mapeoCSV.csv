@@ -1,0 +1,2 @@
+orderId;totals1;totals2;totals3;priceTagsName;aaa
+orderId;totals[0].id;totals[1].id;totals[2].id;items[0].priceTags[0].name;asd.ff.a

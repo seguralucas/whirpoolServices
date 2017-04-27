@@ -1,0 +1,16 @@
+separadorCSV=;
+usaProxy=NO
+ipProxy=10.152.140.252
+puertoProxy=7777
+entidadesAIntegrar=contacto
+borrarDataSetAlFinalizar=false
+
+identificadorAtributo=#
+
+action=GENERICA
+nivelParalelismo=10
+
+responseGET=200
+responsePOST=201
+responseUPDATE
+responseDELETE=200

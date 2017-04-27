@@ -1,0 +1,10 @@
+package exit.services.principal;
+
+import java.io.File;
+
+public class tt {
+
+	public static void main(String[] args) {
+		File f=new File(tt.class.getProtectionDomain().getCodeSource().getLocation().toURI().getPath());
+	}
+}

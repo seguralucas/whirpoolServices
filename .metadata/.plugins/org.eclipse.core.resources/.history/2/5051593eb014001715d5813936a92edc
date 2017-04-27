@@ -1,0 +1,13 @@
+user=lucas.segura
+password=Lucas123
+separadorCSV=;
+usaProxy=NO
+ipProxy=10.152.140.252
+puertoProxy=7777
+entidadesAIntegrar=whirpool, sucursales
+borrarDataSetAlFinalizar=false
+
+identificadorAtributo=#
+
+action=GENERICA
+nivelParalelismo=10

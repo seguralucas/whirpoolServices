@@ -1,0 +1,15 @@
+pathCSVRegistros=D\:/Exit/beneficios1.csv
+url=https://help365.custhelp.com/services/rest/connect/v1.3/CO.Beneficios
+user=lucas.segura
+password=Lucas123
+separadorCSV=;
+usaProxy=NO
+ipProxy=10.152.140.252
+puertoProxy=8080
+
+
+identificadorAtributo=#
+
+metodoEjecutor=ejecutorGenericoCsvAServicio
+action=GENERICA
+nivelParalelismo=40
