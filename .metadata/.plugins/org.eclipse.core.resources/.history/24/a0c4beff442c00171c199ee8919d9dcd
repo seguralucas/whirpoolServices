@@ -1,0 +1,10 @@
+{
+	"clientProfileData.firstName":{
+	"tipo":"cadena",
+	"completar10Ceros":true
+	
+	},
+	"clientProfileData.lastName":{
+	"tipo":"cadena"
+	}
+}

@@ -3,6 +3,7 @@ package exit.services.singletons;
 
 import java.io.BufferedReader;
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -13,44 +14,31 @@ import org.json.simple.JSONObject;
 
 import exit.services.fileHandler.CSVHandler;
 import exit.services.fileHandler.ConstantesGenerales;
-import exit.services.principal.peticiones.ConvertidorJson;
 import exit.services.procesadorJson.IProcesadorJson;
+import exit.services.util.ConvertidorJson;
 
 public class RecuperadorFormato {
 
-	private static RecuperadorFormato instancia=null;
 	private String formato;
 	private JSONObject jsonFormato;
 	
-	public static RecuperadorFormato getInstancia(){
-		if(instancia==null)
-			instancia= new RecuperadorFormato();
-		return instancia;
-	}
-	private RecuperadorFormato(){
-		File f= new File(ConstantesGenerales.PATH_CONFIGURACION_ENTIDADES+"/"+ApuntadorDeEntidad.getInstance().getEntidadActual()+"/formatoJson.json");
+	public RecuperadorFormato(String nombre) throws Exception{
+		File f= new File(ConstantesGenerales.PATH_CONFIGURACION_ENTIDADES+"/"+nombre+"/formatoJson.json");
 		String line;
 		StringBuilder sb= new StringBuilder();
-		try(BufferedReader br= new BufferedReader(new FileReader(f))){
+		BufferedReader br= new BufferedReader(new FileReader(f));
 			while((line=br.readLine()) != null){
 				sb.append(line);
 				
 			}
 			this.formato=sb.toString();		
 			jsonFormato = ConvertidorJson.convertir(this.formato);
-		}
-		catch(Exception e){
-			CSVHandler csv= new CSVHandler();
-			csv.escribirErrorException(e.getStackTrace());
-		}
+		br.close();
 	}
 	public String getFormato() {
 		return formato;
 	}
 	
-	void reiniciar(){
-		instancia=null;
-	}
 	
 	public JSONObject getJsonFormato() throws Exception{
 		return ConvertidorJson.convertir(this.formato);

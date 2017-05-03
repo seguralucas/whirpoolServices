@@ -1,0 +1,8 @@
+package exit.services.singletons.entidadesARecuperar;
+
+public interface IPeticiones {
+	public Peticion getGet();
+	public Peticion getPost();
+	public Peticion getUpdate();
+	public Peticion getDelete();
+}

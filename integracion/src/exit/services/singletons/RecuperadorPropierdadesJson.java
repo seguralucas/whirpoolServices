@@ -15,7 +15,6 @@ import exit.services.fileHandler.CSVHandler;
 import exit.services.fileHandler.ConstantesGenerales;
 
 public class RecuperadorPropierdadesJson {
-	private static RecuperadorPropierdadesJson instancia=null;
 	private JSONObject jsonPropiedades;
 	private HashMap<String, JSONObject> mapCabeceraJson;
 	public static final String PROPIEDAD_TIPO="tipo";
@@ -31,25 +30,22 @@ public class RecuperadorPropierdadesJson {
 	public static final String TIPO_FECHA="fecha";
 	public static final String TIPO_ENTERO="entero";
 	public static final String TIPO_CADENA="cadena";
-	public static RecuperadorPropierdadesJson getInstancia(){
-		if(instancia==null)
-			instancia= new RecuperadorPropierdadesJson();
-		return instancia;
-	}
+
+
 	
 	public JSONObject getPropiedades(String key){
 		return mapCabeceraJson.get(key);
 	}
 	
 	public String getTipo(String key){
-		JSONObject j= RecuperadorPropierdadesJson.getInstancia().getPropiedades(key);
+		JSONObject j= this.getPropiedades(key);
 		return j==null?"":(String)j.get(PROPIEDAD_TIPO);
 	}
 	
-	private RecuperadorPropierdadesJson(){
+	public RecuperadorPropierdadesJson(String nombreEntidad) throws ParseException, IOException{
 		mapCabeceraJson=new HashMap<String, JSONObject>();
-		File f= new File(ConstantesGenerales.PATH_CONFIGURACION_ENTIDADES+"/"+ApuntadorDeEntidad.getInstance().getEntidadActual()+"/tiposDeDatos.json");
-		try(BufferedReader br= new BufferedReader(new FileReader(f))){
+		File f= new File(ConstantesGenerales.PATH_CONFIGURACION_ENTIDADES+"/"+nombreEntidad+"/tiposDeDatos.json");
+		BufferedReader br= new BufferedReader(new FileReader(f));
 			String line;
 			StringBuilder sb= new StringBuilder();
 			while((line=br.readLine()) != null){
@@ -64,12 +60,7 @@ public class RecuperadorPropierdadesJson {
 		        if (keyvalue instanceof JSONObject)
 		        	mapCabeceraJson.put(keyStr, (JSONObject)keyvalue);
 		    }
-		}
-		catch(Exception e){
-			CSVHandler csv= new CSVHandler();
-			e.printStackTrace();
-			csv.escribirErrorException(e.getStackTrace());
-		}
+		br.close();
 
 		/*JSONArray arr=(JSONArray)json.get("informacion");
 		for(int i=0;i<arr.size();i++){
@@ -78,37 +69,35 @@ public class RecuperadorPropierdadesJson {
 		}*/
 	}
 	
-	void reiniciar(){
-		instancia=null;
-	}
+
 	
 	public boolean isBorrarCarNoNumericos(String key){
-		JSONObject j= RecuperadorPropierdadesJson.getInstancia().getPropiedades(key);
+		JSONObject j= this.getPropiedades(key);
 		Object aux=j==null?null:j.get(PROPIEDAD_BORRAR_CAR_NO_NUMERICOS);
 		return aux==null?false:(Boolean)j.get(PROPIEDAD_BORRAR_CAR_NO_NUMERICOS);
 	}
 	
 	public boolean isReemplazarCarEspanol(String key){
-		JSONObject j= RecuperadorPropierdadesJson.getInstancia().getPropiedades(key);
+		JSONObject j= this.getPropiedades(key);
 		Object aux=j==null?null:j.get(PROPIEDAD_REEMPLAZAR_CAR_ESPANOL);
 		return aux==null?false:(Boolean)j.get(PROPIEDAD_REEMPLAZAR_CAR_ESPANOL);
 	}
 	
 	public boolean isCompletar10Ceros(String key){
-		JSONObject j= RecuperadorPropierdadesJson.getInstancia().getPropiedades(key);
+		JSONObject j= this.getPropiedades(key);
 		Object aux=j==null?null:j.get(PROPIEDAD_COMPLETAR10CEROS);
 		return aux==null?false:(Boolean)j.get(PROPIEDAD_COMPLETAR10CEROS);
 	}
 	
 	
 	public String getBorrarSiEsNull(String key){
-		JSONObject j= RecuperadorPropierdadesJson.getInstancia().getPropiedades(key);
+		JSONObject j= this.getPropiedades(key);
 		String aux=j==null?null:(String)j.get(PROPIEDAD_BORRAR_SI_ES_NULL);
 		return aux;
 	}
 	
 	public JSONObject getValoresPermitidos(String key){
-		JSONObject j= RecuperadorPropierdadesJson.getInstancia().getPropiedades(key);
+		JSONObject j= this.getPropiedades(key);
 		JSONObject aux=j==null?null:(JSONObject)j.get(PROPIEDAD_VALORES_PERMITIDOS);
 		return aux;
 	}
@@ -129,17 +118,14 @@ public class RecuperadorPropierdadesJson {
 	}
 	
 	public boolean isBorrarSiEsNull(String key){
-		JSONObject j= RecuperadorPropierdadesJson.getInstancia().getPropiedades(key);
+		JSONObject j= this.getPropiedades(key);
 		Object aux=j==null?null:j.get(PROPIEDAD_BORRAR_SI_ES_NULL);
 		return aux!=null;
 	}
+	
 	
 	public JSONObject getJsonPropiedades() {
 		return jsonPropiedades;
 	}
 	
-	public static void main(String[] args) throws IOException, ParseException {
-		JSONObject a=RecuperadorPropierdadesJson.getInstancia().getPropiedades("BP_WCC_ID");
-				System.out.println(a.get("tipo"));
-	}
 }

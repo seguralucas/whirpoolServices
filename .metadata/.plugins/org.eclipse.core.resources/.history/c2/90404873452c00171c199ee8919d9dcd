@@ -1,0 +1,11 @@
+package exit.services.convertidos.csvAJson;
+
+import exit.services.singletons.ConfiguracionEntidadParticular;
+
+public class JsonVTEX extends JsonGenerico{
+
+	public JsonVTEX(ConfiguracionEntidadParticular confEntidadPart) throws Exception {
+		super(confEntidadPart);
+	}
+
+}

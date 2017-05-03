@@ -1,0 +1,31 @@
+{"totalItems":"1",
+"importeConDescuento":"1419815",
+"provincia":"CIUDAD AUT√u201CNOMA DE BUENOS AIRES",
+"titularCompra":"Ana Laura Angelini/Pablo Daniel Higa",
+"plazoDeEntrega":"2017-05-09T22:41:11.6683806+00:00",
+"nroCuotas":"1",
+"fechaCompra":"2017-05-02T01:40:38.8372464+00:00",
+"direccionEntrega":"2413",
+"valorCuotas":"1668800",
+"cupon":null,
+"importeTotal":"1659900",
+"ciudad":"Ciudad Aut√≥noma Buenos Aires",
+"totalDescuento":"-248985",
+"contactoEntrega":"Damian",
+"recibidorCompra":"Ana Laura Angelini/Pablo Daniel Higa",
+"canal":"whirlpoolarg",
+"importeSinDescuento":"1659900",
+"motivoRechazoPago":"paymentData.transactions[0].payments[0].connectorResponses.Message",
+"medioPago":null,
+"totalFlete":"8900",
+"dni":"28161356"}
+**********************************************************************************************
+{
+    "type": "https://whirlpool.custhelp.com/services/rest/connect/exceptions/OSC-CREST-00006",
+    "title": "Fallo al intentar escribir en un recurso",
+    "status": 400,
+    "detail": "Invalid type specified for property Compra.nroCuotas: 1",
+    "instance": "https://whirlpool.custhelp.com/services/rest/connect/v1.3/Whirlpool.Compra",
+    "o:errorCode": "OSC-CREST-00006"
+}
+##############################################################################################

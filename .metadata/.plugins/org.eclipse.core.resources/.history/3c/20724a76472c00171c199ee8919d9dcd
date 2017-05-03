@@ -1,0 +1,8 @@
+{ 
+    "emails":[{"address":"#clientProfileData#", "addressType":{"id":0}}],
+"name": {
+	        "first": "#clientProfileData.firstName#",
+	        "last": "#clientProfileData.lastName#"
+    	}
+
+}

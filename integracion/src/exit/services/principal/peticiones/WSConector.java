@@ -8,10 +8,11 @@ import java.net.URL;
 
 import org.json.simple.JSONObject;
 
-import Decoder.BASE64Encoder;
-import exit.services.singletons.RecuperadorPropiedadedConfiguracionEntidad;
+import exit.services.singletons.RecEntAct;
+import exit.services.singletons.entidadesARecuperar.IPeticiones;
 import exit.services.singletons.entidadesARecuperar.Peticion;
 import exit.services.singletons.entidadesARecuperar.RecuperadorPeticiones;
+import exit.services.util.ConvertidorJson;
 
 
 
@@ -20,55 +21,43 @@ public class WSConector {
 	 
 	 private URL url;
 	
-	 public WSConector(EPeticiones httpMethod,String url,String contentType) throws Exception{
-		 	this.url = new URL(url);
-		 	initConecction(httpMethod,contentType);
-	 }
 	 
+	 public WSConector(EPeticiones httpMethod,String url,JSONObject cabecera, Peticion peticion) throws Exception{
+		 this.url = new URL(url);
+		 if(peticion==null)
+			 peticion=RecuperadorPeticiones.getInstance().getPeticion(httpMethod);
+		 initConecction(httpMethod,peticion,cabecera);
+	 }	 	
+	 
+	 public WSConector(EPeticiones httpMethod,String url,JSONObject cabecera) throws Exception{
+		 this.url = new URL(url);
+		 initConecction(httpMethod,RecuperadorPeticiones.getInstance().getPeticion(httpMethod),cabecera);
+	 }	 	
 	 public WSConector(EPeticiones httpMethod,String url) throws Exception{
 		 	this(httpMethod,url,null);
 	 }
+	
 	 
 	 public WSConector(EPeticiones httpMethod) throws Exception{
-		 	this(httpMethod,RecuperadorPropiedadedConfiguracionEntidad.getInstance().getUrl());
+		 	this(httpMethod,RecEntAct.getInstance().getCep().getUrl());
 	 }
 	
-	private void initConecction(EPeticiones httpMethod, String contentType) throws Exception{
+	private void initConecction(EPeticiones httpMethod, Peticion peticion, JSONObject cabecera) throws Exception{
 		HttpURLConnection conn=null;
-		if(RecuperadorPropiedadedConfiguracionEntidad.getInstance().getUsaProxy().equalsIgnoreCase("SI")){
-			Proxy proxy = new Proxy(Proxy.Type.HTTP, new InetSocketAddress(RecuperadorPropiedadedConfiguracionEntidad.getInstance().getIpProxy(), Integer.parseInt(RecuperadorPropiedadedConfiguracionEntidad.getInstance().getPuertoProxy())));
+		if(RecEntAct.getInstance().getCep().getUsaProxy().equalsIgnoreCase("SI")){
+			Proxy proxy = new Proxy(Proxy.Type.HTTP, new InetSocketAddress(RecEntAct.getInstance().getCep().getIpProxy(), Integer.parseInt(RecEntAct.getInstance().getCep().getPuertoProxy())));
 			conn = (HttpURLConnection) url.openConnection(proxy);
 		}
 		else
 			conn = (HttpURLConnection) url.openConnection();
-		Peticion peticion = null;
-		if(httpMethod == EPeticiones.POST){
-			peticion=RecuperadorPeticiones.getInstance().getPost();
-		}
-		else if(httpMethod == EPeticiones.UPDATE){
-			peticion=RecuperadorPeticiones.getInstance().getUpdate();
-		}
-		else if(httpMethod == EPeticiones.GET){
-			peticion=RecuperadorPeticiones.getInstance().getGet();
-		}
-		else if(httpMethod == EPeticiones.DELETE){
-			peticion=RecuperadorPeticiones.getInstance().getDelete();
-		}
 		conn.setRequestMethod(peticion.getPeticion());
 		if(peticion.getCabecera()!=null && peticion.getCabecera().length()>0)
 			try{completarCabecera(conn,ConvertidorJson.convertir(peticion.getCabecera()));}	catch (Exception e) {e.printStackTrace();}
 
-		if(contentType!=null)
-			conn.setRequestProperty("Content-Type", contentType);
 		conn.setRequestProperty("charset", "UTF-8");
 		conn.setDoOutput(true);
-
-/*		String userPassword = RecuperadorPropiedadedConfiguracionEntidad.getInstance().getUser() + ":" + RecuperadorPropiedadedConfiguracionEntidad.getInstance().getPassword();
-		BASE64Encoder encode= new BASE64Encoder();
-		String encoding = encode.encode(userPassword.getBytes());
-		conn.setRequestProperty("Authorization", "Basic " + encoding);	 
-		conn.setRequestProperty("OSvC-CREST-Suppress-All", "true");	 */
-		completarCabecera(conn,ConvertidorJson.convertir(RecuperadorPropiedadedConfiguracionEntidad.getInstance().getCabecera()));
+		if(cabecera!=null)
+			completarCabecera(conn,cabecera);
 		this.conexion= conn;
 		
 	}

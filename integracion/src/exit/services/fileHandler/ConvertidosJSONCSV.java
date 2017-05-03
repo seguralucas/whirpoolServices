@@ -7,9 +7,10 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.lang.reflect.InvocationTargetException;
 
-import exit.services.json.AbstractJsonRestEstructura;
-import exit.services.json.JsonGenerico;
-import exit.services.singletons.RecuperadorPropiedadedConfiguracionEntidad;
+import exit.services.convertidos.csvAJson.AbstractJsonRestEstructura;
+import exit.services.convertidos.csvAJson.JsonGenerico;
+import exit.services.singletons.ConfiguracionEntidadParticular;
+import exit.services.singletons.RecEntAct;
 
 
 public class ConvertidosJSONCSV{
@@ -26,6 +27,7 @@ public class ConvertidosJSONCSV{
 		
 	   
 	   public AbstractJsonRestEstructura convertirCSVaJSONLineaALinea(File fileCSV) {
+			ConfiguracionEntidadParticular r= RecEntAct.getInstance().getCep();
 		   try{
 			   if(br==null)
 			   br = new BufferedReader(
@@ -40,11 +42,11 @@ public class ConvertidosJSONCSV{
   				CSVHandler.cabeceraFichero=line;//Esto es sólo en caso de que estemos haciendo update
   			}
   			else{
-  	    		String[] valoresCsv= line.replace("\"", "'").split(RecuperadorPropiedadedConfiguracionEntidad.getInstance().getSeparadorCSVREGEX());
+  	    		String[] valoresCsv= line.replace("\"", "'").split(r.getSeparadorCSVREGEX());
 				try{
   					if(ColumnasMayorCabecera(valoresCsv))
   						throw new Exception();
-  					AbstractJsonRestEstructura jsonEstructura=crearJson(valoresCsv,CSVHandler.cabeceraFichero.split(RecuperadorPropiedadedConfiguracionEntidad.getInstance().getSeparadorCSVREGEX()));  	
+  					AbstractJsonRestEstructura jsonEstructura=crearJson(valoresCsv,CSVHandler.cabeceraFichero.split(r.getSeparadorCSVREGEX()));  	
   					jsonEstructura.setLine(line);
     			return jsonEstructura;
   				}
@@ -67,7 +69,7 @@ public class ConvertidosJSONCSV{
 	   }
 			   
 	   public AbstractJsonRestEstructura crearJson(String[] valoresCsv, String[] cabeceras) throws Exception{
-		   AbstractJsonRestEstructura restEstructura= new JsonGenerico();
+		   AbstractJsonRestEstructura restEstructura= new JsonGenerico(RecEntAct.getInstance().getCep());
 		   for(int i=0;i<valoresCsv.length;i++){
 			   restEstructura.agregarCampo(cabeceras[i], valoresCsv[i]);
 		   }
@@ -76,7 +78,7 @@ public class ConvertidosJSONCSV{
 
 	   
 	   private boolean ColumnasMayorCabecera(String[] valoresCsv){
-		   return CSVHandler.cabeceraFichero.split(RecuperadorPropiedadedConfiguracionEntidad.getInstance().getSeparadorCSVREGEX()).length<valoresCsv.length;
+		   return CSVHandler.cabeceraFichero.split(RecEntAct.getInstance().getCep().getSeparadorCSVREGEX()).length<valoresCsv.length;
 	   }
 	   
 	   	   

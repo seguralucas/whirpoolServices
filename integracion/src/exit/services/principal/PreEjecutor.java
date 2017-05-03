@@ -7,6 +7,7 @@ import exit.services.fileHandler.CSVHandler;
 import exit.services.principal.peticiones.EPeticiones;
 import exit.services.principal.peticiones.GetIdsAEliminar;
 import exit.services.singletons.ApuntadorDeEntidad;
+import exit.services.singletons.RecEntAct;
 
 public class PreEjecutor {
 
@@ -15,7 +16,7 @@ public class PreEjecutor {
 		System.out.println("Borrando "+ApuntadorDeEntidad.getInstance().getEntidadActual()+".");
 		while(cantidad>0 || cantidad==-1){
 			GetIdsAEliminar g= new GetIdsAEliminar();
-			Object o=g.realizarPeticion(EPeticiones.GET);
+			Object o=g.realizarPeticion(EPeticiones.GET,RecEntAct.getInstance().getCep().getCabecera());
 			if(o instanceof Integer)
 				cantidad=(Integer)o;
 			else

@@ -4,11 +4,9 @@ import java.io.BufferedReader;
 
 import org.json.simple.JSONObject;
 
-import exit.services.fileHandler.CSVHandler;
-import exit.services.json.JSONHandler;
+import exit.services.convertidos.csvAJson.JSONHandler;
 import exit.services.principal.peticiones.AbstractHTTP;
-import exit.services.principal.peticiones.ConvertidorJson;
-import exit.services.principal.peticiones.vtex.funciones.FuncionesVTEX;
+import exit.services.util.ConvertidorJson;
 
 public class GetVTEXEmailDesencriptado extends AbstractHTTP {
 

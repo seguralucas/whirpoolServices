@@ -1,2 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<qualifiedTypeNameHistroy/>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="exit.services.singletons.ApuntadorDeEntidad"/>
+<fullyQualifiedTypeName name="java.util.HashMap"/>
+<fullyQualifiedTypeName name="exit.services.singletons.RecuperadorFormato"/>
+<fullyQualifiedTypeName name="exit.services.singletons.RecuperadorPropiedadedConfiguracionEntidadActual"/>
+<fullyQualifiedTypeName name="exit.services.singletons.RecuperadorMapeoCsv"/>
+<fullyQualifiedTypeName name="exit.services.singletons.RecuperadorPropierdadesJson"/>
+<fullyQualifiedTypeName name="exit.services.singletons.ConfiguracionEntidadParticular"/>
+<fullyQualifiedTypeName name="exit.services.singletons.RecEntAct"/>
+<fullyQualifiedTypeName name="exit.services.util.RecorrerJson"/>
+</qualifiedTypeNameHistroy>

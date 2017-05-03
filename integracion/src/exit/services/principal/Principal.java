@@ -10,9 +10,10 @@ import exit.services.fileHandler.CSVHandler;
 import exit.services.fileHandler.DirectorioManager;
 import exit.services.principal.ejecutores.ParalelizadorDistintosFicheros;
 import exit.services.singletons.ApuntadorDeEntidad;
+import exit.services.singletons.ConfiguracionEntidadParticular;
 import exit.services.singletons.EOutputs;
 import exit.services.singletons.RecuperadorMapeoCsv;
-import exit.services.singletons.RecuperadorPropiedadedConfiguracionEntidad;
+import exit.services.singletons.RecEntAct;
 
 public class Principal {
 	public static final String UPDATE_CONTACTOS="UPDATE_CONTACTOS";
@@ -23,17 +24,21 @@ public class Principal {
 
 	
 	public static void main(String[] args) throws Exception {
+		String a="#paymentData.transactions[0].payments[0].installments#";
+		System.out.println(a.replaceAll("#paymentData.transactions\\[0\\].payments\\[0\\].installments#", "1"));				
+
 		long time_start, time_end;
     	time_start = System.currentTimeMillis();
     	ApuntadorDeEntidad ap=ApuntadorDeEntidad.getInstance();
     	if(ap==null)
     		return;
-
     	while(ap.siguienteEntidad()){
-	    	RecuperadorPropiedadedConfiguracionEntidad.getInstance().mostrarConfiguracion();
-	    	switch(RecuperadorPropiedadedConfiguracionEntidad.getInstance().getAction().toUpperCase()){
-	    		case RecuperadorPropiedadedConfiguracionEntidad.ACCION_CSVASERVICIO:csvAServicio();break;
-	    		case RecuperadorPropiedadedConfiguracionEntidad.ACCION_SERVICIOAACSV:servicioACsv(); break;
+    		ConfiguracionEntidadParticular r= RecEntAct.getInstance().getCep();
+	    	r.mostrarConfiguracion();
+	    	switch(r.getAction().toUpperCase()){
+	    		case ConfiguracionEntidadParticular.ACCION_CSVASERVICIO:csvAServicio();break;
+	    		case ConfiguracionEntidadParticular.ACCION_SERVICIOAACSV:servicioACsv(); break;
+	    		case ConfiguracionEntidadParticular.ACCION_SERVICIOASERVICIO:servicioAServicio(); break;
 	    	}
 	    }
 	    	time_end = System.currentTimeMillis();
@@ -52,13 +57,14 @@ public class Principal {
 
 	
 	private static void csvAServicio(){
+		ConfiguracionEntidadParticular r= RecEntAct.getInstance().getCep();
 		ParalelizadorDistintosFicheros hiloApartre = new ParalelizadorDistintosFicheros();
       	try {
-      		if(RecuperadorPropiedadedConfiguracionEntidad.getInstance().getMetodoPreEjecutor()!=null)
-      			PreEjecutor.ejecutar(RecuperadorPropiedadedConfiguracionEntidad.getInstance().getMetodoPreEjecutor(), RecuperadorPropiedadedConfiguracionEntidad.getInstance().getParametroPreEjecutor());
+      		if(r.getMetodoPreEjecutor()!=null)
+      			PreEjecutor.ejecutar(r.getMetodoPreEjecutor(), r.getParametroPreEjecutor());
       		hiloApartre.insertar();
-      		if(RecuperadorPropiedadedConfiguracionEntidad.getInstance().isBorrarDataSetAlFinalizar()){
-      			File file = new File(RecuperadorPropiedadedConfiguracionEntidad.getInstance().getPathCSVRegistros());
+      		if(r.isBorrarDataSetAlFinalizar()){
+      			File file = new File(r.getPathCSVRegistros());
       			file.delete();
       		}
 		} catch (Exception e) {
@@ -71,10 +77,9 @@ public class Principal {
 		try{
 
 			Integer cantRegistros=-1;
-			RecuperadorMapeoCsv.getInstancia();
-			RecuperadorPropiedadedConfiguracionEntidad r= RecuperadorPropiedadedConfiguracionEntidad.getInstance();
-			if(RecuperadorPropiedadedConfiguracionEntidad.getInstance().isCreateEmptyFile())
-				CSVHandler.crearCabecer(DirectorioManager.getDirectorioFechaYHoraInicio(r.getOutputFile()),RecuperadorMapeoCsv.getInstancia().getCabecera() );
+			ConfiguracionEntidadParticular r= RecEntAct.getInstance().getCep();
+			if(r.isCreateEmptyFile())
+				CSVHandler.crearCabecer(DirectorioManager.getDirectorioFechaYHoraInicio(r.getOutputFile()),r.getRecuperadorMapeoCSV().getCabecera() );
 			if(r.isPaginado()){
 				while(cantRegistros!=0){
 					try{
@@ -85,12 +90,36 @@ public class Principal {
 				}
 			}
 			else{
-				cantRegistros=(Integer)e.ejecutar(r.getMetodoEjecutor(),RecuperadorPropiedadedConfiguracionEntidad.getInstance().getParametroEjecutor());
+				cantRegistros=(Integer)e.ejecutar(r.getMetodoEjecutor(),r.getParametroEjecutor());
 			}
 			if(r.getOutput()==EOutputs.SFTP){
 				SFTP sftp= new SFTP(r.getSftpPropiedades());
 				sftp.transferirFichero(DirectorioManager.getDirectorioFechaYHoraInicio(r.getOutputFile()).getPath(), r.getOutPutPath()+"/"+r.getOutputFile());
 			}
+			System.out.println("Fin");
+		}
+		catch (Exception d) {
+			d.printStackTrace();
+		}
+	}
+	
+	private static void servicioAServicio(){
+		Ejecutor e= new Ejecutor();
+		try{
+			Integer cantRegistros=-1;
+			ConfiguracionEntidadParticular r= RecEntAct.getInstance().getCep();
+//			System.out.println(RecEntAct.getInstance().getCep().getSubEntidad("contacto").getRecuperadorMapeoCSV().getCabecera());
+			if(r.isPaginado()){
+				while(cantRegistros!=0){
+					try{
+						System.out.println("Pagina actual: "+r.getPaginaActual());					
+						cantRegistros=(Integer)e.ejecutar(r.getMetodoEjecutor(),r.getParametroEjecutor());
+						r.incresePaginaActual();
+						}catch(Exception ex){CSVHandler csv= new CSVHandler(); csv.escribirErrorException("Error en entidad: "+ApuntadorDeEntidad.getInstance().getEntidadActual(), ex.getStackTrace(),true);}
+				}
+			}
+			else
+				cantRegistros=(Integer)e.ejecutar(r.getMetodoEjecutor(),r.getParametroEjecutor());
 			System.out.println("Fin");
 		}
 		catch (Exception d) {

@@ -2,25 +2,20 @@ package exit.services.singletons;
 
 import java.io.BufferedReader;
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.FileReader;
+import java.io.IOException;
 
 import exit.services.fileHandler.CSVHandler;
 import exit.services.fileHandler.ConstantesGenerales;
-import exit.services.principal.peticiones.ConvertidorJson;
+import exit.services.util.ConvertidorJson;
 
 public class RecuperadorMapeoCsv {
 
-	private static RecuperadorMapeoCsv instancia=null;
 
 	private String cabecera;
 	private String cuerpo;
 	
-	public static RecuperadorMapeoCsv getInstancia(){
-		if(instancia==null)
-			instancia= new RecuperadorMapeoCsv();
-		return instancia;
-	}
-
 	
 	public String getCabecera() {
 		return cabecera;
@@ -42,10 +37,10 @@ public class RecuperadorMapeoCsv {
 	}
 
 
-	private RecuperadorMapeoCsv(){
-		File f= new File(ConstantesGenerales.PATH_CONFIGURACION_ENTIDADES+"/"+ApuntadorDeEntidad.getInstance().getEntidadActual()+"/mapeoCSV.csv");
+	public RecuperadorMapeoCsv(String name) throws IOException{
+		File f= new File(ConstantesGenerales.PATH_CONFIGURACION_ENTIDADES+"/"+name+"/mapeoCSV.csv");
 		CSVHandler csv= new CSVHandler();
-		try(BufferedReader br= new BufferedReader(new FileReader(f))){
+		BufferedReader br= new BufferedReader(new FileReader(f));
 			String line;
 			int nroLine=0;
 			while((line=br.readLine()) != null){
@@ -57,12 +52,8 @@ public class RecuperadorMapeoCsv {
 					csv.escribirErrorException("El fichero mapeo.csv posee mas de 2 lineas. Se ignorara lineas siguientes");
 				nroLine++;
 			}
-		}
-		catch(Exception e){
-			csv.escribirErrorException(e.getStackTrace());
-		}
+			br.close();
 	}
-	public void reiniciar(){
-		this.instancia=null;
-	}
+
+
 }

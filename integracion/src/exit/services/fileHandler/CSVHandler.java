@@ -7,8 +7,8 @@ import java.io.IOException;
 
 import com.csvreader.CsvWriter;
 
-import exit.services.json.JSONHandler;
-import exit.services.singletons.RecuperadorPropiedadedConfiguracionEntidad;
+import exit.services.convertidos.csvAJson.JSONHandler;
+import exit.services.singletons.RecEntAct;
 
 public class CSVHandler {
 	
@@ -28,7 +28,7 @@ public class CSVHandler {
 
 		public static synchronized void crearCabecer(File file,String cabecera)  throws IOException{
             if(!file.exists() || file.length() == 0){
-            		CsvWriter csvOutput = new CsvWriter(new FileWriter(file, true), RecuperadorPropiedadedConfiguracionEntidad.getInstance().getSeparadorCSVREGEX().charAt(0));
+            		CsvWriter csvOutput = new CsvWriter(new FileWriter(file, true), RecEntAct.getInstance().getCep().getSeparadorCSVREGEX().charAt(0));
     				csvOutput.write(cabecera);
     	        	csvOutput.endRecord();
     	            csvOutput.close();
@@ -36,14 +36,14 @@ public class CSVHandler {
 		}
 		
 		private void escribirCampos(File file, String line,boolean onlyNotNull) throws IOException{
-		 	CsvWriter csvOutput = new CsvWriter(new FileWriter(file, true), RecuperadorPropiedadedConfiguracionEntidad.getInstance().getSeparadorCSV().charAt(0));
+		 	CsvWriter csvOutput = new CsvWriter(new FileWriter(file, true), RecEntAct.getInstance().getCep().getSeparadorCSV().charAt(0));
         	if(onlyNotNull){
-			 	String[] campos= line.split(RecuperadorPropiedadedConfiguracionEntidad.getInstance().getSeparadorCSVREGEX());
+			 	String[] campos= line.split(RecEntAct.getInstance().getCep().getSeparadorCSVREGEX());
 	            for(String c:campos)
 	            		csvOutput.write(insertarNoNull(c));             
         	}
             else{
-			 	String[] campos= line.split(RecuperadorPropiedadedConfiguracionEntidad.getInstance().getSeparadorCSVREGEX(),-1);
+			 	String[] campos= line.split(RecEntAct.getInstance().getCep().getSeparadorCSVREGEX(),-1);
 	            for(String c:campos)
 	            	csvOutput.write(insertarNoNull(c==null?"":c));   
             }

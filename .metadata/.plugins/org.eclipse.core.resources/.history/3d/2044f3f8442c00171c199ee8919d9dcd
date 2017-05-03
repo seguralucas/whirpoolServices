@@ -1,0 +1,8 @@
+{
+	"clientProfileData.firstName":{
+	"tipo":"cadena"
+	},
+	"clientProfileData.lastName":{
+	"tipo":"cadena"
+	}
+}

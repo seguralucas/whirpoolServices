@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
+		<item value="false" key="isRegEx"/>
+		<item value="puntero" key="selection"/>
+		<item value="false" key="casesensitive"/>
+		<item value="false" key="incremental"/>
+		<item value="true" key="wrap"/>
+		<item value="false" key="wholeword"/>
+		<list key="findhistory">
+			<item value="puntero"/>
+			<item value="RecuperadorPropierdadesJson.getInstancia()"/>
+			<item value="RecuperadorPropierdadesJson.getInstancia()."/>
+			<item value="RecuperadorEspecificacionesCSV"/>
+			<item value="RecuperadorPropiedadedConfiguracionEntidadActual.getInstance()"/>
+			<item value="outPut"/>
+		</list>
+		<list key="replacehistory">
+			<item value="RecEntAct.getInstance().getCep().getRecuperadorPropiedadesJson()"/>
+			<item value="RecEntAct.getInstance().getCep()"/>
+			<item value="RecuperadorPropierdadesJson.getInstancia()"/>
+			<item value="this"/>
+			<item value="RecuperadorPropiedadedConfiguracionEntidadActual.getInstance().getCep()"/>
+		</list>
+	</section>
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
+		<item value="284" key="DIALOG_WIDTH"/>
+		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
+		<item value="390" key="DIALOG_HEIGHT"/>
+		<item value="948" key="DIALOG_X_ORIGIN"/>
+		<item value="210" key="DIALOG_Y_ORIGIN"/>
+	</section>
+</section>

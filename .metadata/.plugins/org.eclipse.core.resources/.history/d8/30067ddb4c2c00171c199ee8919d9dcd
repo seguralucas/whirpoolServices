@@ -1,0 +1,19 @@
+{
+	"clientProfileData.firstName":{
+	"tipo":"cadena"	
+	},
+	"clientProfileData.lastName":{
+	"tipo":"cadena"
+	},
+
+	"clientProfileData.document":{
+		"tipo":"cadena"	
+	},
+	"clientProfileData.documentType":{
+		"tipo":"cadena"	
+	},
+	"clientProfileData.email":{
+		"tipo":"cadena",
+		"desencriptarMailVtex":true
+	}
+}

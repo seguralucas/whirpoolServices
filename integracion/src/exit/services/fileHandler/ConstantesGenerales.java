@@ -16,6 +16,19 @@ public class ConstantesGenerales {
 	 public static String PATH_PETICIONES_UPDATE=PATH_EJECUCION+"/Configuracion/peticiones/UPDATE.properties";
 	 public static String PATH_PETICIONES_DELETE=PATH_EJECUCION+"/Configuracion/peticiones/DELETE.properties";
 	 public static String PATH_PETICIONES_POST=PATH_EJECUCION+"/Configuracion/peticiones/POST.properties";
+	 public static String PATH_PETICIONES_ENTIDAD_GET=PATH_EJECUCION+"/Configuracion/@0/peticiones/GET.properties";
+	 public static String PATH_PETICIONES_ENTIDAd_UPDATE=PATH_EJECUCION+"/Configuracion/@0/peticiones/UPDATE.properties";
+	 public static String PATH_PETICIONES_ENTIDAD_DELETE=PATH_EJECUCION+"/Configuracion/@0/peticiones/DELETE.properties";
+	 public static String PATH_PETICIONES_ENTIDAD_POST=PATH_EJECUCION+"/Configuracion/@0/peticiones/POST.properties";
+	 
+	 
+	 
+	 public static String reemplazarArrobas(String constante, String... valores){
+		 for(int i=0;i<valores.length;i++){
+			 constante=constante.replaceAll("@"+i, valores[i]);
+		 }
+		 return constante;
+	 }
 	 
 	 static{
 		 try {
@@ -36,7 +49,10 @@ public class ConstantesGenerales {
 			PATH_PETICIONES_UPDATE=PATH_EJECUCION+"/Configuracion/peticiones/UPDATE.properties";
 			PATH_PETICIONES_DELETE=PATH_EJECUCION+"/Configuracion/peticiones/DELETE.properties";
 			PATH_PETICIONES_POST=PATH_EJECUCION+"/Configuracion/peticiones/POST.properties";
-			 
+			PATH_PETICIONES_ENTIDAD_GET=PATH_EJECUCION+"Configuracion/entidades/@0/peticiones/GET.properties";
+			PATH_PETICIONES_ENTIDAd_UPDATE=PATH_EJECUCION+"Configuracion/entidades/@0/peticiones/UPDATE.properties";
+			PATH_PETICIONES_ENTIDAD_DELETE=PATH_EJECUCION+"Configuracion/entidades/@0/peticiones/DELETE.properties";
+			PATH_PETICIONES_ENTIDAD_POST=PATH_EJECUCION+"Configuracion/entidades/@0/peticiones/POST.properties";
 		} catch (URISyntaxException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

@@ -9,13 +9,12 @@ import java.util.concurrent.Callable;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
-
+import exit.services.convertidos.csvAJson.AbstractJsonRestEstructura;
 import exit.services.fileHandler.ConvertidosJSONCSV;
 import exit.services.fileHandler.DirectorioManager;
 import exit.services.fileHandler.FilesAProcesarManager;
-import exit.services.json.AbstractJsonRestEstructura;
 import exit.services.principal.Ejecutor;
-import exit.services.singletons.RecuperadorPropiedadedConfiguracionEntidad;
+import exit.services.singletons.RecEntAct;
 import exit.services.util.Contador;
 
 
@@ -25,7 +24,7 @@ public class ParalelizadorDistintosFicheros {
 	public static int y=0;
 	public static int z=0;
 	public void insertar() throws InterruptedException, IOException{
-	 	ArrayList<File> pathsCSVEjecutar= FilesAProcesarManager.getInstance().getCSVAProcesar(RecuperadorPropiedadedConfiguracionEntidad.getInstance().getPathCSVRegistros());
+	 	ArrayList<File> pathsCSVEjecutar= FilesAProcesarManager.getInstance().getCSVAProcesar(RecEntAct.getInstance().getCep().getPathCSVRegistros());
 	 	for(File path:pathsCSVEjecutar){
 		 	try {
 				DirectorioManager.SepararFicheros(path);
@@ -33,7 +32,7 @@ public class ParalelizadorDistintosFicheros {
 				e.printStackTrace();
 			}
 			ArrayList<File> filesCSVDivididos=FilesAProcesarManager.getInstance().getAllCSV(DirectorioManager.getPathFechaYHoraInicioDivision());
-	    	ExecutorService workers = Executors.newFixedThreadPool(RecuperadorPropiedadedConfiguracionEntidad.getInstance().getNivelParalelismo());      	
+	    	ExecutorService workers = Executors.newFixedThreadPool(RecEntAct.getInstance().getCep().getNivelParalelismo());      	
 		    List<Callable<Void>> tasks = new ArrayList<>();
 			for(File file: filesCSVDivididos){
 				tasks.add(new Callable<Void>() {
@@ -45,7 +44,7 @@ public class ParalelizadorDistintosFicheros {
 			        			jsonEst = csvThread.convertirCSVaJSONLineaALinea(file);
 			        			if(jsonEst != null && jsonEst.validarCampos()){
 				        			Ejecutor e= new Ejecutor();
-				        			e.ejecutar(RecuperadorPropiedadedConfiguracionEntidad.getInstance().getMetodoEjecutor(),RecuperadorPropiedadedConfiguracionEntidad.getInstance().getParametroEjecutor(),jsonEst);
+				        			e.ejecutar(RecEntAct.getInstance().getCep().getMetodoEjecutor(),RecEntAct.getInstance().getCep().getParametroEjecutor(),jsonEst);
 			        			}
 			    				Contador.x++;
 			    				System.out.println(Contador.x);
@@ -56,7 +55,7 @@ public class ParalelizadorDistintosFicheros {
 			    		    		System.out.println("el proceso lleva procesado un total de: "+Contador.x+" Registros");
 			    				}
 			        		}
-			        		}
+			        	}
 			        	catch (Exception e) {
 							e.printStackTrace();
 						}

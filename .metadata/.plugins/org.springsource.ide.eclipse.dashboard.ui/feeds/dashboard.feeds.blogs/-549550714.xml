@@ -5,7 +5,184 @@
   <link rel="self" href="https://spring.io/blog.atom" />
   <id>http://spring.io/blog.atom</id>
   <icon>https://spring.io/favicon.ico</icon>
-  <updated>2017-04-25T14:50:33Z</updated>
+  <updated>2017-05-02T03:30:41Z</updated>
+  <entry>
+    <title>This Week in Spring - May 2nd, 2017</title>
+    <link rel="alternate" href="https://spring.io/blog/2017/05/02/this-week-in-spring-may-2nd-2017" />
+    <category term="engineering" label="Engineering" />
+    <author>
+      <name>Josh Long</name>
+    </author>
+    <id>tag:spring.io,2017-05-02:2915</id>
+    <updated>2017-05-02T03:30:41Z</updated>
+    <content type="html">&lt;p&gt;Welcome to another installment of &lt;em&gt;This Week in Spring&lt;/em&gt;! This week I&amp;rsquo;m in Perth, Australia, for the &lt;a href="http://west.yowconference.com.au/speakers/josh-long/"&gt;amazing YOW! West conference&lt;/a&gt;, talking to developers about building cloud native Java applications. If you&amp;rsquo;re around, say &lt;a href="http://twitter.com/starbuxman"&gt;hi&lt;/a&gt;. As usual, we&amp;rsquo;ve got a lot to cover so let&amp;rsquo;s get to it!&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Spring IO lead &lt;a href="https://spring.io/blog/2017/04/28/spring-io-platform-athens-sr5"&gt;Any Wilkinson has announced Spring IO Platform Athens-SR5&lt;/a&gt;. He &lt;a href="https://spring.io/blog/2017/04/28/spring-io-platform-brussels-sr2"&gt;also announced Spring IO Platform Brussels-SR2&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Spring Session lead &lt;a href="https://spring.io/blog/2017/04/27/spring-session-1-3-1-released"&gt;Rob Winch just announced Spring Session 1.3.1&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Spring Integration lead and all around great human &lt;a href="https://spring.io/blog/2017/04/27/spring-for-apache-kafka-2-0-milestone-1-available"&gt;Gary Russell just announced Spring for Apache Kafka 2.0M1&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Spring Cloud ninja Glenn Renfro &lt;a href="https://spring.io/blog/2017/04/25/spring-cloud-task-1-2-0-release-is-now-available"&gt;just announced Spring Cloud Task 1.2.0&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;I &lt;em&gt;loved&lt;/em&gt; (in case you were unclear about the sentiment I have for this post!) this look at real time sentiment &lt;a href="https://www.youtube.com/watch?v=QzF2Iii4s5c"&gt;analysis with TensorFlow and Spring Cloud Data Flow&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;the results of this months&amp;rsquo; ZeroTurnaround web framework report are not too surprising: &lt;a href="https://zeroturnaround.com/wp-content/uploads/2017/03/RebelLabs-WFI-Index-table-April-v3.png"&gt;Spring MVC is in a distant lead, then JSF and GWT, then Spring Boot&lt;/a&gt;.&lt;/li&gt;
+  &lt;li&gt;this post, &amp;ldquo;&lt;a href="http://developer.okta.com/blog/2017/04/26/bootiful-development-with-spring-boot-and-angular"&gt;Bootiful Development with Spring Boot and Angular&lt;/a&gt;,&amp;rdquo; on the Okta blog, is another gem by our buddy Matt Raible.&lt;/li&gt;
+  &lt;li&gt;Check out the ZT (short for ZeroTurnaround) Live replay for an epic look at &lt;a href="http://pages.zeroturnaround.com/Reactive-Spring-Webinar_On-Demand-Gated-Landing-Page.html?utm_campaign=reactivespringwebinar&amp;utm_medium=social&amp;utm_source=twitter"&gt;Reactive Spring by Spring WebFlux engineer Sebastien Deleuze&lt;/a&gt;.&lt;/li&gt;
+  &lt;li&gt;Spring Cloud engineer Jon Schneider is cooking up some very cool stuff, and it might be an indication of future direction. Who knows!? But you should &lt;a href="https://github.com/jkschneider/spring-metrics"&gt;definitely check out his project, Spring Metrics&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;My buddy Matt Raible and I looked at building progressive web applications with Spring Boot and Angular.js at our recent two-parter talks at Devoxx France 2017: &lt;a href="https://www.youtube.com/watch?v=0MBsfdQiS64&amp;feature=youtu.be"&gt;part 1&lt;/a&gt; and &lt;a href="https://www.youtube.com/watch?v=xo7djiUBMpU"&gt;part 2&lt;/a&gt;. This was &lt;em&gt;so&lt;/em&gt; much fun! Merci mille fois, Devoxx France! Thank you Devoxx France for letting us do these sessions!&lt;/li&gt;
+  &lt;li&gt;I did an interview with the amazing &lt;a href="https://softwareengineeringdaily.com/2017/04/26/spring-boot-with-josh-long/"&gt;Software Engineering Daily Podcast on Spring Boot&lt;/a&gt;. It was a lot of fun being on there. I listen to the podcast regularly and really appreciate the opportunity!&lt;/li&gt;
+  &lt;li&gt;I liked this post by Alex Soto on &lt;a href="http://www.lordofthejars.com/2017/04/testing-spring-data-spring-boot.html"&gt;using Arquillian to test Spring Data applications&lt;/a&gt;.&lt;/li&gt;
+  &lt;li&gt;this is an interesting post on discovering an microservices &lt;a href="https://040code.github.io/2017/04/20/discovery-agent/"&gt;exposed port in a Docker container&lt;/a&gt;. Seems.. painful. I&amp;rsquo;m glad it&amp;rsquo;s so thoroughly documented and articulated here, though! Good stuff!&lt;/li&gt;
+&lt;/ul&gt;</content>
+  </entry>
+  <entry>
+    <title>Spring IO Platform Brussels-SR2</title>
+    <link rel="alternate" href="https://spring.io/blog/2017/04/28/spring-io-platform-brussels-sr2" />
+    <category term="releases" label="Releases" />
+    <author>
+      <name>Andy Wilkinson</name>
+    </author>
+    <id>tag:spring.io,2017-04-28:2914</id>
+    <updated>2017-04-28T14:51:10Z</updated>
+    <content type="html">&lt;p&gt;I am pleased to announce that &lt;a href="http://platform.spring.io/platform"&gt;Spring IO Platform&lt;/a&gt; Brussels-SR2 is now available from both &lt;a href="http://repo.spring.io/release"&gt;repo.spring.io&lt;/a&gt; and Maven Central. &lt;/p&gt;
+&lt;p&gt;This maintenance release upgrades the versions of a number of the projects in the Platform:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;AspectJ 1.8.10&lt;/li&gt;
+  &lt;li&gt;Spring AMQP 1.7.2&lt;/li&gt;
+  &lt;li&gt;Spring Boot 1.5.3&lt;/li&gt;
+  &lt;li&gt;Spring Data Ingalls SR 3&lt;/li&gt;
+  &lt;li&gt;Spring Framework 4.3.8&lt;/li&gt;
+  &lt;li&gt;Spring Integration 4.3.9&lt;/li&gt;
+  &lt;li&gt;Spring Kafka 1.1.4&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The versions of a number of third-party dependencies have also been updated.&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://platform.spring.io/platform"&gt;Project Page&lt;/a&gt; | &lt;a href="https://github.com/spring-io/platform"&gt;GitHub&lt;/a&gt; | &lt;a href="https://github.com/spring-io/platform/issues"&gt;Issues&lt;/a&gt; | &lt;a href="http://docs.spring.io/platform/docs/Brussels-SR2/reference/htmlsingle"&gt;Documentation&lt;/a&gt;&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Spring IO Platform Athens-SR5</title>
+    <link rel="alternate" href="https://spring.io/blog/2017/04/28/spring-io-platform-athens-sr5" />
+    <category term="releases" label="Releases" />
+    <author>
+      <name>Andy Wilkinson</name>
+    </author>
+    <id>tag:spring.io,2017-04-28:2913</id>
+    <updated>2017-04-28T14:51:01Z</updated>
+    <content type="html">&lt;p&gt;I am pleased to announce that &lt;a href="http://platform.spring.io/platform"&gt;Spring IO Platform&lt;/a&gt; Athens-SR5 is now available from both &lt;a href="http://repo.spring.io/release"&gt;repo.spring.io&lt;/a&gt; and Maven Central. &lt;/p&gt;
+&lt;p&gt;This maintenance release upgrades the versions of a number of the projects in the Platform:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;AspectJ 1.8.10&lt;/li&gt;
+  &lt;li&gt;Spring AMQP 1.6.9&lt;/li&gt;
+  &lt;li&gt;Spring Boot 1.4.6&lt;/li&gt;
+  &lt;li&gt;Spring Data Hopper SR 10&lt;/li&gt;
+  &lt;li&gt;Spring Framework 4.3.8&lt;/li&gt;
+  &lt;li&gt;Spring Integration 4.3.9&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The versions of a number of third-party dependencies have also been updated.&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://platform.spring.io/platform"&gt;Project Page&lt;/a&gt; | &lt;a href="https://github.com/spring-io/platform"&gt;GitHub&lt;/a&gt; | &lt;a href="https://github.com/spring-io/platform/issues"&gt;Issues&lt;/a&gt; | &lt;a href="http://docs.spring.io/platform/docs/Athens-SR5/reference/htmlsingle"&gt;Documentation&lt;/a&gt;&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Spring Session 1.3.1 Released</title>
+    <link rel="alternate" href="https://spring.io/blog/2017/04/27/spring-session-1-3-1-released" />
+    <category term="releases" label="Releases" />
+    <author>
+      <name>Rob Winch</name>
+    </author>
+    <id>tag:spring.io,2017-04-27:2912</id>
+    <updated>2017-04-27T19:35:15Z</updated>
+    <content type="html">&lt;p&gt;On behalf of the community, I&amp;rsquo;m pleased to announce the release of Spring Session 1.3.1.RELEASE. &lt;a href="https://github.com/spring-projects/spring-session/milestone/21?closed=1"&gt;This release contains&lt;/a&gt; numerous bug fixes. A special thanks to &lt;a href="https://github.com/vpavic"&gt;Vedran Pavi?&lt;/a&gt; and &lt;a href="https://github.com/jxblum"&gt;John Blum&lt;/a&gt; for all their hard work!&lt;/p&gt;
+&lt;p&gt;Some of the highlights include:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href="https://github.com/spring-projects/spring-session/issues/756"&gt;#756&lt;/a&gt; - Usage of Spring Data Redis 1.7.1 which has critical bug&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://github.com/spring-projects/spring-session/issues/757"&gt;#757&lt;/a&gt; - Restore proper behavior of HttpSession created events in GemFire&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://github.com/spring-projects/spring-session/issues/755"&gt;#755&lt;/a&gt; - Improve GemFire SessionRepository, (HTTP) Session copy logic&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;a href="http://projects.spring.io/spring-session/"&gt;Project Site&lt;/a&gt; | &lt;a href="http://docs.spring.io/spring-session/docs/current/reference/html5/"&gt;Reference&lt;/a&gt; | &lt;a href="http://stackoverflow.com/questions/tagged/spring-session"&gt;Help&lt;/a&gt;&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Spring For Apache Kafka 2.0 Milestone 1 Available</title>
+    <link rel="alternate" href="https://spring.io/blog/2017/04/27/spring-for-apache-kafka-2-0-milestone-1-available" />
+    <category term="releases" label="Releases" />
+    <author>
+      <name>Gary Russell</name>
+    </author>
+    <id>tag:spring.io,2017-04-26:2911</id>
+    <updated>2017-04-27T18:11:00Z</updated>
+    <content type="html">&lt;div class="paragraph"&gt;
+&lt;p&gt;We are very pleased to announce the availability of the first milestone of the Spring for Apache Kafka 2.0 release &lt;a href="https://github.com/spring-projects/spring-kafka/milestone/13?closed=1"&gt;2.0.0.M1&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;Significant new features in the 2.0 line include:&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="ulist"&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Support for timestamps in the &lt;code&gt;KafkaTemplate&lt;/code&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Seek to beginning/end of topics.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;New threading model facilitated by &lt;a href="https://cwiki.apache.org/confluence/display/KAFKA/KIP-62%3A+Allow+consumer+to+send+heartbeats+from+a+background+thread"&gt;KIP-62&lt;/a&gt; - now that the consumer client does not rely on &lt;code&gt;poll()&lt;/code&gt; being called frequently, the threading model is much simpler; avoiding the need for internal &lt;code&gt;pause()&lt;/code&gt; / &lt;code&gt;resume()&lt;/code&gt; processing.
+Listeners are now always invoked on the consumer thread. This, in turn, has facilitated:&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;ConsumerAwareMessageListener&lt;/code&gt; (and &lt;code&gt;BatchConsumerAwareMessageListener&lt;/code&gt;) are provided so that listener implementations can access the &lt;code&gt;Consumer&amp;lt;?, ?&amp;gt;&lt;/code&gt; object to perform operations such as &lt;code&gt;pause()&lt;/code&gt;, &lt;code&gt;resume()&lt;/code&gt;, &lt;code&gt;metrics()&lt;/code&gt; etc.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;@KafkaListener&lt;/code&gt; POJO methods can now be annotated with &lt;code&gt;@SendTo&lt;/code&gt; to send the method result to some other topic.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="listingblock"&gt;
+&lt;div class="content"&gt;
+&lt;pre class="prettyprint highlight"&gt;&lt;code class="language-java" data-lang="java"&gt;@KafkaListener(id = "replyingListener", topics = "inTopic")
+@SendTo("replyTopic")
+public String replyingListener(String in) {
+	return in.toUpperCase();
+}&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;For more information, see &lt;a href="http://docs.spring.io/spring-kafka/docs/2.0.0.BUILD-SNAPSHOT/reference/html/_reference.html#annotation-send-to"&gt;Forwarding Listener Results using @SendTo&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="ulist"&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;@KafkaListener&lt;/code&gt; annotations now have an &lt;code&gt;errorHandler&lt;/code&gt; property, allowing a custom error handler to be configured for each. Previously, you had to use a different container factory for each.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;The embedded kafka server JUnit &lt;code&gt;@Rule&lt;/code&gt; in &lt;code&gt;spring-kafka-test&lt;/code&gt; can now be provided as a Spring Bean instead (and auto wired into your tests).
+For further simplification, the framework can auto-declare the bean for you; simply add &lt;code&gt;@EmbeddedKafka&lt;/code&gt; to your test class.
+See &lt;a href="http://docs.spring.io/spring-kafka/docs/2.0.0.BUILD-SNAPSHOT/reference/html/_reference.html#__embeddedkafka_annotation"&gt;@EmbeddedKafka Annotation&lt;/a&gt; for more information.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;In addition, the first 3.0 milestone of the Spring Integration Kafka extension is available (3.0.0.M1) based on this &lt;code&gt;spring-kafka&lt;/code&gt; milestone.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;The milestone releases for both projects are available in the &lt;a href="http://repo.spring.io/milestone/"&gt;Spring milestone repository&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;We very much appreciate the feedback (and contributions) received to-date.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="admonitionblock note"&gt;
+&lt;table&gt;
+&lt;tr&gt;
+&lt;td class="icon"&gt;
+&lt;div class="title"&gt;Note&lt;/div&gt;
+&lt;/td&gt;
+&lt;td class="content"&gt;
+Unfortunately, the spring-kafka pom has an incorrect transitive dependency on &lt;code&gt;spring-messaging-5.0.0.BUILD-SNAPSHOT&lt;/code&gt;. We don&amp;#8217;t recommend using milestones in production, but in order to provide a stable platform for testing, you should override this dependency to &lt;code&gt;5.0.0.M5&lt;/code&gt;.
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;General availability of the 2.0 release is expected to be in the early summer (shortly after the Spring Framework 5.0 release).
+Feedback, feature requests and, of course, contributions are welcomed via the usual channels:&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;&lt;a href="http://projects.spring.io/spring-kafka/"&gt;Project Page&lt;/a&gt; | &lt;a href="https://github.com/spring-projects/spring-kafka/issues"&gt;Issues&lt;/a&gt; | &lt;a href="https://github.com/spring-projects/spring-kafka/blob/master/CONTRIBUTING.adoc"&gt;Contributing&lt;/a&gt; | &lt;a href="http://stackoverflow.com/questions/tagged/spring-kafka"&gt;Help&lt;/a&gt; | &lt;a href="https://gitter.im/spring-projects/spring-kafka"&gt;Chat&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;</content>
+  </entry>
   <entry>
     <title>Spring Cloud Task 1.2.0.RELEASE is now available</title>
     <link rel="alternate" href="https://spring.io/blog/2017/04/25/spring-cloud-task-1-2-0-release-is-now-available" />
@@ -677,196 +854,5 @@ dependencies {&#xD;
     ...&#xD;
 }
 &lt;/code&gt;&lt;/pre&gt;</content>
-  </entry>
-  <entry>
-    <title>Spring Vault 1.0 goes GA</title>
-    <link rel="alternate" href="https://spring.io/blog/2017/04/12/spring-vault-1-0-goes-ga" />
-    <category term="releases" label="Releases" />
-    <author>
-      <name>Mark Paluch</name>
-    </author>
-    <id>tag:spring.io,2017-04-10:2893</id>
-    <updated>2017-04-12T12:11:00Z</updated>
-    <content type="html">&lt;p&gt;On behalf of the community, it&amp;rsquo;s my pleasure to announce the general availability of Spring Vault 1.0 – the very first GA release of Spring Vault after almost a year of development.&lt;/p&gt;
-&lt;p&gt;The artifacts are available from Maven Central and Bintray.&lt;/p&gt;
-&lt;pre&gt;&lt;code class="prettyprint xml"&gt;&amp;lt;dependency&amp;gt;&#xD;
-  &amp;lt;groupId&amp;gt;org.springframework.vault&amp;lt;/groupId&amp;gt;&#xD;
-  &amp;lt;artifactId&amp;gt;spring-vault-core&amp;lt;/artifactId&amp;gt;&#xD;
-  &amp;lt;version&amp;gt;1.0.0.RELEASE&amp;lt;/version&amp;gt;&#xD;
-&amp;lt;/dependency&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;The release ships more than 50 tickets fixed in total. Here’s a very truncated list of the most important features shipping with the release:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Pluggable application authentication via AppRole, AWS-EC2, client certificates, Cubbyhole (wrapped tokens) and static tokens.&lt;/li&gt;
-  &lt;li&gt;Support for renewable &lt;code&gt;@VaultPropertySource&lt;/code&gt; with credentials rotation.&lt;/li&gt;
-  &lt;li&gt;Lifecycle-aware session management with token renewal and re-login after terminal token expiry.&lt;/li&gt;
-  &lt;li&gt;Template API to interact with Vault directly.&lt;/li&gt;
-  &lt;li&gt;Compatibility with Vault 0.5 to 0.7.&lt;/li&gt;
-&lt;/ul&gt;&lt;h2&gt;&lt;a href="#contributions" class="anchor" name="contributions"&gt;&lt;/a&gt;Contributions&lt;/h2&gt;
-&lt;p&gt;Without the community, we couldn’t be the successful project we are today. I’d like to thank everyone that created issues &amp;amp; provided feedback.&lt;/p&gt;&lt;h2&gt;&lt;a href="#feedback-please" class="anchor" name="feedback-please"&gt;&lt;/a&gt;Feedback Please&lt;/h2&gt;
-&lt;p&gt;If you have feedback on this release, I encourage you to reach out via &lt;a href="http://stackoverflow.com/questions/tagged/spring-vault"&gt;StackOverflow&lt;/a&gt;, &lt;a href="https://github.com/spring-projects/spring-vault/issues"&gt;GitHub Issues&lt;/a&gt;, or via the comments section. You can also ping me &lt;a href="https://twitter.com/mp911de"&gt;@mp911&lt;/a&gt; or the &lt;a href="https://twitter.com/SpringCloud"&gt;@SpringCloud&lt;/a&gt; team on Twitter.&lt;/p&gt;&lt;h2&gt;&lt;a href="#next-steps" class="anchor" name="next-steps"&gt;&lt;/a&gt;Next Steps&lt;/h2&gt;
-&lt;p&gt;The upcoming Spring Cloud Vault Config 1.0 GA release will pick up Spring Vault GA and ship as part of the Spring Cloud Dalston release train.&lt;/p&gt;
-&lt;p&gt;Check out any of these links for more details:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href="http://projects.spring.io/spring-vault/"&gt;Spring Vault Project page&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="http://docs.spring.io/spring-vault/docs/1.0.0.RELEASE/reference/html/"&gt;Spring Vault Project documentation&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://github.com/mp911de/spring-cloud-vault-config-samples"&gt;Examples&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content>
-  </entry>
-  <entry>
-    <title>This Week in Spring - April 11th, 2017</title>
-    <link rel="alternate" href="https://spring.io/blog/2017/04/11/this-week-in-spring-april-11th-2017" />
-    <category term="engineering" label="Engineering" />
-    <author>
-      <name>Josh Long</name>
-    </author>
-    <id>tag:spring.io,2017-04-11:2894</id>
-    <updated>2017-04-11T18:36:00Z</updated>
-    <content type="html">&lt;p&gt;Welcome to another installation of &lt;em&gt;This Week in Spring&lt;/em&gt;!&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Spring Integration ninja Artem Bilan &lt;a href="https://spring.io/blog/2017/04/05/spring-integration-5-0-milestone-3-available"&gt;just announced Spring Integration 5.0.M3&lt;/a&gt;. The new release includes an integration test framework, speed improvements, support for the Spring 5 reactive &lt;code&gt;WebClient&lt;/code&gt;, retroactive restoration of file trees when using the (S)FTP and AWS S3 inbound adapters, a smarter SOAP web-services gateway, and much more.&lt;/li&gt;
-  &lt;li&gt;Spring Integration lead Gary Russell just announced &lt;a href="https://spring.io/blog/2017/04/07/spring-for-apache-kafka-1-2-0-and-1-1-4-available"&gt;Spring for Apache Kafka 1.2.0 and 1.1.4&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Andy Wilkinson just debuted a look at &lt;a href="https://spring.io/blog/2017/04/05/spring-boot-s-new-gradle-plugin"&gt;the new Gradle Spring Boot 2.0 plugin&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;in last week&amp;rsquo;s &lt;em&gt;Spring Tips&lt;/em&gt; I looked at &lt;a href="https://spring.io/blog/2017/04/05/spring-tips-creating-a-spring-security-oauth-auth-service"&gt;how to standup a Spring Cloud Security-powered OAuth auth service&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://spring.io/blog/2017/04/04/spring-amqp-2-0-0-milestone-3-is-available"&gt;Spring AMQP lead Gary Russell just announced Spring AMQP 2.0.0M3&lt;/a&gt;, &lt;em&gt;packed&lt;/em&gt; with new features supporting testing, smarter handling for &lt;code&gt;null&lt;/code&gt; messages, and so much more.&lt;/li&gt;
-  &lt;li&gt;Are you going to be at not-to-miss OSCON event in Austin, TX? &lt;a href="https://spring.io/blog/2017/04/03/spring-team-and-pivotal-at-oscon-austin-2017"&gt;We&amp;rsquo;d love to see you&lt;/a&gt;! I&amp;rsquo;ll be there, too!&lt;/li&gt;
-  &lt;li&gt;I enjoyed revisting this &lt;a href="https://www.youtube.com/watch?v=Uiqb8q02ZSw"&gt;video from the Cloud Foundry launch event&lt;/a&gt;. My memory is hazy, but that event - I think - was April 11th, and uploaded on April 12th. Either way, happy birthday Cloud Foundry! You&amp;rsquo;ve changed the world with style.&lt;/li&gt;
-  &lt;li&gt;Jared Ruckle has a great look all &lt;a href="https://content.pivotal.io/blog/always-be-shipping-with-pivotal-cloud-foundry-1-10-go-fast-go-secure-and-go-net"&gt;the new features in PCF 1.10&lt;/a&gt; - check it out!&lt;/li&gt;
-  &lt;li&gt;if you want to learn more about our thinking about taking Cloud Foundry to market, you&amp;rsquo;ll love this a16z podcast with one of Pivotal&amp;rsquo;s visionaries, &lt;a href="http://a16z.com/2017/04/10/monetizing-open-source-enterprise-software/"&gt;James Watters&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;I liked this quick look &lt;a href="https://dzone.com/articles/spring-data-jpa-with-an-embedded-database-and-spring-boot"&gt;by Gaurav Rai Mazra at using Spring Data JPA with an embedded database&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Andreas Falk has a nice article on &lt;a href="http://www.novatec-gmbh.de/aktuelles/news/detailansicht-nachrichten/veroeffentlichung-von-andreas-falk-im-java-magazin-52017-sicher-in-die-cloud-mit-angular-2-und-spring/"&gt;securing Spring and Angular.js applications&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;the Baeldung site has done yet another very interesting look at &lt;a href="http://www.baeldung.com/java-in-2017"&gt;the trends in Java, pointing again to the continued growth of Spring Boot and Java 8&lt;/a&gt; - good news!&lt;/li&gt;
-  &lt;li&gt;just a friendly reminder, Alibaba uses Spring throughout &lt;a href="https://twitter.com/linux_china/status/851261770010210305"&gt;and AliExpress, which serves 100+ million uses, is using Spring Boot and Spring Cloud&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;I hope you&amp;rsquo;ll join me and &lt;a href="https://voxxeddays.com/singapore/"&gt;many others at Voxxed Days Singapore&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Alex Falappa? hints at some of the &lt;a href="https://twitter.com/aless_falappa/status/850771695656980480"&gt;very cool new support for Apache NetBeans&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Stefan Rempfer put together a nice example &lt;a href="https://github.com/srempfer/spring-cloud-vaadin-proxy-sample"&gt;of using Spring Cloud Zuul with Vaadin&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;I &lt;em&gt;love&lt;/em&gt; this blog by Robert Kapala on &lt;a href="https://blog.gft.com/blog/2017/04/07/migrating-to-spring-boot-in-an-investment-bank"&gt;how they migrated their investment bank to Spring Boot&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Jonas Hecht put together a nice post on running &lt;a href="https://blog.codecentric.de/en/2017/04/ansible-docker-windows-containers-spring-boot/"&gt;Spring Boot applications on Windows using Ansible&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content>
-  </entry>
-  <entry>
-    <title>Spring For Apache Kafka 1.2.0 and 1.1.4 Available</title>
-    <link rel="alternate" href="https://spring.io/blog/2017/04/07/spring-for-apache-kafka-1-2-0-and-1-1-4-available" />
-    <category term="releases" label="Releases" />
-    <author>
-      <name>Gary Russell</name>
-    </author>
-    <id>tag:spring.io,2017-04-07:2892</id>
-    <updated>2017-04-07T15:41:27Z</updated>
-    <content type="html">&lt;div class="paragraph"&gt;
-&lt;p&gt;We are pleased to announce that these maintenance releases of Spring for Apache Kafka are now available, 1.2.0.RELEASE and 1.1.4.RELEASE.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;These versions include several bug fixes and improvements, as well as introduce support for &lt;a href="http://docs.spring.io/spring-kafka/docs/1.2.0.RELEASE/reference/htmlsingle/#kafka-streams"&gt;KStreams&lt;/a&gt;.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;They are functionally equivalent; the 1.2.0.RELEASE is based on the 0.10.2.0 &lt;code&gt;kafka-clients&lt;/code&gt; jar and 1.1.4.RELEASE can be used with 0.10.0.x and 0.10.1.x.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;While 1.1.4.RELEASE will work at runtime with a 0.10.2.x client library, some breaking changes in the embedded kafka API means that the embedded kafka Junit &lt;code&gt;@Rule&lt;/code&gt; in &lt;code&gt;spring-kafka-test&lt;/code&gt; will not work and 1.2.0.RELEASE is required for that.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;&lt;a href="http://projects.spring.io/spring-kafka/"&gt;Project Page&lt;/a&gt; | &lt;a href="https://github.com/spring-projects/spring-kafka/issues"&gt;Issues&lt;/a&gt; | &lt;a href="https://github.com/spring-projects/spring-kafka/blob/master/CONTRIBUTING.adoc"&gt;Contributing&lt;/a&gt; | &lt;a href="http://stackoverflow.com/questions/tagged/spring-kafka"&gt;Help&lt;/a&gt; | &lt;a href="https://gitter.im/spring-projects/spring-kafka"&gt;Chat&lt;/a&gt;&lt;/p&gt;
-&lt;/div&gt;</content>
-  </entry>
-  <entry>
-    <title>Spring Integration 5.0 Milestone 3 Available</title>
-    <link rel="alternate" href="https://spring.io/blog/2017/04/05/spring-integration-5-0-milestone-3-available" />
-    <category term="releases" label="Releases" />
-    <author>
-      <name>Artem Bilan</name>
-    </author>
-    <id>tag:spring.io,2017-04-05:2891</id>
-    <updated>2017-04-05T20:27:53Z</updated>
-    <content type="html">&lt;div class="paragraph"&gt;
-&lt;p&gt;The Spring Integration team is pleased to announce that the third milestone for the Spring Integration 5.0 release (&lt;code&gt;5.0.0.M3&lt;/code&gt;) is now available.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;&lt;a href="https://jira.spring.io/jira/secure/ReleaseNote.jspa?projectId=10121&amp;amp;version=15860"&gt;53 JIRAs&lt;/a&gt; (and some GitHub issues) made into this release, including bug fixes and a number of new features.
-Some highlights since the previous &lt;a href="https://spring.io/blog/2017/01/05/spring-integration-5-0-milestone-2-available"&gt;Milestone 2&lt;/a&gt;:&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="ulist"&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;Initial implementation for a Spring Integration Testing Framework - the &lt;code&gt;@SpringIntegrationTest&lt;/code&gt; annotation for test classes and &lt;code&gt;MockIntegration&lt;/code&gt; factory help you to write unit tests for integration flows and channel adapters.
-We intend to flush out this capability with more features before GA, including more mocking, verifications and some &lt;code&gt;send-and-receive&lt;/code&gt; utilities to test components in isolation.
-Feedback is welcome!&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;POJO handler method invocations (&lt;code&gt;@ServiceActivator&lt;/code&gt;, &lt;code&gt;@Transformer&lt;/code&gt; etc., or such methods invoked from XML definitions) now use &lt;code&gt;InvocableHandlerMethod&lt;/code&gt; by default.
-Together with the &lt;code&gt;ConfigurableCompositeMessageConverter&lt;/code&gt; and &lt;code&gt;@Default&lt;/code&gt; utilities that allows us to implement conditional method invocation scenarios based on the Content-Type and target method arguments resolution.
-To restore the previous SpEL-based behavior, the &lt;code&gt;@UseSpelInvoker&lt;/code&gt; method-level annotation is provided.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;A based on the WebFlux &lt;code&gt;WebClient&lt;/code&gt; &lt;code&gt;ReactiveHttpRequestExecutingMessageHandler&lt;/code&gt; implementation is provided.
-Together with a &lt;code&gt;ReactiveChannel&lt;/code&gt; as an &lt;code&gt;outputChannel&lt;/code&gt; options it provides backpressure manner for remote HTTP service consumption.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;The (S)FTP (and AWS S3) Inbound Channel Adapters can now restore file tree locally.
-For that purpose a new, &lt;code&gt;Files.walk()&lt;/code&gt; based, &lt;code&gt;RecursiveDirectoryScanner&lt;/code&gt; is introduced.
-The &lt;code&gt;useWatchService&lt;/code&gt; option is also provided.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Web Services Gateways now can exchange &lt;code&gt;WebServiceMessage&lt;/code&gt; s directly as the inbound/outbound &lt;code&gt;payload&lt;/code&gt;.
-This allows the support of MTOM via direct access to &lt;code&gt;WebServiceMessage&lt;/code&gt; properties.
-The &lt;code&gt;UnmarshallingTransformer&lt;/code&gt; can now process a &lt;code&gt;MimeMessage&lt;/code&gt; as the payload to unmarshal it into an object graph with attachments.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;The reply producing &lt;code&gt;MessageHandler&lt;/code&gt; now has a fallback to the &lt;code&gt;replyChannel&lt;/code&gt; header from the reply message, if there is no &lt;code&gt;outputChannel&lt;/code&gt; or &lt;code&gt;replyChannel&lt;/code&gt; in the request message headers.
-This allows the implementation of business process-like scenarios when the next step is determined by the result of current calculations.&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;We would like to thank several community members for their ongoing active contributions to the framework; scan &lt;a href="https://github.com/spring-projects/spring-integration/commits/v5.0.0.M3"&gt;the commits&lt;/a&gt; and give them some kudos!&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;We are working towards the M4 release in time for the Spring Boot 2.0 milestone; with the GA in early summer; shortly after the Spring Framework 5.0 release.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;For a complete list of changes in &lt;code&gt;5.0&lt;/code&gt;, also see the &lt;a href="http://docs.spring.io/spring-integration/docs/5.0.0.M3/reference/html/whats-new.html"&gt;What&amp;#8217;s New&lt;/a&gt; chapter in the reference manual.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;&lt;a href="http://projects.spring.io/spring-integration/"&gt;Project Page&lt;/a&gt; | &lt;a href="https://jira.spring.io/browse/INT"&gt;JIRA&lt;/a&gt; | &lt;a href="https://github.com/spring-projects/spring-integration/blob/master/CONTRIBUTING.adoc"&gt;Contributing&lt;/a&gt; | &lt;a href="http://stackoverflow.com/questions/tagged/spring-integration"&gt;Help&lt;/a&gt; | &lt;a href="https://gitter.im/spring-projects/spring-integration"&gt;Chat&lt;/a&gt;&lt;/p&gt;
-&lt;/div&gt;</content>
-  </entry>
-  <entry>
-    <title>Spring Boot's new Gradle plugin</title>
-    <link rel="alternate" href="https://spring.io/blog/2017/04/05/spring-boot-s-new-gradle-plugin" />
-    <category term="engineering" label="Engineering" />
-    <author>
-      <name>Andy Wilkinson</name>
-    </author>
-    <id>tag:spring.io,2017-04-03:2887</id>
-    <updated>2017-04-05T08:57:00Z</updated>
-    <content type="html">&lt;p&gt;One of the main themes of Spring Boot 2.0 M1 is a &lt;a href="https://github.com/spring-projects/spring-boot/issues?utf8=?&amp;q=label%3A%22theme%3A%20gradle-plugin%22%20milestone%3A2.0.0.M1%20"&gt;range of significant improvements to its Gradle plugin&lt;/a&gt;. Many of those improvements have just been merged and are available in the latest Spring Boot snapshots. There&amp;rsquo;s a few weeks until Spring Boot 2.0.0.M1 will be released at the beginning of May and we&amp;rsquo;d love to hear your early feedback on the new plugin before then.&lt;/p&gt;
-&lt;p&gt;You can read more about the plugin&amp;rsquo;s capabilities in its &lt;a href="https://docs.spring.io/spring-boot/docs/2.0.0.BUILD-SNAPSHOT/gradle-plugin/reference"&gt;reference&lt;/a&gt; and &lt;a href="https://docs.spring.io/spring-boot/docs/2.0.0.BUILD-SNAPSHOT/gradle-plugin/api"&gt;API&lt;/a&gt; documentation.&lt;/p&gt;&lt;h2&gt;&lt;a href="#trying-the-new-plugin" class="anchor" name="trying-the-new-plugin"&gt;&lt;/a&gt;Trying the new plugin&lt;/h2&gt;
-&lt;p&gt;The new plugin requires Gradle 3.4 or later. Like the rest of Spring Boot, snapshots are published to &lt;a href="https://repo.spring.io/libs-snapshot"&gt;https://repo.spring.io/libs-snapshot&lt;/a&gt;. The easiest way to use a snapshot is to &lt;a href="https://start.spring.io/#!type=gradle-project"&gt;create a new Gradle project on start.spring.io&lt;/a&gt; and select Spring Boot 2.0 snapshots.&lt;/p&gt;
-&lt;p&gt;Alternatively, your &lt;code&gt;build.gradle&lt;/code&gt; should look something like this:&lt;/p&gt;
-&lt;pre&gt;&lt;code class="prettyprint groovy"&gt;buildscript {&#xD;
-    ext {&#xD;
-        springBootVersion = &amp;#39;2.0.0.BUILD-SNAPSHOT&amp;#39;&#xD;
-    }&#xD;
-    repositories {&#xD;
-        mavenCentral()&#xD;
-        maven { url &amp;#39;https://repo.spring.io/libs-snapshot&amp;#39; }&#xD;
-    }&#xD;
-    dependencies {&#xD;
-        classpath &amp;quot;org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}&amp;quot;&#xD;
-    }&#xD;
-}&#xD;
-&#xD;
-apply plugin: &amp;#39;java&amp;#39;&#xD;
-apply plugin: &amp;#39;org.springframework.boot&amp;#39;&#xD;
-apply plugin: &amp;#39;io.spring.dependency-management&amp;#39;
-&lt;/code&gt;&lt;/pre&gt;&lt;h3&gt;&lt;a href="#building-executable-jars-and-wars" class="anchor" name="building-executable-jars-and-wars"&gt;&lt;/a&gt;Building executable jars and wars&lt;/h3&gt;
-&lt;p&gt;The &lt;code&gt;bootRepackage&lt;/code&gt; task has been replaced with &lt;code&gt;bootJar&lt;/code&gt; and &lt;code&gt;bootWar&lt;/code&gt; tasks for building executable jars and wars respectively. Both tasks extend their equivalent standard Gradle jar or war task, giving you access to all of the usual configuration options and behaviour.&lt;/p&gt;&lt;h3&gt;&lt;a href="#dependency-management" class="anchor" name="dependency-management"&gt;&lt;/a&gt;Dependency management&lt;/h3&gt;
-&lt;p&gt;Spring Boot&amp;rsquo;s Gradle plugin no longer automatically applies the &lt;a href="https://github.com/spring-gradle-plugins/dependency-management-plugin"&gt;dependency management plugin&lt;/a&gt;. Instead, Spring Boot&amp;rsquo;s plugin now reacts to the dependency management plugin being applied by importing the correct version of the &lt;code&gt;spring-boot-dependencies&lt;/code&gt; bom. This gives you more control over how and when dependency management is configured. For most applications applying the dependency management plugin will be sufficient:&lt;/p&gt;
-&lt;pre&gt;&lt;code class="prettyprint"&gt;apply plugin: &amp;#39;io.spring.dependency-management&amp;#39;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Please note that the dependency management plugin remains a transitive dependency of &lt;code&gt;spring-boot-gradle-plugin&lt;/code&gt; so there&amp;rsquo;s no need for it to be listed as a &lt;code&gt;classpath&lt;/code&gt; dependency in your &lt;code&gt;buildscript&lt;/code&gt; configuration&lt;/p&gt;&lt;h2&gt;&lt;a href="#providing-feedback" class="anchor" name="providing-feedback"&gt;&lt;/a&gt;Providing feedback&lt;/h2&gt;
-&lt;p&gt;As I said above, there&amp;rsquo;s a few weeks until Spring Boot 2.0.0.M1 is released so now&amp;rsquo;s an excellent opportunity to take the new plugin for a spin and then please let us know what you think.&lt;/p&gt;
-&lt;p&gt;The plugin is still a work in progress. Many things that were not possible with the previous version are made possible by the new version. Also, a few things that were previously possible may no longer be possible, or may require a different approach. In particular, the plugin&amp;rsquo;s DSL has been deliberately stripped back to only cover functionality that we&amp;rsquo;re certain we want.&lt;/p&gt;
-&lt;p&gt;If you&amp;rsquo;d like to discuss the new capabilities please do so in the comments below or &lt;a href="https://gitter.im/spring-projects/spring-boot"&gt;on Gitter&lt;/a&gt;. If you find a bug or have an idea for some further improvements then please &lt;a href="https://github.com/spring-projects/spring-boot/issues/new"&gt;open an issue on GitHub&lt;/a&gt;.&lt;/p&gt;</content>
   </entry>
 </feed>

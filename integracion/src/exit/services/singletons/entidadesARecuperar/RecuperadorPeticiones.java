@@ -9,27 +9,27 @@ import java.util.Properties;
 
 import exit.services.fileHandler.ConstantesGenerales;
 import exit.services.fileHandler.DirectorioManager;
+import exit.services.principal.peticiones.EPeticiones;
 import exit.services.singletons.RecuperadorPropiedadesConfiguracionGenerales;
 
 
-public class RecuperadorPeticiones {
+public class RecuperadorPeticiones implements IPeticiones{
 	HashMap<String, Peticion> mapPeticiones;
 	private static RecuperadorPeticiones instance;
-	private Peticion get;
-	private Peticion post;
-	private Peticion update;
-	private Peticion delete;
+	HashMap<EPeticiones, Peticion> peticion;
+
     private RecuperadorPeticiones(){
         Properties props = new Properties();
         try{
+        	peticion= new HashMap<EPeticiones, Peticion>();
     		props.load(new FileReader(ConstantesGenerales.PATH_PETICIONES_GET));
-    		get=new Peticion(props.getProperty("metodo"), Integer.parseInt(props.getProperty("codigoResponseEsperado")), props.getProperty("cabecera"));
+    		peticion.put(EPeticiones.GET, new Peticion(props.getProperty("metodo"), Integer.parseInt(props.getProperty("codigoResponseEsperado")), props.getProperty("cabecera")));
     		props.load(new FileReader(ConstantesGenerales.PATH_PETICIONES_POST));
-    		post=new Peticion(props.getProperty("metodo"), Integer.parseInt(props.getProperty("codigoResponseEsperado")), props.getProperty("cabecera"));
+    		peticion.put(EPeticiones.POST, new Peticion(props.getProperty("metodo"), Integer.parseInt(props.getProperty("codigoResponseEsperado")), props.getProperty("cabecera")));
     		props.load(new FileReader(ConstantesGenerales.PATH_PETICIONES_UPDATE));
-    		update=new Peticion(props.getProperty("metodo"), Integer.parseInt(props.getProperty("codigoResponseEsperado")), props.getProperty("cabecera"));
+    		peticion.put(EPeticiones.UPDATE, new Peticion(props.getProperty("metodo"), Integer.parseInt(props.getProperty("codigoResponseEsperado")), props.getProperty("cabecera")));
     		props.load(new FileReader(ConstantesGenerales.PATH_PETICIONES_DELETE));
-    		delete=new Peticion(props.getProperty("metodo"), Integer.parseInt(props.getProperty("codigoResponseEsperado")), props.getProperty("cabecera"));
+    		peticion.put(EPeticiones.DELETE, new Peticion(props.getProperty("metodo"), Integer.parseInt(props.getProperty("codigoResponseEsperado")), props.getProperty("cabecera")));
         }
         catch(Exception e){
         	e.printStackTrace();
@@ -45,28 +45,15 @@ public class RecuperadorPeticiones {
     	instance=null;
     }
 
-	public synchronized static RecuperadorPeticiones getInstance() {
+	public synchronized static IPeticiones getInstance() {
     	if(instance==null)
     		instance=new RecuperadorPeticiones();
     	return instance;	}
 
 
-	public Peticion getGet() {
-		return get;
+	public Peticion getPeticion(EPeticiones ePeticion){
+		return peticion.get(ePeticion);
 	}
-
-	public Peticion getPost() {
-		return post;
-	}
-
-	public Peticion getUpdate() {
-		return update;
-	}
-
-	public Peticion getDelete() {
-		return delete;
-	}
-
     
     
     

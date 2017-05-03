@@ -1,0 +1,32 @@
+1493317215818	Rename type 'RecuperadorPropiedadedConfiguracionEntidad'
+1493317267257	Rename type 'RecuperadorPropiedadesConfiguracionEntidad'
+1493319470827	Rename type 'RecuperadorPropiedadedConfiguracionEntidadActual'
+1493321421478	Delete element
+1493321566883	Delete element
+1493321576530	Move compilation unit
+1493321729142	Delete element
+1493321795204	Move compilation unit
+1493321797689	Delete element
+1493322050642	Delete elements
+1493322923468	Delete element
+1493322924371	Delete element
+1493322925915	Delete element
+1493323976101	Delete element
+1493385931111	Copy folder
+1493385975984	Copy file
+1493385978540	Move folder
+1493386222144	Rename field 'mapEntidades'
+1493386348811	Delete element
+1493386693132	Delete element
+1493386696661	Copy file
+1493386742852	Copy folder
+1493386746633	Copy folder
+1493386757678	Rename resource 'prudcto'
+1493387826897	Rename type 'GetVTEXAbstract'
+1493387849419	Rename type 'GetVTEXMasterData'
+1493387857427	Rename type 'GetVTEXOMS'
+1493389723986	Delete element
+1493389725582	Delete element
+1493390126301	Rename package 'exit.services.json'
+1493390240165	Rename package 'exit.services.csvAJson'
+1493390249612	Rename package 'exit.services.jsonAJson'

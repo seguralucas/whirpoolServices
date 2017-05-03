@@ -6,11 +6,11 @@ import java.io.File;
 import java.io.FileWriter;
 import java.io.PrintWriter;
 
+import exit.services.convertidos.csvAJson.JSONHandler;
 import exit.services.fileHandler.CSVHandler;
 import exit.services.fileHandler.ConstantesGenerales;
 import exit.services.fileHandler.DirectorioManager;
-import exit.services.json.JSONHandler;
-import exit.services.singletons.RecuperadorPropiedadedConfiguracionEntidad;
+import exit.services.singletons.RecEntAct;
 
 public class UpdateGenericoRightNow extends AbstractHTTP{
 
@@ -20,7 +20,7 @@ public class UpdateGenericoRightNow extends AbstractHTTP{
 			throws Exception {
 		CSVHandler csv= new CSVHandler();
 	    File fichero = DirectorioManager.getDirectorioFechaYHoraInicio(CSVHandler.PATH_UPDATES_OK);
-        csv.escribirCSV(fichero, id+RecuperadorPropiedadedConfiguracionEntidad.getInstance().getSeparadorCSV()+json.getLine(), "ID"+RecuperadorPropiedadedConfiguracionEntidad.getInstance().getSeparadorCSV()+CSVHandler.cabeceraFichero,true);        
+        csv.escribirCSV(fichero, id+RecEntAct.getInstance().getCep().getSeparadorCSV()+json.getLine(), "ID"+RecEntAct.getInstance().getCep().getSeparadorCSV()+CSVHandler.cabeceraFichero,true);        
         return null;		
 	}
 

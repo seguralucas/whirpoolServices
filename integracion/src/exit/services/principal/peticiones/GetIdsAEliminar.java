@@ -15,12 +15,13 @@ import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 
+import exit.services.convertidos.csvAJson.JSONHandler;
 import exit.services.fileHandler.CSVHandler;
 import exit.services.fileHandler.DirectorioManager;
-import exit.services.json.JSONHandler;
 import exit.services.fileHandler.ConstantesGenerales;
 import exit.services.singletons.ApuntadorDeEntidad;
-import exit.services.singletons.RecuperadorPropiedadedConfiguracionEntidad;
+import exit.services.singletons.RecEntAct;
+import exit.services.util.ConvertidorJson;
 
 public class GetIdsAEliminar extends AbstractHTTP{
 
@@ -42,7 +43,7 @@ public class GetIdsAEliminar extends AbstractHTTP{
 		JSONArray jsonArrayItems= (JSONArray) jsonObject.get(("items"));
 		EliminarGenerico e= new EliminarGenerico();
 		Integer resultado=jsonArrayItems.size();
-		ExecutorService workers = Executors.newFixedThreadPool(RecuperadorPropiedadedConfiguracionEntidad.getInstance().getNivelParalelismo());      	
+		ExecutorService workers = Executors.newFixedThreadPool(RecEntAct.getInstance().getCep().getNivelParalelismo());      	
 	    List<Callable<Void>> tasks = new ArrayList<>();
 		for(int i=0;i<jsonArrayItems.size();i++){
 			final Integer j=i;
@@ -51,7 +52,7 @@ public class GetIdsAEliminar extends AbstractHTTP{
     		JSONObject jsonItem;
 			jsonItem=(JSONObject)jsonArrayItems.get(j);
 			Long id=(Long)jsonItem.get("id");
-			e.realizarPeticion(EPeticiones.DELETE, String.valueOf(id));
+			e.realizarPeticion(EPeticiones.DELETE, String.valueOf(id),RecEntAct.getInstance().getCep().getCabecera());
 			return null;
 		        }
 			});

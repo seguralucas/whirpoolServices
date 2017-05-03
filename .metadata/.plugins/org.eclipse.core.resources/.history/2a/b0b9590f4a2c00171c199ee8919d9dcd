@@ -1,0 +1,14 @@
+{ 
+    "emails":[{"address":"#clientProfileData.email#", "addressType":{"id":0}}],
+	"name": {
+	        "first": "#clientProfileData.firstName#",
+	        "last": "#clientProfileData.lastName#"
+    	},
+    "customFields": {
+        "Whirlpool": {
+            "numero_documento": "34767349",
+            "tipo_documento": "dni"
+        }
+    }
+
+}

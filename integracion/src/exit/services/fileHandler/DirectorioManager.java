@@ -11,8 +11,10 @@ import java.nio.file.Paths;
 
 import exit.services.singletons.AlmacenadorFechaYHora;
 import exit.services.singletons.ApuntadorDeEntidad;
+import exit.services.singletons.ApuntadorSubEntidad;
+import exit.services.singletons.ConfiguracionEntidadParticular;
 import exit.services.singletons.EOutputs;
-import exit.services.singletons.RecuperadorPropiedadedConfiguracionEntidad;
+import exit.services.singletons.RecEntAct;
 
 public class DirectorioManager {
 	
@@ -32,7 +34,7 @@ public class DirectorioManager {
 			    			}
 			    			else{
 				    			csv.escribirCSV(DirectorioManager.getDirectorioFechaYHoraInicioDivision(NOMBRE_TEMP+i+".csv"),line,true);
-			    				if(i>=RecuperadorPropiedadedConfiguracionEntidad.getInstance().getNivelParalelismo()-1)
+			    				if(i>=RecEntAct.getInstance().getCep().getNivelParalelismo()-1)
 			    					i=0;
 			    				else
 			    					i++;
@@ -48,29 +50,45 @@ public class DirectorioManager {
 	}
 	
 
-	private static String getEntidadFecha(){
-		String outputPath=RecuperadorPropiedadedConfiguracionEntidad.getInstance().getOutPutPath();
-		if(RecuperadorPropiedadedConfiguracionEntidad.getInstance().getOutput()!=EOutputs.DIRECTORIO)
+	private static String getEntidadFecha(ConfiguracionEntidadParticular conf){
+		String outputPath=RecEntAct.getInstance().getCep().getOutPutPath();
+		if(RecEntAct.getInstance().getCep().getOutput()!=EOutputs.DIRECTORIO)
 			outputPath=ConstantesGenerales.PATH_EJECUCION;
-		return outputPath+"/"+ApuntadorDeEntidad.getInstance().getEntidadActual()+"/"+AlmacenadorFechaYHora.getFechaYHoraInicio();
+		return outputPath+"/"+conf.getEntidadNombre()+"/"+AlmacenadorFechaYHora.getFechaYHoraInicio();
 	}
+
+	
+	public static File getDirectorioFechaYHoraInicio(ConfiguracionEntidadParticular conf, String nombreFichero) throws IOException{
+		File file = new File(getEntidadFecha(conf));
+		if(!file.exists())
+			Files.createDirectories(Paths.get(getEntidadFecha(conf)));
+		return new File(getEntidadFecha(conf)+"/"+nombreFichero);
+	}
+	
 	public static File getDirectorioFechaYHoraInicio(String nombreFichero) throws IOException{
-		File file = new File(getEntidadFecha());
+		File file = new File(getEntidadFecha(RecEntAct.getInstance().getCep()));
 		if(!file.exists())
-			Files.createDirectories(Paths.get(getEntidadFecha()));
-		return new File(getEntidadFecha()+"/"+nombreFichero);
+			Files.createDirectories(Paths.get(getEntidadFecha(RecEntAct.getInstance().getCep())));
+		return new File(getEntidadFecha(RecEntAct.getInstance().getCep())+"/"+nombreFichero);
 	}
+	
 	public static String getPathFechaYHoraInicioDivision() throws IOException{
-		File file = new File(getEntidadFecha());
+		return getPathFechaYHoraInicioDivision(RecEntAct.getInstance().getCep());
+	}
+	public static String getPathFechaYHoraInicioDivision(ConfiguracionEntidadParticular conf) throws IOException{
+		File file = new File(getEntidadFecha(conf));
 		if(!file.exists())
-			Files.createDirectories(Paths.get(getEntidadFecha()));
-		file = new File(getEntidadFecha()+"/division");
+			Files.createDirectories(Paths.get(getEntidadFecha(conf)));
+		file = new File(getEntidadFecha(conf)+"/division");
 		if(!file.exists())
-			Files.createDirectories(Paths.get(getEntidadFecha()+"/division"));
-		return getEntidadFecha()+"/division";
+			Files.createDirectories(Paths.get(getEntidadFecha(conf)+"/division"));
+		return getEntidadFecha(conf)+"/division";
 	}
 	private static File getDirectorioFechaYHoraInicioDivision(String nombreFichero) throws IOException{
-		return new File(getPathFechaYHoraInicioDivision()+"/"+nombreFichero);
+		return new File(getPathFechaYHoraInicioDivision(RecEntAct.getInstance().getCep())+"/"+nombreFichero);
+	}
+	private static File getDirectorioFechaYHoraInicioDivision(String nombreFichero, ConfiguracionEntidadParticular conf) throws IOException{
+		return new File(getPathFechaYHoraInicioDivision(conf)+"/"+nombreFichero);
 	}
 	
 	/*	public static void SepararFicherosSinSacsRepetidos(File archivo) throws IOException{

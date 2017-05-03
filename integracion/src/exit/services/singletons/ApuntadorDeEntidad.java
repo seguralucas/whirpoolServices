@@ -1,6 +1,6 @@
 package exit.services.singletons;
 
-
+import java.util.HashMap;
 
 public class ApuntadorDeEntidad {
 	private String[] entidades;
@@ -8,8 +8,11 @@ public class ApuntadorDeEntidad {
 	private static ApuntadorDeEntidad instance;
 	private ApuntadorDeEntidad(){
 		entidades= RecuperadorPropiedadesConfiguracionGenerales.getInstance().getEntidadesAIntegrar().split(",");
-		puntero=-1;
+		puntero=-1;		
 	}
+	
+
+	
     public static synchronized ApuntadorDeEntidad getInstance() {
     	if(instance==null)
     		instance=new ApuntadorDeEntidad();
@@ -31,17 +34,17 @@ public class ApuntadorDeEntidad {
     	if((puntero+1)>=entidades.length)
     		return false;
     	puntero++;
-    	RecuperadorPropiedadedConfiguracionEntidad.getInstance().reiniciar();
-    	switch(RecuperadorPropiedadedConfiguracionEntidad.getInstance().getAction().toUpperCase()){
-		case RecuperadorPropiedadedConfiguracionEntidad.ACCION_CSVASERVICIO:
-			RecuperadorFormato.getInstancia().reiniciar();
-	    	RecuperadorPropierdadesJson.getInstancia().reiniciar();
-	    	AlmacenadorFechaYHora.reiniciar();
-	    	;break;
-		case RecuperadorPropiedadedConfiguracionEntidad.ACCION_SERVICIOAACSV:
-			RecuperadorMapeoCsv.getInstancia().reiniciar();
-			RecuperadorEspecificacionesCSV.getInstancia().reiniciar();
-			break;
+    	RecEntAct.getInstance().reiniciar();
+    	switch(RecEntAct.getInstance().getCep().getAction().toUpperCase()){
+		case ConfiguracionEntidadParticular.ACCION_CSVASERVICIO:
+				AlmacenadorFechaYHora.reiniciar();
+	    	break;
+		case ConfiguracionEntidadParticular.ACCION_SERVICIOAACSV:
+			AlmacenadorFechaYHora.reiniciar();
+		break;
+		case ConfiguracionEntidadParticular.ACCION_SERVICIOASERVICIO:
+			AlmacenadorFechaYHora.reiniciar();
+		break;
 	}    	
     	return true;
     	

@@ -1,0 +1,18 @@
+""
+wrg-v800070256carg-01 de la entidad contactoCompraProducto
+FileName: GetVTEXOMSServicioAServicio.java Metodo: procesarPeticionOKClase exit.services.principal.peticiones.vtex.GetVTEXOMSServicioAServicio Linea 42
+FileName: AbstractHTTP.java Metodo: realizarPeticionClase exit.services.principal.peticiones.AbstractHTTP Linea 82
+FileName: AbstractHTTP.java Metodo: realizarPeticionClase exit.services.principal.peticiones.AbstractHTTP Linea 53
+FileName: GetVTEXOMSServicioAServicio.java Metodo: procesarPeticionOKClase exit.services.principal.peticiones.vtex.GetVTEXOMSServicioAServicio Linea 66
+FileName: AbstractHTTP.java Metodo: realizarPeticionClase exit.services.principal.peticiones.AbstractHTTP Linea 88
+FileName: AbstractHTTP.java Metodo: realizarPeticionClase exit.services.principal.peticiones.AbstractHTTP Linea 39
+FileName: Ejecutor.java Metodo: ejecutorServicioAServicioVTEXOMSClase exit.services.principal.Ejecutor Linea 155
+FileName: null Metodo: invoke0Clase sun.reflect.NativeMethodAccessorImpl Linea -2
+FileName: null Metodo: invokeClase sun.reflect.NativeMethodAccessorImpl Linea -1
+FileName: null Metodo: invokeClase sun.reflect.DelegatingMethodAccessorImpl Linea -1
+FileName: null Metodo: invokeClase java.lang.reflect.Method Linea -1
+FileName: Ejecutor.java Metodo: ejecutarClase exit.services.principal.Ejecutor Linea 189
+FileName: Ejecutor.java Metodo: ejecutarClase exit.services.principal.Ejecutor Linea 175
+FileName: Principal.java Metodo: servicioAServicioClase exit.services.principal.Principal Linea 116
+FileName: Principal.java Metodo: mainClase exit.services.principal.Principal Linea 41
+---------------------------------------------------------------------
