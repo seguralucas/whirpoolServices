@@ -14,7 +14,7 @@ import java.util.concurrent.Executors;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 
-import exit.services.convertidos.csvAJson.JSONHandler;
+import exit.services.convertidos.csvAJson.AbstractJsonRestEstructura;
 import exit.services.fileHandler.CSVHandler;
 import exit.services.fileHandler.DirectorioManager;
 import exit.services.principal.peticiones.AbstractHTTP;
@@ -26,26 +26,26 @@ import exit.services.singletons.RecEntAct;
 public abstract class GetVTEXAbstractServicioACSV  extends AbstractHTTP{
 	
 	@Override
-	protected Object procesarPeticionOK(BufferedReader in, JSONHandler json, int responseCode) throws Exception {
+	protected Object procesarPeticionOK(BufferedReader in, AbstractJsonRestEstructura json, int responseCode) throws Exception {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	protected Object procesarPeticionError(BufferedReader in, JSONHandler json, int responseCode) throws Exception {
+	protected Object procesarPeticionError(BufferedReader in, AbstractJsonRestEstructura json, int responseCode) throws Exception {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	protected Object procesarPeticionOK(BufferedReader in, JSONHandler json, String id, int responseCode)
+	protected Object procesarPeticionOK(BufferedReader in, AbstractJsonRestEstructura json, String id, int responseCode)
 			throws Exception {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	protected Object procesarPeticionError(BufferedReader in, JSONHandler json, String id, int responseCode)
+	protected Object procesarPeticionError(BufferedReader in, AbstractJsonRestEstructura json, String id, int responseCode)
 			throws Exception {
 		// TODO Auto-generated method stub
 		return null;

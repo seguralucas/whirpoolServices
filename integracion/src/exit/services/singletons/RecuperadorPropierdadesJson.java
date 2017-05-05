@@ -21,6 +21,7 @@ public class RecuperadorPropierdadesJson {
 	public static final String PROPIEDAD_BORRAR_SI_ES_NULL="borrarSiEsNull";
 	public static final String PROPIEDAD_BORRAR_CAR_NO_NUMERICOS="borrarCarNoNumericos";
 	public static final String PROPIEDAD_REEMPLAZAR_CAR_ESPANOL="reemplazarCarEspanol";
+	public static final String PROPIEDAD_VALOR_POR_DEFAULT="valorPorDefault";
 	public static final String PROPIEDAD_COMPLETAR10CEROS="completar10Ceros";
 
 	public static final String PROPIEDAD_VALORES_PERMITIDOS="valoresPermitidos";
@@ -81,6 +82,17 @@ public class RecuperadorPropierdadesJson {
 		JSONObject j= this.getPropiedades(key);
 		Object aux=j==null?null:j.get(PROPIEDAD_REEMPLAZAR_CAR_ESPANOL);
 		return aux==null?false:(Boolean)j.get(PROPIEDAD_REEMPLAZAR_CAR_ESPANOL);
+	}
+	
+	public boolean isValorPorDefault(String key){
+		JSONObject j= this.getPropiedades(key);
+		Object aux=j==null?null:j.get(PROPIEDAD_VALOR_POR_DEFAULT);
+		return aux==null?false:j.get(PROPIEDAD_VALOR_POR_DEFAULT).toString().length()>0;
+	}
+	
+	public String getValorPorDefault(String key){
+		JSONObject j= this.getPropiedades(key);
+		return (String)j.get(PROPIEDAD_VALOR_POR_DEFAULT);
 	}
 	
 	public boolean isCompletar10Ceros(String key){

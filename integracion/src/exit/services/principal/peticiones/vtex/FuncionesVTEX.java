@@ -87,23 +87,29 @@ public class FuncionesVTEX {
 	
 	public String descriptarEmailVtex(String emailEncriptado, JSONObject params){
 		try{
-		String instancia=(String)params.get("instancia");
-		String url=(String)params.get("url");
-		AbstractHTTP getEmailDescriptado= new GetVTEXEmailDesencriptado();
-		Object result=getEmailDescriptado.realizarPeticion(EPeticiones.GET,url+"?alias="+emailEncriptado+"&an="+instancia,RecEntAct.getInstance().getCep().getCabecera());
-		if(result==null)
-			throw new Exception();
-		return (String)result;
-		}
-		catch(Exception e){
-			e.printStackTrace();
-			System.out.println("Se guarda el valor del email encriptado");
-			CSVHandler csv= new CSVHandler();
-			try {
-				csv.escribirCSV(CSVHandler.PATH_LOG_GENERICO, "No se pudo descriptar el email: "+ emailEncriptado+". Se procederá a guardarlo encriptado");
-			} catch (IOException e1) {
-				e1.printStackTrace();
+			String instancias[]=((String)params.get("instancia")).split(",");
+			String url=(String)params.get("url");
+			int i=0;
+			String result=emailEncriptado;
+			while(i<instancias.length && result.contains("ct.vtex.com.br")){
+				String instancia=instancias[i];
+				AbstractHTTP getEmailDescriptado= new GetVTEXEmailDesencriptado();
+				try{
+				String aux=(String)getEmailDescriptado.realizarPeticion(EPeticiones.GET,url+"?alias="+result+"&an="+instancia,RecEntAct.getInstance().getCep().getCabecera());
+				result=aux==null?result:aux;
+				}
+				catch(Exception e){
+					System.out.println("No descripto con: "+instancia);
+				}
+				i++;
 			}
+			if(result.contains("ct.vtex.com.br"))
+				System.out.println("Se va a guardar el mail encriptado");
+			else
+				System.out.println("Se logró desencriptar el e-mail");
+			return (String)result;
+		}
+		catch(Exception e){ 
 			return emailEncriptado;
 		}
 	}

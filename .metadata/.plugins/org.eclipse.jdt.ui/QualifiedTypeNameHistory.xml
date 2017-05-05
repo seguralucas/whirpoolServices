@@ -7,6 +7,11 @@
 <fullyQualifiedTypeName name="exit.services.singletons.RecuperadorMapeoCsv"/>
 <fullyQualifiedTypeName name="exit.services.singletons.RecuperadorPropierdadesJson"/>
 <fullyQualifiedTypeName name="exit.services.singletons.ConfiguracionEntidadParticular"/>
-<fullyQualifiedTypeName name="exit.services.singletons.RecEntAct"/>
 <fullyQualifiedTypeName name="exit.services.util.RecorrerJson"/>
+<fullyQualifiedTypeName name="exit.services.principal.peticiones.AbstractHTTP"/>
+<fullyQualifiedTypeName name="exit.services.singletons.RecEntAct"/>
+<fullyQualifiedTypeName name="exit.services.convertidos.csvAJson.JSONHandler"/>
+<fullyQualifiedTypeName name="org.json.simple.JSONObject"/>
+<fullyQualifiedTypeName name="exit.services.principal.peticiones.vtex.PostVTEXGenericoContactoOrdenProducto"/>
+<fullyQualifiedTypeName name="java.lang.Exception"/>
 </qualifiedTypeNameHistroy>

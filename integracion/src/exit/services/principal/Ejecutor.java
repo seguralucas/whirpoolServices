@@ -7,8 +7,9 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 
+import org.json.simple.JSONObject;
+
 import exit.services.convertidos.csvAJson.AbstractJsonRestEstructura;
-import exit.services.convertidos.csvAJson.JSONHandler;
 import exit.services.excepciones.ExceptionBiactiva;
 import exit.services.fileHandler.CSVHandler;
 import exit.services.principal.peticiones.AbstractHTTP;
@@ -25,17 +26,11 @@ import exit.services.singletons.RecEntAct;
 
 public class Ejecutor {
 	
-	public void updateRecuperandoIdPorQuery(String parametros, AbstractJsonRestEstructura jsonEst){
-		JSONHandler jsonH;
+
+	
+	public Object updateRecuperandoIdPorQuery(String parametros, AbstractJsonRestEstructura jsonEst){
 		try{
-			jsonH=jsonEst.createJson();
-		}
-		catch(Exception e){
-			escribirExcepcion(e,jsonEst);
-			return;
-		}
-		try{
-		String separador=RecEntAct.getInstance().getCep().getIdentificadorAtributo();
+		String separador=jsonEst.getConfEntidadPart().getIdentificadorAtributo();
 		int aux;
 		int index = parametros.indexOf(separador);
 		while(index >= 0) {
@@ -49,29 +44,27 @@ public class Ejecutor {
 		   }
 		}
 		GetExistFieldURLQueryRightNow get= new GetExistFieldURLQueryRightNow();
-		String id=(String)get.realizarPeticion(EPeticiones.GET, parametros,RecEntAct.getInstance().getCep().getCabecera());
+		String id=(String)get.realizarPeticion(EPeticiones.GET, parametros,null,null,jsonEst.getConfEntidadPart().getCabecera(), jsonEst.getConfEntidadPart());
 		if(id!=null){
+			System.out.println("Se va a actualizar el contacto con id: "+id);
 			UpdateGenericoRightNow update= new UpdateGenericoRightNow();
-			update.realizarPeticion(EPeticiones.UPDATE, id, jsonH,RecEntAct.getInstance().getCep().getCabecera());
+			return update.realizarPeticion(EPeticiones.UPDATE, jsonEst.getConfEntidadPart().getUrl() , id, jsonEst,jsonEst.getConfEntidadPart().getCabecera(),jsonEst.getConfEntidadPart());
 		}
-		else{
+		System.out.println("Se va a insertar el contacto");
 			PostGenerico insertar= new PostGenerico();
-			insertar.realizarPeticion(EPeticiones.POST, jsonH,RecEntAct.getInstance().getCep().getCabecera());
-		}
+			return insertar.realizarPeticion(EPeticiones.POST, jsonEst.getConfEntidadPart().getUrl(), jsonEst,jsonEst.getConfEntidadPart().getCabecera());
 		}
 		catch(Exception e){
+			System.out.println("Se va a insertar el contacto");
 			PostGenerico insertar= new PostGenerico();
-			insertar.realizarPeticion(EPeticiones.POST,jsonH,RecEntAct.getInstance().getCep().getCabecera());			
+			return insertar.realizarPeticion(EPeticiones.POST, jsonEst.getConfEntidadPart().getUrl(),jsonEst,jsonEst.getConfEntidadPart().getCabecera());			
 		}
 	}
 	
 	public void ejecutorGenericoCsvAServicio(AbstractJsonRestEstructura jsonEst){
-		JSONHandler jsonH;
 			try{
-				jsonH=jsonEst.createJson();
-				System.out.println(jsonH.toStringNormal());
 				AbstractHTTP insertar= new PostGenerico();
-				insertar.realizarPeticion(EPeticiones.POST,jsonH,RecEntAct.getInstance().getCep().getCabecera());
+				insertar.realizarPeticion(EPeticiones.POST,jsonEst,RecEntAct.getInstance().getCep().getCabecera());
 			}
 			catch(Exception e){
 				escribirExcepcion(e,jsonEst);
@@ -181,7 +174,7 @@ public class Ejecutor {
 			Object o;
 			if(parametros!=null){
 				if(jsonEst!=null){
-					m= a.getMethod(nombreMetodo, parametros.getClass(),jsonEst.getClass().getSuperclass());
+					m= a.getMethod(nombreMetodo, parametros.getClass(),AbstractJsonRestEstructura.class);
 					o=m.invoke(this,parametros,jsonEst);
 				}
 				else{
@@ -190,7 +183,7 @@ public class Ejecutor {
 			}
 			else{
 				if(jsonEst!=null){
-					m=a.getMethod(nombreMetodo,jsonEst.getClass().getSuperclass());
+					m=a.getMethod(nombreMetodo,AbstractJsonRestEstructura.class);
 					o=m.invoke(this,jsonEst);
 				}
 				else{

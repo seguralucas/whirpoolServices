@@ -54,7 +54,9 @@ public class DirectorioManager {
 		String outputPath=RecEntAct.getInstance().getCep().getOutPutPath();
 		if(RecEntAct.getInstance().getCep().getOutput()!=EOutputs.DIRECTORIO)
 			outputPath=ConstantesGenerales.PATH_EJECUCION;
-		return outputPath+"/"+conf.getEntidadNombre()+"/"+AlmacenadorFechaYHora.getFechaYHoraInicio();
+		if(conf!=null)
+			return outputPath+"/"+conf.getEntidadNombre()+"/"+AlmacenadorFechaYHora.getFechaYHoraInicio();
+		return outputPath+"/"+RecEntAct.getInstance().getCep().getEntidadNombre()+"/"+AlmacenadorFechaYHora.getFechaYHoraInicio();
 	}
 
 	

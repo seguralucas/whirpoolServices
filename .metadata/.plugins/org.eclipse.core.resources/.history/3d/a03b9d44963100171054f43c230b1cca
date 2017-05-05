@@ -1,0 +1,11 @@
+{
+    "nombre": "#items[0].name#",
+    "marca": "#items[0].additionalInfo.brandName#",
+    "ean": "#items[0].ean#",
+    "precio": "#items[0].price#",
+    "sku": "#items[0].sellerSku#",
+    "idCompra":{"id":"#propiedadesExtras.idcontactoCompraProducto/compra#"},
+    "vtexId":"items[0].uniqueId"
+}
+
+

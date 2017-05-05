@@ -7,7 +7,8 @@ import java.io.IOException;
 
 import com.csvreader.CsvWriter;
 
-import exit.services.convertidos.csvAJson.JSONHandler;
+import exit.services.convertidos.csvAJson.AbstractJsonRestEstructura;
+import exit.services.singletons.ConfiguracionEntidadParticular;
 import exit.services.singletons.RecEntAct;
 
 public class CSVHandler {
@@ -80,11 +81,15 @@ public class CSVHandler {
 			 	escribirCSV(DirectorioManager.getDirectorioFechaYHoraInicio(path),line,cabecera, onlyNotNull);
 		 }
 		 
+		 public void escribirCSV(String path,ConfiguracionEntidadParticular conf, String line, String cabecera, boolean onlyNotNull) throws IOException{
+			 	escribirCSV(DirectorioManager.getDirectorioFechaYHoraInicio(conf,path),line,cabecera, onlyNotNull);
+		 }
+		 
 		 
 		 public void escribirCSV(String path,String line,boolean cabeceraDefecto) throws IOException{
 			 	escribirCSV(DirectorioManager.getDirectorioFechaYHoraInicio(path),line,cabeceraDefecto);
 		 }
-		 public void escribirCSV(String path,JSONHandler json) throws IOException{
+		 public void escribirCSV(String path,AbstractJsonRestEstructura json) throws IOException{
 			 escribirCSV(DirectorioManager.getDirectorioFechaYHoraInicio(path),json.getLine(),true);
 		 }
 		 
@@ -114,7 +119,7 @@ public class CSVHandler {
 			 escribirErrorException((String)null,stackArray,false);
 		 }
 		 
-		 public synchronized void escribirErrorException(JSONHandler json,StackTraceElement[] stackArray) {
+		 public synchronized void escribirErrorException(AbstractJsonRestEstructura json,StackTraceElement[] stackArray) {
 			 escribirErrorException(json.getLine(),stackArray,true);
 		 }
 		 public synchronized void escribirErrorException(String linea) {

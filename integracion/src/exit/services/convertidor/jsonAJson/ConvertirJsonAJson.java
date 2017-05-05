@@ -42,6 +42,19 @@ public class ConvertirJsonAJson {
 	public AbstractJsonRestEstructura getJsonAbstract() {
 		return jsonAbstract;
 	}
+	
+	@Override
+	public String toString() {
+		return obtenedorDeDatos.toString().replace("\\", "").replace(",", ",\n");
+	}
+	
+	public String toStringSinEnter(){
+		return obtenedorDeDatos.toString().replace("\\", "");
+	}
+	
+	public String toStringNormal(){
+		return obtenedorDeDatos.toString();
+	}
 
 
 	

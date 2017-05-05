@@ -9,7 +9,7 @@ import java.net.HttpURLConnection;
 
 import org.json.simple.JSONObject;
 
-import exit.services.convertidos.csvAJson.JSONHandler;
+import exit.services.convertidos.csvAJson.AbstractJsonRestEstructura;
 import exit.services.fileHandler.CSVHandler;
 import exit.services.singletons.ApuntadorDeEntidad;
 import exit.services.singletons.ConfiguracionEntidadParticular;
@@ -19,15 +19,17 @@ import exit.services.singletons.entidadesARecuperar.Peticion;
 import exit.services.singletons.entidadesARecuperar.RecuperadorPeticiones;
 
 public abstract class AbstractHTTP {
+	public static final String PROPIEDADES_EXTRA="propiedadesExtras";
+
 	@Deprecated
 	public Object realizarPeticion(EPeticiones httpMetodo,JSONObject cabecera){
 		return realizarPeticion(httpMetodo,RecEntAct.getInstance().getCep().getUrl(),null,null,cabecera,null);
 	}
 	
-	public Object realizarPeticion(EPeticiones httpMetodo, JSONHandler json,JSONObject cabecera,ConfiguracionEntidadParticular conf){
+	public Object realizarPeticion(EPeticiones httpMetodo, AbstractJsonRestEstructura json,JSONObject cabecera,ConfiguracionEntidadParticular conf){
 		return realizarPeticion(httpMetodo,RecEntAct.getInstance().getCep().getUrl(),null,json,cabecera,conf);
 	}
-	public Object realizarPeticion(EPeticiones httpMetodo, JSONHandler json,JSONObject cabecera){
+	public Object realizarPeticion(EPeticiones httpMetodo, AbstractJsonRestEstructura json,JSONObject cabecera){
 		return realizarPeticion(httpMetodo,RecEntAct.getInstance().getCep().getUrl(),null,json,cabecera,null);
 	}
 
@@ -39,10 +41,10 @@ public abstract class AbstractHTTP {
 		return realizarPeticion(httpMetodo,url,null,null,cabecera,null);
 	}
 		
-	public Object realizarPeticion(EPeticiones httpMetodo, String url, JSONHandler json,JSONObject cabecera, ConfiguracionEntidadParticular conf){
+	public Object realizarPeticion(EPeticiones httpMetodo, String url, AbstractJsonRestEstructura json,JSONObject cabecera, ConfiguracionEntidadParticular conf){
 		 return realizarPeticion(httpMetodo,url,null,json,cabecera,conf);
 	 }
-	public Object realizarPeticion(EPeticiones httpMetodo, String url, JSONHandler json,JSONObject cabecera){
+	public Object realizarPeticion(EPeticiones httpMetodo, String url, AbstractJsonRestEstructura json,JSONObject cabecera){
 		 return realizarPeticion(httpMetodo,url,null,json,cabecera,null);
 	 }
 	 
@@ -53,7 +55,7 @@ public abstract class AbstractHTTP {
 		 return realizarPeticion(httpMetodo,url,id,null,cabecera,null);
 	}
 	
-	public Object realizarPeticion(EPeticiones httpMetodo, String url,String id,JSONHandler json, JSONObject cabecera, ConfiguracionEntidadParticular conf){
+	public Object realizarPeticion(EPeticiones httpMetodo, String url,String id,AbstractJsonRestEstructura json, JSONObject cabecera, ConfiguracionEntidadParticular conf){
 	        try{
 	            Peticion pet= conf==null?RecuperadorPeticiones.getInstance().getPeticion(httpMetodo):conf.getPeticiones().getPeticion(httpMetodo);
 	        	WSConector ws;
@@ -122,9 +124,9 @@ public abstract class AbstractHTTP {
 	abstract protected Object procesarPeticionError(BufferedReader in, String id, int responseCode) throws Exception;
 	abstract protected  Object procesarPeticionOK(BufferedReader in, int responseCode) throws Exception;
 	abstract protected Object procesarPeticionError(BufferedReader in, int responseCode) throws Exception;
-	abstract protected  Object procesarPeticionOK(BufferedReader in, JSONHandler json, int responseCode) throws Exception;
-	abstract protected Object procesarPeticionError(BufferedReader in, JSONHandler json,int responseCode) throws Exception;
-	abstract protected Object procesarPeticionOK(BufferedReader in, JSONHandler json, String id,int responseCode) throws Exception;
-	abstract protected Object procesarPeticionError(BufferedReader in, JSONHandler json, String id, int responseCode) throws Exception;
+	abstract protected  Object procesarPeticionOK(BufferedReader in, AbstractJsonRestEstructura json, int responseCode) throws Exception;
+	abstract protected Object procesarPeticionError(BufferedReader in, AbstractJsonRestEstructura json,int responseCode) throws Exception;
+	abstract protected Object procesarPeticionOK(BufferedReader in, AbstractJsonRestEstructura json, String id,int responseCode) throws Exception;
+	abstract protected Object procesarPeticionError(BufferedReader in, AbstractJsonRestEstructura json, String id, int responseCode) throws Exception;
 
 }

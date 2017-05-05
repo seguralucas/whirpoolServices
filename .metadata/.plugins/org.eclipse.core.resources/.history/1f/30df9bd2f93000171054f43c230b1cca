@@ -1,0 +1,21 @@
+{
+	"shippingData.address.complement":{
+		"tipo":"cadena"	
+	},
+	"shippingData.address.number":{
+		"tipo":"cadena"	
+	},
+	"shippingData.address.city":{
+		"tipo":"cadena"	
+	},
+	"shippingData.address.state":{
+		"tipo":"cadena"	
+	},
+	"shippingData.address.postalCode":{
+		"tipo":"cadena"	
+	},
+	"shippingData.address.street":{
+		"tipo":"cadena"	
+	}
+	
+}

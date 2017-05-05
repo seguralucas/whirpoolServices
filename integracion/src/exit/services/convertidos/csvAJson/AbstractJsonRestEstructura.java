@@ -20,13 +20,14 @@ import exit.services.singletons.RecuperadorPropierdadesJson;
 
 public abstract class AbstractJsonRestEstructura {
 	protected String line;
-	protected JSONObject jsonFormato;
+	protected JSONObject json;
 	protected HashMap<String, Object> mapCabeceraValor;
 	protected ConfiguracionEntidadParticular confEntidadPart;
-
+	protected String cabeceraCSV;
+	
 	abstract public void agregarCampo(String cabecera, String valor);
 	abstract public boolean validarCampos();
-	abstract public JSONHandler createJson() throws Exception;
+//	abstract public JSONHandler createJson() throws Exception;
 	abstract protected Object alterarValor(String cabecera, String valor);
 
 
@@ -34,7 +35,7 @@ public abstract class AbstractJsonRestEstructura {
 	public AbstractJsonRestEstructura(ConfiguracionEntidadParticular confEntPart) throws Exception {
 		super();
 		this.confEntidadPart=confEntPart;
-		this.jsonFormato=confEntidadPart.getRecuperadorFormato().getJsonFormato();
+		this.json=confEntidadPart.getRecuperadorFormato().getJsonFormato();
 		mapCabeceraValor= new HashMap<String, Object>();
 	}
 	
@@ -54,7 +55,7 @@ public abstract class AbstractJsonRestEstructura {
 			borrarKey(cabecera);
 		else{
 			JsonProcesarReemplazo jpr= new JsonProcesarReemplazo(valorAlterado,cabecera,confEntidadPart);
-			recorrerJSON(this.jsonFormato,jpr);
+			recorrerJSON(this.json,jpr);
 		}
 	}
 	
@@ -129,7 +130,7 @@ public abstract class AbstractJsonRestEstructura {
 		try{ 
 		if(confEntidadPart.getRecuperadorPropiedadesJson().isBorrarSiEsNull(cabecera)){
 			String[] recorrido=confEntidadPart.getRecuperadorPropiedadesJson().getBorrarSiEsNull(cabecera).split("\\.");
-			JSONObject aux= this.jsonFormato;
+			JSONObject aux= this.json;
 			JSONArray auxArray;
 			for(int i=0;i<recorrido.length;i++){
 				if(i+1==recorrido.length){
@@ -189,6 +190,16 @@ public abstract class AbstractJsonRestEstructura {
 	    
 	}
 	
+	public String valorPorDefault(String cabecera,String valor) {
+		if(!confEntidadPart.getRecuperadorPropiedadesJson().isValorPorDefault(cabecera))
+			return valor;
+		if(valor==null || valor.length()==0)
+			return confEntidadPart.getRecuperadorPropiedadesJson().getValorPorDefault(cabecera);
+		return valor;
+	}
+	
+	
+	
 	
 	public String agregar10Ceros(String cabecera,String valor) {
 		if(!confEntidadPart.getRecuperadorPropiedadesJson().isCompletar10Ceros(cabecera))
@@ -202,6 +213,7 @@ public abstract class AbstractJsonRestEstructura {
 		valor=agregar10Ceros(cabecera,valor);
 		valor=borrarCaracteresNoNumericos(cabecera,valor);
 		valor=remplazarTildes(cabecera,valor);
+		valor=valorPorDefault(cabecera,valor);
 		if(valor==null || valor.length()==0)
 			return null;
 		return valor;
@@ -213,11 +225,11 @@ public abstract class AbstractJsonRestEstructura {
 		return valor;		
 	}
 	
-	protected Integer procesarEntero(String cabecera, String valor){
+	protected Long procesarEntero(String cabecera, String valor){
 		valor=borrarCaracteresNoNumericos(cabecera,valor);
 		if(valor==null || valor.length()==0)
 			return null;
-		return Integer.parseInt(valor);
+		return Long.parseLong(valor.trim());
 	}
 	
 	
@@ -230,7 +242,7 @@ public abstract class AbstractJsonRestEstructura {
 	
 
 	public JSONObject getJsonFormato() {
-		return jsonFormato;
+		return json;
 	}
 	
 	public String getLineaDesdeFormatoJson(){
@@ -259,5 +271,32 @@ public abstract class AbstractJsonRestEstructura {
 	    return linea;
 	}
 
+	@Override
+	public String toString() {
+		return json.toString().replace("\\", "").replace(",", ",\n");
+	}
+	
+	public String toStringSinEnter(){
+		return json.toString().replace("\\", "");
+	}
+	
+	public String toStringNormal(){
+		return json.toString();
+	}
+	public ConfiguracionEntidadParticular getConfEntidadPart() {
+		return confEntidadPart;
+	}
+	public String getCabeceraCSV() {
+		return cabeceraCSV;
+	}
+	public void setCabeceraCSV(String cabeceraCSV) {
+		this.cabeceraCSV = cabeceraCSV;
+	}
+	public JSONObject getJson() {
+		return json;
+	}
+
+	
+	
 	
 }

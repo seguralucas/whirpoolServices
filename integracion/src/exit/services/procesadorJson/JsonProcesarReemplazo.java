@@ -27,8 +27,11 @@ public class JsonProcesarReemplazo implements IProcesadorJson {
 			String valor=(String)o;
 			if(r.getRecuperadorPropiedadesJson().getTipo(cabeceraPorReemplazar).equalsIgnoreCase(RecuperadorPropierdadesJson.TIPO_CADENA)){
 				if(valor.contains(identificador+cabeceraPorReemplazar+identificador)){
-					if(valorPorReemplazaR==null)
+					if(valorPorReemplazaR==null && valor.replaceAll(identificador+reemplazarCorcheteParaRegex(cabeceraPorReemplazar)+identificador, "").trim().length()==0)
 						json.put(keyValue,null);
+					else if(valorPorReemplazaR==null){
+						json.put(keyValue, valor.replaceAll(identificador+reemplazarCorcheteParaRegex(cabeceraPorReemplazar)+identificador, ""));
+					}
 					else
 						json.put(keyValue, valor.replaceAll(identificador+reemplazarCorcheteParaRegex(cabeceraPorReemplazar)+identificador, insertarStringNoNull((String)valorPorReemplazaR)));				
 				}

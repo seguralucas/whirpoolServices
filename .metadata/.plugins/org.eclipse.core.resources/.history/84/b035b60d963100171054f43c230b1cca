@@ -1,0 +1,3 @@
+separadorCSV=;
+url=https://whirlpool.custhelp.com/services/rest/connect/v1.3/Whirlpool.Producto
+cabecera={"Authorization": "Basic ZGFtaWFuLmNhcnJpdmFsZTpEYW1pYW4uY2Fycml2YWxl", "Accept-Language":"application/json"}

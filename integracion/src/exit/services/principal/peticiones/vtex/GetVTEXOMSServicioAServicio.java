@@ -15,8 +15,10 @@ import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 
 import exit.services.convertidor.jsonAJson.ConvertirJsonAJson;
-import exit.services.convertidos.csvAJson.JSONHandler;
+import exit.services.convertidos.csvAJson.AbstractJsonRestEstructura;
+import exit.services.convertidos.csvAJson.AbstractJsonRestEstructura;
 import exit.services.fileHandler.DirectorioManager;
+import exit.services.principal.Ejecutor;
 import exit.services.principal.peticiones.AbstractHTTP;
 import exit.services.principal.peticiones.EPeticiones;
 import exit.services.principal.peticiones.PostGenerico;
@@ -30,17 +32,38 @@ public class GetVTEXOMSServicioAServicio  extends AbstractHTTP {
 	@Override
 	protected Object procesarPeticionOK(BufferedReader in, String id, int responseCode) throws Exception {
 		JSONObject jsonObject = ConvertidorJson.convertir(in);
-		ConfiguracionEntidadParticular conf=RecEntAct.getInstance().getCep().getSubEntidad("compra");
-		ConvertirJsonAJson conv= new ConvertirJsonAJson(conf,jsonObject);
+		String[] subEntidades= RecEntAct.getInstance().getCep().getSubEntidades();
+		for(int i=0;i<subEntidades.length;i++){
+			String subEnt=subEntidades[i];
+			ConfiguracionEntidadParticular conf=RecEntAct.getInstance().getCep().getSubEntidad(subEnt);
+			ConvertirJsonAJson conv= new ConvertirJsonAJson(conf,jsonObject);
+			JSONObject resultadoContacto=conv.convertir();
+			PostVTEXGenericoContactoOrdenProducto postGenerico= new PostVTEXGenericoContactoOrdenProducto();
+			AbstractJsonRestEstructura jsonA=conv.getJsonAbstract();
+			jsonA.setLine(jsonA.getLineaDesdeFormatoJson());
+			jsonA.setCabeceraCSV(jsonA.getCabeceraDesdeFormatoJson());
+			Ejecutor e= new Ejecutor();
+			AbstractJsonRestEstructura result=(AbstractJsonRestEstructura)e.ejecutar(conf.getMetodoEjecutor(),conf.getParametroEjecutor(),(AbstractJsonRestEstructura)jsonA);
+//			AbstractJsonRestEstructura result= (AbstractJsonRestEstructura)postGenerico.realizarPeticion(EPeticiones.POST, conf.getUrl(),jsonA, RecEntAct.getInstance().getCep().getSubEntidad(subEnt).getCabecera(),conf);
+			if(result==null)
+				System.out.println("Error al insertar");
+			else{
+				jsonObject.put(PostVTEXGenericoContactoOrdenProducto.PROPIEDADES_EXTRA, result.getJson().get(PostVTEXGenericoContactoOrdenProducto.PROPIEDADES_EXTRA));
+				System.out.println("Resultado: "+((JSONObject)jsonObject.get(PostVTEXGenericoContactoOrdenProducto.PROPIEDADES_EXTRA)).get("id"+conf.getEntidadNombre()));
+				System.out.println("id"+conf.getEntidadNombre());
+			}
 
-		JSONObject resultadoContacto=conv.convertir();
-		PostVTEXGenericoContactoOrdenProducto postGenerico= new PostVTEXGenericoContactoOrdenProducto();
-		JSONHandler jsonH= new JSONHandler(conv.getJsonAbstract().getLineaDesdeFormatoJson(),resultadoContacto);
-		jsonH.setEntidad(conf);
-		jsonH.setCabecera(conv.getJsonAbstract().getCabeceraDesdeFormatoJson());
-		JSONHandler result= (JSONHandler)postGenerico.realizarPeticion(EPeticiones.POST, conf.getUrl(),jsonH, RecEntAct.getInstance().getCep().getSubEntidad("contacto").getCabecera(),conf);
-		System.out.println("Resultado: "+((JSONObject)result.getJson().get(PostVTEXGenericoContactoOrdenProducto.PROPIEDADES_EXTRA)).get("id"+conf.getEntidadNombre()));
-		System.out.println("id"+conf.getEntidadNombre());
+		}
+//		ConfiguracionEntidadParticular conf=RecEntAct.getInstance().getCep().getSubEntidad("compra");
+//		ConvertirJsonAJson conv= new ConvertirJsonAJson(conf,jsonObject);
+//		JSONObject resultadoContacto=conv.convertir();
+//		PostVTEXGenericoContactoOrdenProducto postGenerico= new PostVTEXGenericoContactoOrdenProducto();
+//		AbstractJsonRestEstructura jsonH= new AbstractJsonRestEstructura(conv.getJsonAbstract().getLineaDesdeFormatoJson(),resultadoContacto);
+//		jsonH.setEntidad(conf);
+//		jsonH.setCabecera(conv.getJsonAbstract().getCabeceraDesdeFormatoJson());
+//		AbstractJsonRestEstructura result= (AbstractJsonRestEstructura)postGenerico.realizarPeticion(EPeticiones.POST, conf.getUrl(),jsonH, RecEntAct.getInstance().getCep().getSubEntidad("compra").getCabecera(),conf);
+//		System.out.println("Resultado: "+((JSONObject)result.getJson().get(PostVTEXGenericoContactoOrdenProducto.PROPIEDADES_EXTRA)).get("id"+conf.getEntidadNombre()));
+//		System.out.println("id"+conf.getEntidadNombre());
 		return null;
 	}
 
@@ -82,26 +105,26 @@ public class GetVTEXOMSServicioAServicio  extends AbstractHTTP {
 	}
 
 	@Override
-	protected Object procesarPeticionOK(BufferedReader in, JSONHandler json, int responseCode) throws Exception {
+	protected Object procesarPeticionOK(BufferedReader in, AbstractJsonRestEstructura json, int responseCode) throws Exception {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	protected Object procesarPeticionError(BufferedReader in, JSONHandler json, int responseCode) throws Exception {
+	protected Object procesarPeticionError(BufferedReader in, AbstractJsonRestEstructura json, int responseCode) throws Exception {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	protected Object procesarPeticionOK(BufferedReader in, JSONHandler json, String id, int responseCode)
+	protected Object procesarPeticionOK(BufferedReader in, AbstractJsonRestEstructura json, String id, int responseCode)
 			throws Exception {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	protected Object procesarPeticionError(BufferedReader in, JSONHandler json, String id, int responseCode)
+	protected Object procesarPeticionError(BufferedReader in, AbstractJsonRestEstructura json, String id, int responseCode)
 			throws Exception {
 
         return null;

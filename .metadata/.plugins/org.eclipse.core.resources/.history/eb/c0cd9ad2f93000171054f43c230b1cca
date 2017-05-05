@@ -1,0 +1,6 @@
+{
+
+    "direccionEntrega": "#shippingData.address.street# #shippingData.address.number# #shippingData.address.complement# #shippingData.address.complement# #shippingData.address.city# #shippingData.address.state# #shippingData.address.postalCode# "
+}
+
+

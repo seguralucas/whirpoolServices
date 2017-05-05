@@ -1,0 +1,6 @@
+{
+    "nombre": "#hostname#",
+    "idCompra":{"id":"#propiedadesExtras.idcontactoCompraProducto/compra#"}
+}
+
+

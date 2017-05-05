@@ -6,7 +6,9 @@ import java.io.File;
 import java.io.FileWriter;
 import java.io.PrintWriter;
 
-import exit.services.convertidos.csvAJson.JSONHandler;
+import org.json.simple.JSONObject;
+
+import exit.services.convertidos.csvAJson.AbstractJsonRestEstructura;
 import exit.services.fileHandler.CSVHandler;
 import exit.services.fileHandler.ConstantesGenerales;
 import exit.services.fileHandler.DirectorioManager;
@@ -16,16 +18,23 @@ public class UpdateGenericoRightNow extends AbstractHTTP{
 
 
 	@Override
-	protected Object procesarPeticionOK(BufferedReader in, JSONHandler json, String id, int responseCode)
+	protected Object procesarPeticionOK(BufferedReader in, AbstractJsonRestEstructura json, String id, int responseCode)
 			throws Exception {
 		CSVHandler csv= new CSVHandler();
-	    File fichero = DirectorioManager.getDirectorioFechaYHoraInicio(CSVHandler.PATH_UPDATES_OK);
+	    File fichero = DirectorioManager.getDirectorioFechaYHoraInicio(json.getConfEntidadPart(), CSVHandler.PATH_UPDATES_OK);
         csv.escribirCSV(fichero, id+RecEntAct.getInstance().getCep().getSeparadorCSV()+json.getLine(), "ID"+RecEntAct.getInstance().getCep().getSeparadorCSV()+CSVHandler.cabeceraFichero,true);        
-        return null;		
+        JSONObject propiedadesExtra=(JSONObject)json.getJson().get(PROPIEDADES_EXTRA);
+        if(propiedadesExtra==null)
+        	propiedadesExtra= new JSONObject();
+        else
+        	json.getJson().remove(PROPIEDADES_EXTRA);
+        propiedadesExtra.put("id"+json.getConfEntidadPart().getEntidadNombre(), id);
+        json.getJson().put(PROPIEDADES_EXTRA, propiedadesExtra);
+        return json;		
 	}
 
 	@Override
-	protected Object procesarPeticionError(BufferedReader in, JSONHandler json, String id, int responseCode)
+	protected Object procesarPeticionError(BufferedReader in, AbstractJsonRestEstructura json, String id, int responseCode)
 			throws Exception {
 		String path=("error_update_servidor_codigo_"+responseCode+".txt");
 	    File fichero = DirectorioManager.getDirectorioFechaYHoraInicio(path);
@@ -68,13 +77,13 @@ public class UpdateGenericoRightNow extends AbstractHTTP{
 
 
 	@Override
-	protected Object procesarPeticionOK(BufferedReader in, JSONHandler json, int responseCode) throws Exception {
+	protected Object procesarPeticionOK(BufferedReader in, AbstractJsonRestEstructura json, int responseCode) throws Exception {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	protected Object procesarPeticionError(BufferedReader in, JSONHandler json, int responseCode) throws Exception {
+	protected Object procesarPeticionError(BufferedReader in, AbstractJsonRestEstructura json, int responseCode) throws Exception {
 		// TODO Auto-generated method stub
 		return null;
 	}

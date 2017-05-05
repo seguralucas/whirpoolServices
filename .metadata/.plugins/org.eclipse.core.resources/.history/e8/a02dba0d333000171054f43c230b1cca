@@ -1,0 +1,26 @@
+{
+    "canal": "#hostname#",
+    "ciudad": "#shippingData.address.city#",
+    "contactoEntrega": "Damian",
+    "cupon": "#paymentData.transactions[0].payments[0].giftCardName#",
+    "direccionEntrega": "#shippingData.address.number#",
+    "dni": "#clientProfileData.document#",
+    "fechaCompra": "#creationDate#",
+    "importeConDescuento": "#value#",
+    "importeSinDescuento": "#totals[0].value#",
+    "importeTotal": "#totals[0].value#",
+    "medioPago": "#paymentData.transactions[0].payments.paymentSystemName#",
+    "motivoRechazoPago":"#paymentData.transactions[0].payments[0].connectorResponses.Message#",
+    "nroCuotas": "#paymentData.transactions[0].payments[0].installments#",
+    "plazoDeEntrega": "#shippingData.logisticsInfo[0].shippingEstimateDate#",
+    "provincia": "#shippingData.address.state#",
+    "recibidorCompra": "#shippingData.address.receiverName#",
+    "titularCompra":  "#shippingData.address.receiverName#",
+    "totalDescuento": "#totals[1].value#",
+    "totalFlete": "#totals[2].value#",
+    "totalItems": "#items[0].quantity#",
+    "valorCuotas": "#paymentData.transactions[0].payments[0].referenceValue#",
+    "idContacto":{"id":"#propiedadesExtras.contacto#"}
+}
+
+

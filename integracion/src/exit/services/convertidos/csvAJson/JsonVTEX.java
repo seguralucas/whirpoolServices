@@ -9,6 +9,7 @@ import exit.services.singletons.ConfiguracionEntidadParticular;
 
 public class JsonVTEX extends JsonGenerico{
 	private static final String PROPIEDAD_DESCRIPTAR_MAIL_VTEX="desencriptarMailVtex";
+	private static final String PROPIEDAD_PRECIO_CON_PUNTO="precioConPunto";
 	public JsonVTEX(ConfiguracionEntidadParticular confEntidadPart) throws Exception {
 		super(confEntidadPart);
 	}
@@ -29,7 +30,11 @@ public class JsonVTEX extends JsonGenerico{
 		if(aux!=null){
 			FuncionesVTEX fvtex= new FuncionesVTEX();
 			resultado=(fvtex.descriptarEmailVtex(valor,(JSONObject)aux));
-		}			
+		}	
+		aux=j==null?null:j.get(PROPIEDAD_PRECIO_CON_PUNTO);
+		if(aux!=null){
+			resultado = resultado.substring(0, resultado.length()-2) + "." + resultado.substring(resultado.length()-2, resultado.length());
+		}	
 		return resultado;
 	}
 }

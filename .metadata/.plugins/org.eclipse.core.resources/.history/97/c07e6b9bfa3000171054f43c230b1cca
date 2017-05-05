@@ -1,0 +1,22 @@
+{
+	"items[0].name":{
+	"tipo":"cadena"	
+	},
+	"items[0].additionalInfo.brandName":{
+	"tipo":"cadena"
+	},
+
+	"items[0].ean":{
+		"tipo":"cadena"	
+	},
+	"items[0].price":{
+		"tipo":"cadena"	
+	},
+	"items[0].sellerSku":{
+		"tipo":"cadena"
+	},
+	"propiedadesExtras.idcontactoCompraProducto/compra":{
+		"tipo":"entero"
+	}
+}
+

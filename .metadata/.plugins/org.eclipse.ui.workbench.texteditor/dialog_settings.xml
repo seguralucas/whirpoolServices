@@ -2,20 +2,23 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="puntero" key="selection"/>
+		<item value="paymentData.transactions[0].payments[0].installments" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
-			<item value="puntero"/>
-			<item value="RecuperadorPropierdadesJson.getInstancia()"/>
-			<item value="RecuperadorPropierdadesJson.getInstancia()."/>
-			<item value="RecuperadorEspecificacionesCSV"/>
-			<item value="RecuperadorPropiedadedConfiguracionEntidadActual.getInstance()"/>
-			<item value="outPut"/>
+			<item value="paymentData.transactions[0].payments[0].installments"/>
+			<item value="items[0].quantity"/>
+			<item value="canal.firstName"/>
+			<item value="paymentData.transactions[0].payments[0].connectorResponses.Message"/>
+			<item value="cupon"/>
+			<item value="valorAlterado"/>
+			<item value="borrarCabecera"/>
+			<item value="logisticsInfo"/>
 		</list>
 		<list key="replacehistory">
+			<item value="paymentData.transactions[0]"/>
 			<item value="RecEntAct.getInstance().getCep().getRecuperadorPropiedadesJson()"/>
 			<item value="RecEntAct.getInstance().getCep()"/>
 			<item value="RecuperadorPropierdadesJson.getInstancia()"/>

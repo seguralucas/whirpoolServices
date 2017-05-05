@@ -81,10 +81,10 @@ public class JsonGenerico extends AbstractJsonRestEstructura{
 		return true;
 	}
 
-	@Override
-	public JSONHandler createJson() throws Exception {
-		return new JSONHandler(getLine(),getJsonFormato());
-	}
+//	@Override
+//	public JSONHandler createJson() throws Exception {
+//		return new JSONHandler(getLine(),getJsonFormato());
+//	}
 
 	@Override
 	public HashMap<String, Object> getMapCabeceraValor() {
