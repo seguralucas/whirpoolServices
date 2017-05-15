@@ -35,22 +35,57 @@ public class GetVTEXOMSServicioAServicio  extends AbstractHTTP {
 		String[] subEntidades= RecEntAct.getInstance().getCep().getSubEntidades();
 		for(int i=0;i<subEntidades.length;i++){
 			String subEnt=subEntidades[i];
-			ConfiguracionEntidadParticular conf=RecEntAct.getInstance().getCep().getSubEntidad(subEnt);
-			ConvertirJsonAJson conv= new ConvertirJsonAJson(conf,jsonObject);
-			JSONObject resultadoContacto=conv.convertir();
-			PostVTEXGenericoContactoOrdenProducto postGenerico= new PostVTEXGenericoContactoOrdenProducto();
-			AbstractJsonRestEstructura jsonA=conv.getJsonAbstract();
-			jsonA.setLine(jsonA.getLineaDesdeFormatoJson());
-			jsonA.setCabeceraCSV(jsonA.getCabeceraDesdeFormatoJson());
-			Ejecutor e= new Ejecutor();
-			AbstractJsonRestEstructura result=(AbstractJsonRestEstructura)e.ejecutar(conf.getMetodoEjecutor(),conf.getParametroEjecutor(),(AbstractJsonRestEstructura)jsonA);
-//			AbstractJsonRestEstructura result= (AbstractJsonRestEstructura)postGenerico.realizarPeticion(EPeticiones.POST, conf.getUrl(),jsonA, RecEntAct.getInstance().getCep().getSubEntidad(subEnt).getCabecera(),conf);
-			if(result==null)
-				System.out.println("Error al insertar");
+			if(subEnt.equalsIgnoreCase("producto")){
+				JSONArray jsonAItems= (JSONArray)jsonObject.get("items");
+				System.out.println("El size de item es: "+jsonAItems.size());
+				ConfiguracionEntidadParticular conf=RecEntAct.getInstance().getCep().getSubEntidad(subEnt);
+				JSONObject propiedadExtraCompra=null;
+				for(int j=0;j<jsonAItems.size();j++){
+					JSONObject jsonFinal= (JSONObject)((JSONArray)jsonObject.get("items")).get(j);
+					ConvertirJsonAJson conv= new ConvertirJsonAJson(conf,jsonFinal);
+					conv.convertir();
+					AbstractJsonRestEstructura jsonA=conv.getJsonAbstract();
+//					jsonA.setLine(jsonA.getLineaDesdeFormatoJson());
+//					jsonA.setCabeceraCSV(jsonA.getCabeceraDesdeFormatoJson());
+					jsonA.getJson().remove("idCompra");
+					if(propiedadExtraCompra==null){
+						propiedadExtraCompra= new JSONObject();
+						propiedadExtraCompra.put("id", Long.parseLong(((JSONObject)jsonObject.get(PostVTEXGenericoContactoOrdenProducto.PROPIEDADES_EXTRA)).get("idcontactoCompraProducto/compra").toString().trim()));
+					}
+					jsonA.getJson().put("idCompra", propiedadExtraCompra);
+
+					Ejecutor e= new Ejecutor();
+					AbstractJsonRestEstructura result=(AbstractJsonRestEstructura)e.ejecutar(conf.getMetodoEjecutor(),conf.getParametroEjecutor(),(AbstractJsonRestEstructura)jsonA);
+		//			AbstractJsonRestEstructura result= (AbstractJsonRestEstructura)postGenerico.realizarPeticion(EPeticiones.POST, conf.getUrl(),jsonA, RecEntAct.getInstance().getCep().getSubEntidad(subEnt).getCabecera(),conf);
+					if(result==null)
+						System.out.println("Error al insertar");
+					else{
+						jsonObject.put(PostVTEXGenericoContactoOrdenProducto.PROPIEDADES_EXTRA, result.getJson().get(PostVTEXGenericoContactoOrdenProducto.PROPIEDADES_EXTRA));
+						System.out.println("Resultado: "+((JSONObject)jsonObject.get(PostVTEXGenericoContactoOrdenProducto.PROPIEDADES_EXTRA)).get("id"+conf.getEntidadNombre()));
+						System.out.println("id"+conf.getEntidadNombre());
+					}
+					System.out.println("*********************************");				
+				}
+			}
 			else{
-				jsonObject.put(PostVTEXGenericoContactoOrdenProducto.PROPIEDADES_EXTRA, result.getJson().get(PostVTEXGenericoContactoOrdenProducto.PROPIEDADES_EXTRA));
-				System.out.println("Resultado: "+((JSONObject)jsonObject.get(PostVTEXGenericoContactoOrdenProducto.PROPIEDADES_EXTRA)).get("id"+conf.getEntidadNombre()));
-				System.out.println("id"+conf.getEntidadNombre());
+				ConfiguracionEntidadParticular conf=RecEntAct.getInstance().getCep().getSubEntidad(subEnt);
+				ConvertirJsonAJson conv= new ConvertirJsonAJson(conf,jsonObject);
+				JSONObject resultadoContacto=conv.convertir();
+				PostVTEXGenericoContactoOrdenProducto postGenerico= new PostVTEXGenericoContactoOrdenProducto();
+				AbstractJsonRestEstructura jsonA=conv.getJsonAbstract();
+				jsonA.setLine(jsonA.getLineaDesdeFormatoJson());
+				jsonA.setCabeceraCSV(jsonA.getCabeceraDesdeFormatoJson());
+				Ejecutor e= new Ejecutor();
+				AbstractJsonRestEstructura result=(AbstractJsonRestEstructura)e.ejecutar(conf.getMetodoEjecutor(),conf.getParametroEjecutor(),(AbstractJsonRestEstructura)jsonA);
+	//			AbstractJsonRestEstructura result= (AbstractJsonRestEstructura)postGenerico.realizarPeticion(EPeticiones.POST, conf.getUrl(),jsonA, RecEntAct.getInstance().getCep().getSubEntidad(subEnt).getCabecera(),conf);
+				if(result==null)
+					System.out.println("Error al insertar");
+				else{
+					jsonObject.put(PostVTEXGenericoContactoOrdenProducto.PROPIEDADES_EXTRA, result.getJson().get(PostVTEXGenericoContactoOrdenProducto.PROPIEDADES_EXTRA));
+					System.out.println("Resultado: "+((JSONObject)jsonObject.get(PostVTEXGenericoContactoOrdenProducto.PROPIEDADES_EXTRA)).get("id"+conf.getEntidadNombre()));
+					System.out.println("id"+conf.getEntidadNombre());
+				}
+				System.out.println("*********************************");
 			}
 
 		}

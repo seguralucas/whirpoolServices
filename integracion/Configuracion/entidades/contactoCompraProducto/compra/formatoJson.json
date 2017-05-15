@@ -10,7 +10,7 @@
     "importeConDescuento": "#value#",
     "importeSinDescuento": "#totals[0].value#",
     "importeTotal": "#totals[0].value#",
-    "medioPago": "#paymentData.transactions[0].payments.paymentSystemName#",
+    "medioPago": "#paymentData.transactions[0].payments[0].paymentSystemName#",
     "motivoRechazoPago":"#paymentData.transactions[0].payments[0].connectorResponses.Message#",
     "nroCuotas": "#paymentData.transactions[0].payments[0].installments#",
     "ordenCompra":"#orderId#",

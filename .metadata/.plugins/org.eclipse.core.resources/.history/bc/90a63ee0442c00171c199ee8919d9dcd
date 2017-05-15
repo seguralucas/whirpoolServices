@@ -1,7 +1,0 @@
-{ 
-"name": {
-	        "first": "#clientProfileData22.firstName#",
-	        "last": "#clientProfileData.lastName#"
-    	}
-
-}

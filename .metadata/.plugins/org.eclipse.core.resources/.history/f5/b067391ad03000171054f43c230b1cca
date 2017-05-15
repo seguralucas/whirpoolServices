@@ -1,6 +1,0 @@
-{
-    "nombre": "#items[0].name#",
-    "idCompra":{"id":"#propiedadesExtras.idcontactoCompraProducto/compra#"}
-}
-
-

@@ -33,7 +33,8 @@ public class JsonVTEX extends JsonGenerico{
 		}	
 		aux=j==null?null:j.get(PROPIEDAD_PRECIO_CON_PUNTO);
 		if(aux!=null){
-			resultado = resultado.substring(0, resultado.length()-2) + "." + resultado.substring(resultado.length()-2, resultado.length());
+			if(resultado.length()>=3)
+				resultado = resultado.substring(0, resultado.length()-2) + "." + resultado.substring(resultado.length()-2, resultado.length());
 		}	
 		return resultado;
 	}

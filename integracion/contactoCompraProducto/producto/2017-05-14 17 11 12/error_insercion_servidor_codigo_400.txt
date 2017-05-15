@@ -1,0 +1,36 @@
+{"marca":"Whirlpool",
+"precio":"21599.00",
+"vtexId":"65D6B04FC6144456963D3DE7D3BFE824",
+"ean":"7891129240087",
+"propiedadesExtras":"102684",
+"idCompra":{"id":null},
+"sku":"184",
+"nombre":"Heladera Whirlpool Top Mount - 354 Lts"}
+**********************************************************************************************
+{
+    "type": "https://whirlpool.custhelp.com/services/rest/connect/exceptions/OSC-CREST-00013",
+    "title": "Recurso no reconocido",
+    "status": 400,
+    "detail": "Invalid property specified: propiedadesExtras",
+    "instance": "https://whirlpool.custhelp.com/services/rest/connect/v1.3/Whirlpool.Producto",
+    "o:errorCode": "OSC-CREST-00013"
+}
+##############################################################################################
+{"marca":"Whirlpool",
+"precio":"43999.00",
+"vtexId":"5DECE6742C9A4EC5A02A52070569A448",
+"ean":"7891129240780",
+"propiedadesExtras":"102685",
+"idCompra":{"id":null},
+"sku":"98",
+"nombre":"Heladera Whirlpool No Frost Sexto Sentido - 429 Litros - Inox"}
+**********************************************************************************************
+{
+    "type": "https://whirlpool.custhelp.com/services/rest/connect/exceptions/OSC-CREST-00013",
+    "title": "Recurso no reconocido",
+    "status": 400,
+    "detail": "Invalid property specified: propiedadesExtras",
+    "instance": "https://whirlpool.custhelp.com/services/rest/connect/v1.3/Whirlpool.Producto",
+    "o:errorCode": "OSC-CREST-00013"
+}
+##############################################################################################

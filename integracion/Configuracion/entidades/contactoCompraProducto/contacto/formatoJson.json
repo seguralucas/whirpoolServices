@@ -1,5 +1,7 @@
 { 
     "emails":[{"address":"#clientProfileData.email#", "addressType":{"id":0}}],
+    
+    "phones":[{"number":"#clientProfileData.phone#", "phoneType":{"id":0}}],
 
 	"name": {
         "first": "#clientProfileData.firstName#",

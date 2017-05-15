@@ -1,0 +1,400 @@
+""
+wrg-v800070730carg-01 de la entidad contactoCompraProducto
+FileName: AbstractJsonRestEstructura.java Metodo: <init>Clase exit.services.convertidos.csvAJson.AbstractJsonRestEstructura Linea 38
+FileName: JsonGenerico.java Metodo: <init>Clase exit.services.convertidos.csvAJson.JsonGenerico Linea 24
+FileName: JsonVTEX.java Metodo: <init>Clase exit.services.convertidos.csvAJson.JsonVTEX Linea 14
+FileName: ConvertirJsonAJson.java Metodo: convertirClase exit.services.convertidor.jsonAJson.ConvertirJsonAJson Linea 26
+FileName: GetVTEXOMSServicioAServicio.java Metodo: procesarPeticionOKClase exit.services.principal.peticiones.vtex.GetVTEXOMSServicioAServicio Linea 71
+FileName: AbstractHTTP.java Metodo: realizarPeticionClase exit.services.principal.peticiones.AbstractHTTP Linea 84
+FileName: AbstractHTTP.java Metodo: realizarPeticionClase exit.services.principal.peticiones.AbstractHTTP Linea 55
+FileName: GetVTEXOMSServicioAServicio.java Metodo: procesarPeticionOKClase exit.services.principal.peticiones.vtex.GetVTEXOMSServicioAServicio Linea 122
+FileName: AbstractHTTP.java Metodo: realizarPeticionClase exit.services.principal.peticiones.AbstractHTTP Linea 90
+FileName: AbstractHTTP.java Metodo: realizarPeticionClase exit.services.principal.peticiones.AbstractHTTP Linea 41
+FileName: Ejecutor.java Metodo: ejecutorServicioAServicioVTEXOMSClase exit.services.principal.Ejecutor Linea 149
+FileName: null Metodo: invoke0Clase sun.reflect.NativeMethodAccessorImpl Linea -2
+FileName: null Metodo: invokeClase sun.reflect.NativeMethodAccessorImpl Linea -1
+FileName: null Metodo: invokeClase sun.reflect.DelegatingMethodAccessorImpl Linea -1
+FileName: null Metodo: invokeClase java.lang.reflect.Method Linea -1
+FileName: Ejecutor.java Metodo: ejecutarClase exit.services.principal.Ejecutor Linea 183
+FileName: Ejecutor.java Metodo: ejecutarClase exit.services.principal.Ejecutor Linea 169
+FileName: Principal.java Metodo: servicioAServicioClase exit.services.principal.Principal Linea 117
+FileName: Principal.java Metodo: mainClase exit.services.principal.Principal Linea 41
+---------------------------------------------------------------------
+wrg-v800070728carg-01 de la entidad contactoCompraProducto
+FileName: AbstractJsonRestEstructura.java Metodo: <init>Clase exit.services.convertidos.csvAJson.AbstractJsonRestEstructura Linea 38
+FileName: JsonGenerico.java Metodo: <init>Clase exit.services.convertidos.csvAJson.JsonGenerico Linea 24
+FileName: JsonVTEX.java Metodo: <init>Clase exit.services.convertidos.csvAJson.JsonVTEX Linea 14
+FileName: ConvertirJsonAJson.java Metodo: convertirClase exit.services.convertidor.jsonAJson.ConvertirJsonAJson Linea 26
+FileName: GetVTEXOMSServicioAServicio.java Metodo: procesarPeticionOKClase exit.services.principal.peticiones.vtex.GetVTEXOMSServicioAServicio Linea 71
+FileName: AbstractHTTP.java Metodo: realizarPeticionClase exit.services.principal.peticiones.AbstractHTTP Linea 84
+FileName: AbstractHTTP.java Metodo: realizarPeticionClase exit.services.principal.peticiones.AbstractHTTP Linea 55
+FileName: GetVTEXOMSServicioAServicio.java Metodo: procesarPeticionOKClase exit.services.principal.peticiones.vtex.GetVTEXOMSServicioAServicio Linea 122
+FileName: AbstractHTTP.java Metodo: realizarPeticionClase exit.services.principal.peticiones.AbstractHTTP Linea 90
+FileName: AbstractHTTP.java Metodo: realizarPeticionClase exit.services.principal.peticiones.AbstractHTTP Linea 41
+FileName: Ejecutor.java Metodo: ejecutorServicioAServicioVTEXOMSClase exit.services.principal.Ejecutor Linea 149
+FileName: null Metodo: invoke0Clase sun.reflect.NativeMethodAccessorImpl Linea -2
+FileName: null Metodo: invokeClase sun.reflect.NativeMethodAccessorImpl Linea -1
+FileName: null Metodo: invokeClase sun.reflect.DelegatingMethodAccessorImpl Linea -1
+FileName: null Metodo: invokeClase java.lang.reflect.Method Linea -1
+FileName: Ejecutor.java Metodo: ejecutarClase exit.services.principal.Ejecutor Linea 183
+FileName: Ejecutor.java Metodo: ejecutarClase exit.services.principal.Ejecutor Linea 169
+FileName: Principal.java Metodo: servicioAServicioClase exit.services.principal.Principal Linea 117
+FileName: Principal.java Metodo: mainClase exit.services.principal.Principal Linea 41
+---------------------------------------------------------------------
+v750083539warg-01 de la entidad contactoCompraProducto
+FileName: AbstractJsonRestEstructura.java Metodo: <init>Clase exit.services.convertidos.csvAJson.AbstractJsonRestEstructura Linea 38
+FileName: JsonGenerico.java Metodo: <init>Clase exit.services.convertidos.csvAJson.JsonGenerico Linea 24
+FileName: JsonVTEX.java Metodo: <init>Clase exit.services.convertidos.csvAJson.JsonVTEX Linea 14
+FileName: ConvertirJsonAJson.java Metodo: convertirClase exit.services.convertidor.jsonAJson.ConvertirJsonAJson Linea 26
+FileName: GetVTEXOMSServicioAServicio.java Metodo: procesarPeticionOKClase exit.services.principal.peticiones.vtex.GetVTEXOMSServicioAServicio Linea 71
+FileName: AbstractHTTP.java Metodo: realizarPeticionClase exit.services.principal.peticiones.AbstractHTTP Linea 84
+FileName: AbstractHTTP.java Metodo: realizarPeticionClase exit.services.principal.peticiones.AbstractHTTP Linea 55
+FileName: GetVTEXOMSServicioAServicio.java Metodo: procesarPeticionOKClase exit.services.principal.peticiones.vtex.GetVTEXOMSServicioAServicio Linea 122
+FileName: AbstractHTTP.java Metodo: realizarPeticionClase exit.services.principal.peticiones.AbstractHTTP Linea 90
+FileName: AbstractHTTP.java Metodo: realizarPeticionClase exit.services.principal.peticiones.AbstractHTTP Linea 41
+FileName: Ejecutor.java Metodo: ejecutorServicioAServicioVTEXOMSClase exit.services.principal.Ejecutor Linea 149
+FileName: null Metodo: invoke0Clase sun.reflect.NativeMethodAccessorImpl Linea -2
+FileName: null Metodo: invokeClase sun.reflect.NativeMethodAccessorImpl Linea -1
+FileName: null Metodo: invokeClase sun.reflect.DelegatingMethodAccessorImpl Linea -1
+FileName: null Metodo: invokeClase java.lang.reflect.Method Linea -1
+FileName: Ejecutor.java Metodo: ejecutarClase exit.services.principal.Ejecutor Linea 183
+FileName: Ejecutor.java Metodo: ejecutarClase exit.services.principal.Ejecutor Linea 169
+FileName: Principal.java Metodo: servicioAServicioClase exit.services.principal.Principal Linea 117
+FileName: Principal.java Metodo: mainClase exit.services.principal.Principal Linea 41
+---------------------------------------------------------------------
+wrg-v800070726carg-01 de la entidad contactoCompraProducto
+FileName: AbstractJsonRestEstructura.java Metodo: <init>Clase exit.services.convertidos.csvAJson.AbstractJsonRestEstructura Linea 38
+FileName: JsonGenerico.java Metodo: <init>Clase exit.services.convertidos.csvAJson.JsonGenerico Linea 24
+FileName: JsonVTEX.java Metodo: <init>Clase exit.services.convertidos.csvAJson.JsonVTEX Linea 14
+FileName: ConvertirJsonAJson.java Metodo: convertirClase exit.services.convertidor.jsonAJson.ConvertirJsonAJson Linea 26
+FileName: GetVTEXOMSServicioAServicio.java Metodo: procesarPeticionOKClase exit.services.principal.peticiones.vtex.GetVTEXOMSServicioAServicio Linea 71
+FileName: AbstractHTTP.java Metodo: realizarPeticionClase exit.services.principal.peticiones.AbstractHTTP Linea 84
+FileName: AbstractHTTP.java Metodo: realizarPeticionClase exit.services.principal.peticiones.AbstractHTTP Linea 55
+FileName: GetVTEXOMSServicioAServicio.java Metodo: procesarPeticionOKClase exit.services.principal.peticiones.vtex.GetVTEXOMSServicioAServicio Linea 122
+FileName: AbstractHTTP.java Metodo: realizarPeticionClase exit.services.principal.peticiones.AbstractHTTP Linea 90
+FileName: AbstractHTTP.java Metodo: realizarPeticionClase exit.services.principal.peticiones.AbstractHTTP Linea 41
+FileName: Ejecutor.java Metodo: ejecutorServicioAServicioVTEXOMSClase exit.services.principal.Ejecutor Linea 149
+FileName: null Metodo: invoke0Clase sun.reflect.NativeMethodAccessorImpl Linea -2
+FileName: null Metodo: invokeClase sun.reflect.NativeMethodAccessorImpl Linea -1
+FileName: null Metodo: invokeClase sun.reflect.DelegatingMethodAccessorImpl Linea -1
+FileName: null Metodo: invokeClase java.lang.reflect.Method Linea -1
+FileName: Ejecutor.java Metodo: ejecutarClase exit.services.principal.Ejecutor Linea 183
+FileName: Ejecutor.java Metodo: ejecutarClase exit.services.principal.Ejecutor Linea 169
+FileName: Principal.java Metodo: servicioAServicioClase exit.services.principal.Principal Linea 117
+FileName: Principal.java Metodo: mainClase exit.services.principal.Principal Linea 41
+---------------------------------------------------------------------
+wrg-v800070724carg-01 de la entidad contactoCompraProducto
+FileName: AbstractJsonRestEstructura.java Metodo: <init>Clase exit.services.convertidos.csvAJson.AbstractJsonRestEstructura Linea 38
+FileName: JsonGenerico.java Metodo: <init>Clase exit.services.convertidos.csvAJson.JsonGenerico Linea 24
+FileName: JsonVTEX.java Metodo: <init>Clase exit.services.convertidos.csvAJson.JsonVTEX Linea 14
+FileName: ConvertirJsonAJson.java Metodo: convertirClase exit.services.convertidor.jsonAJson.ConvertirJsonAJson Linea 26
+FileName: GetVTEXOMSServicioAServicio.java Metodo: procesarPeticionOKClase exit.services.principal.peticiones.vtex.GetVTEXOMSServicioAServicio Linea 71
+FileName: AbstractHTTP.java Metodo: realizarPeticionClase exit.services.principal.peticiones.AbstractHTTP Linea 84
+FileName: AbstractHTTP.java Metodo: realizarPeticionClase exit.services.principal.peticiones.AbstractHTTP Linea 55
+FileName: GetVTEXOMSServicioAServicio.java Metodo: procesarPeticionOKClase exit.services.principal.peticiones.vtex.GetVTEXOMSServicioAServicio Linea 122
+FileName: AbstractHTTP.java Metodo: realizarPeticionClase exit.services.principal.peticiones.AbstractHTTP Linea 90
+FileName: AbstractHTTP.java Metodo: realizarPeticionClase exit.services.principal.peticiones.AbstractHTTP Linea 41
+FileName: Ejecutor.java Metodo: ejecutorServicioAServicioVTEXOMSClase exit.services.principal.Ejecutor Linea 149
+FileName: null Metodo: invoke0Clase sun.reflect.NativeMethodAccessorImpl Linea -2
+FileName: null Metodo: invokeClase sun.reflect.NativeMethodAccessorImpl Linea -1
+FileName: null Metodo: invokeClase sun.reflect.DelegatingMethodAccessorImpl Linea -1
+FileName: null Metodo: invokeClase java.lang.reflect.Method Linea -1
+FileName: Ejecutor.java Metodo: ejecutarClase exit.services.principal.Ejecutor Linea 183
+FileName: Ejecutor.java Metodo: ejecutarClase exit.services.principal.Ejecutor Linea 169
+FileName: Principal.java Metodo: servicioAServicioClase exit.services.principal.Principal Linea 117
+FileName: Principal.java Metodo: mainClase exit.services.principal.Principal Linea 41
+---------------------------------------------------------------------
+wrg-v800070722carg-01 de la entidad contactoCompraProducto
+FileName: AbstractJsonRestEstructura.java Metodo: <init>Clase exit.services.convertidos.csvAJson.AbstractJsonRestEstructura Linea 38
+FileName: JsonGenerico.java Metodo: <init>Clase exit.services.convertidos.csvAJson.JsonGenerico Linea 24
+FileName: JsonVTEX.java Metodo: <init>Clase exit.services.convertidos.csvAJson.JsonVTEX Linea 14
+FileName: ConvertirJsonAJson.java Metodo: convertirClase exit.services.convertidor.jsonAJson.ConvertirJsonAJson Linea 26
+FileName: GetVTEXOMSServicioAServicio.java Metodo: procesarPeticionOKClase exit.services.principal.peticiones.vtex.GetVTEXOMSServicioAServicio Linea 71
+FileName: AbstractHTTP.java Metodo: realizarPeticionClase exit.services.principal.peticiones.AbstractHTTP Linea 84
+FileName: AbstractHTTP.java Metodo: realizarPeticionClase exit.services.principal.peticiones.AbstractHTTP Linea 55
+FileName: GetVTEXOMSServicioAServicio.java Metodo: procesarPeticionOKClase exit.services.principal.peticiones.vtex.GetVTEXOMSServicioAServicio Linea 122
+FileName: AbstractHTTP.java Metodo: realizarPeticionClase exit.services.principal.peticiones.AbstractHTTP Linea 90
+FileName: AbstractHTTP.java Metodo: realizarPeticionClase exit.services.principal.peticiones.AbstractHTTP Linea 41
+FileName: Ejecutor.java Metodo: ejecutorServicioAServicioVTEXOMSClase exit.services.principal.Ejecutor Linea 149
+FileName: null Metodo: invoke0Clase sun.reflect.NativeMethodAccessorImpl Linea -2
+FileName: null Metodo: invokeClase sun.reflect.NativeMethodAccessorImpl Linea -1
+FileName: null Metodo: invokeClase sun.reflect.DelegatingMethodAccessorImpl Linea -1
+FileName: null Metodo: invokeClase java.lang.reflect.Method Linea -1
+FileName: Ejecutor.java Metodo: ejecutarClase exit.services.principal.Ejecutor Linea 183
+FileName: Ejecutor.java Metodo: ejecutarClase exit.services.principal.Ejecutor Linea 169
+FileName: Principal.java Metodo: servicioAServicioClase exit.services.principal.Principal Linea 117
+FileName: Principal.java Metodo: mainClase exit.services.principal.Principal Linea 41
+---------------------------------------------------------------------
+wrg-v800070720carg-01 de la entidad contactoCompraProducto
+FileName: AbstractJsonRestEstructura.java Metodo: <init>Clase exit.services.convertidos.csvAJson.AbstractJsonRestEstructura Linea 38
+FileName: JsonGenerico.java Metodo: <init>Clase exit.services.convertidos.csvAJson.JsonGenerico Linea 24
+FileName: JsonVTEX.java Metodo: <init>Clase exit.services.convertidos.csvAJson.JsonVTEX Linea 14
+FileName: ConvertirJsonAJson.java Metodo: convertirClase exit.services.convertidor.jsonAJson.ConvertirJsonAJson Linea 26
+FileName: GetVTEXOMSServicioAServicio.java Metodo: procesarPeticionOKClase exit.services.principal.peticiones.vtex.GetVTEXOMSServicioAServicio Linea 71
+FileName: AbstractHTTP.java Metodo: realizarPeticionClase exit.services.principal.peticiones.AbstractHTTP Linea 84
+FileName: AbstractHTTP.java Metodo: realizarPeticionClase exit.services.principal.peticiones.AbstractHTTP Linea 55
+FileName: GetVTEXOMSServicioAServicio.java Metodo: procesarPeticionOKClase exit.services.principal.peticiones.vtex.GetVTEXOMSServicioAServicio Linea 122
+FileName: AbstractHTTP.java Metodo: realizarPeticionClase exit.services.principal.peticiones.AbstractHTTP Linea 90
+FileName: AbstractHTTP.java Metodo: realizarPeticionClase exit.services.principal.peticiones.AbstractHTTP Linea 41
+FileName: Ejecutor.java Metodo: ejecutorServicioAServicioVTEXOMSClase exit.services.principal.Ejecutor Linea 149
+FileName: null Metodo: invoke0Clase sun.reflect.NativeMethodAccessorImpl Linea -2
+FileName: null Metodo: invokeClase sun.reflect.NativeMethodAccessorImpl Linea -1
+FileName: null Metodo: invokeClase sun.reflect.DelegatingMethodAccessorImpl Linea -1
+FileName: null Metodo: invokeClase java.lang.reflect.Method Linea -1
+FileName: Ejecutor.java Metodo: ejecutarClase exit.services.principal.Ejecutor Linea 183
+FileName: Ejecutor.java Metodo: ejecutarClase exit.services.principal.Ejecutor Linea 169
+FileName: Principal.java Metodo: servicioAServicioClase exit.services.principal.Principal Linea 117
+FileName: Principal.java Metodo: mainClase exit.services.principal.Principal Linea 41
+---------------------------------------------------------------------
+v750083517warg-01 de la entidad contactoCompraProducto
+FileName: AbstractJsonRestEstructura.java Metodo: <init>Clase exit.services.convertidos.csvAJson.AbstractJsonRestEstructura Linea 38
+FileName: JsonGenerico.java Metodo: <init>Clase exit.services.convertidos.csvAJson.JsonGenerico Linea 24
+FileName: JsonVTEX.java Metodo: <init>Clase exit.services.convertidos.csvAJson.JsonVTEX Linea 14
+FileName: ConvertirJsonAJson.java Metodo: convertirClase exit.services.convertidor.jsonAJson.ConvertirJsonAJson Linea 26
+FileName: GetVTEXOMSServicioAServicio.java Metodo: procesarPeticionOKClase exit.services.principal.peticiones.vtex.GetVTEXOMSServicioAServicio Linea 71
+FileName: AbstractHTTP.java Metodo: realizarPeticionClase exit.services.principal.peticiones.AbstractHTTP Linea 84
+FileName: AbstractHTTP.java Metodo: realizarPeticionClase exit.services.principal.peticiones.AbstractHTTP Linea 55
+FileName: GetVTEXOMSServicioAServicio.java Metodo: procesarPeticionOKClase exit.services.principal.peticiones.vtex.GetVTEXOMSServicioAServicio Linea 122
+FileName: AbstractHTTP.java Metodo: realizarPeticionClase exit.services.principal.peticiones.AbstractHTTP Linea 90
+FileName: AbstractHTTP.java Metodo: realizarPeticionClase exit.services.principal.peticiones.AbstractHTTP Linea 41
+FileName: Ejecutor.java Metodo: ejecutorServicioAServicioVTEXOMSClase exit.services.principal.Ejecutor Linea 149
+FileName: null Metodo: invoke0Clase sun.reflect.NativeMethodAccessorImpl Linea -2
+FileName: null Metodo: invokeClase sun.reflect.NativeMethodAccessorImpl Linea -1
+FileName: null Metodo: invokeClase sun.reflect.DelegatingMethodAccessorImpl Linea -1
+FileName: null Metodo: invokeClase java.lang.reflect.Method Linea -1
+FileName: Ejecutor.java Metodo: ejecutarClase exit.services.principal.Ejecutor Linea 183
+FileName: Ejecutor.java Metodo: ejecutarClase exit.services.principal.Ejecutor Linea 169
+FileName: Principal.java Metodo: servicioAServicioClase exit.services.principal.Principal Linea 117
+FileName: Principal.java Metodo: mainClase exit.services.principal.Principal Linea 41
+---------------------------------------------------------------------
+v750083508warg-01 de la entidad contactoCompraProducto
+FileName: AbstractJsonRestEstructura.java Metodo: <init>Clase exit.services.convertidos.csvAJson.AbstractJsonRestEstructura Linea 38
+FileName: JsonGenerico.java Metodo: <init>Clase exit.services.convertidos.csvAJson.JsonGenerico Linea 24
+FileName: JsonVTEX.java Metodo: <init>Clase exit.services.convertidos.csvAJson.JsonVTEX Linea 14
+FileName: ConvertirJsonAJson.java Metodo: convertirClase exit.services.convertidor.jsonAJson.ConvertirJsonAJson Linea 26
+FileName: GetVTEXOMSServicioAServicio.java Metodo: procesarPeticionOKClase exit.services.principal.peticiones.vtex.GetVTEXOMSServicioAServicio Linea 71
+FileName: AbstractHTTP.java Metodo: realizarPeticionClase exit.services.principal.peticiones.AbstractHTTP Linea 84
+FileName: AbstractHTTP.java Metodo: realizarPeticionClase exit.services.principal.peticiones.AbstractHTTP Linea 55
+FileName: GetVTEXOMSServicioAServicio.java Metodo: procesarPeticionOKClase exit.services.principal.peticiones.vtex.GetVTEXOMSServicioAServicio Linea 122
+FileName: AbstractHTTP.java Metodo: realizarPeticionClase exit.services.principal.peticiones.AbstractHTTP Linea 90
+FileName: AbstractHTTP.java Metodo: realizarPeticionClase exit.services.principal.peticiones.AbstractHTTP Linea 41
+FileName: Ejecutor.java Metodo: ejecutorServicioAServicioVTEXOMSClase exit.services.principal.Ejecutor Linea 149
+FileName: null Metodo: invoke0Clase sun.reflect.NativeMethodAccessorImpl Linea -2
+FileName: null Metodo: invokeClase sun.reflect.NativeMethodAccessorImpl Linea -1
+FileName: null Metodo: invokeClase sun.reflect.DelegatingMethodAccessorImpl Linea -1
+FileName: null Metodo: invokeClase java.lang.reflect.Method Linea -1
+FileName: Ejecutor.java Metodo: ejecutarClase exit.services.principal.Ejecutor Linea 183
+FileName: Ejecutor.java Metodo: ejecutarClase exit.services.principal.Ejecutor Linea 169
+FileName: Principal.java Metodo: servicioAServicioClase exit.services.principal.Principal Linea 117
+FileName: Principal.java Metodo: mainClase exit.services.principal.Principal Linea 41
+---------------------------------------------------------------------
+wrg-v800070718carg-01 de la entidad contactoCompraProducto
+FileName: AbstractJsonRestEstructura.java Metodo: <init>Clase exit.services.convertidos.csvAJson.AbstractJsonRestEstructura Linea 38
+FileName: JsonGenerico.java Metodo: <init>Clase exit.services.convertidos.csvAJson.JsonGenerico Linea 24
+FileName: JsonVTEX.java Metodo: <init>Clase exit.services.convertidos.csvAJson.JsonVTEX Linea 14
+FileName: ConvertirJsonAJson.java Metodo: convertirClase exit.services.convertidor.jsonAJson.ConvertirJsonAJson Linea 26
+FileName: GetVTEXOMSServicioAServicio.java Metodo: procesarPeticionOKClase exit.services.principal.peticiones.vtex.GetVTEXOMSServicioAServicio Linea 71
+FileName: AbstractHTTP.java Metodo: realizarPeticionClase exit.services.principal.peticiones.AbstractHTTP Linea 84
+FileName: AbstractHTTP.java Metodo: realizarPeticionClase exit.services.principal.peticiones.AbstractHTTP Linea 55
+FileName: GetVTEXOMSServicioAServicio.java Metodo: procesarPeticionOKClase exit.services.principal.peticiones.vtex.GetVTEXOMSServicioAServicio Linea 122
+FileName: AbstractHTTP.java Metodo: realizarPeticionClase exit.services.principal.peticiones.AbstractHTTP Linea 90
+FileName: AbstractHTTP.java Metodo: realizarPeticionClase exit.services.principal.peticiones.AbstractHTTP Linea 41
+FileName: Ejecutor.java Metodo: ejecutorServicioAServicioVTEXOMSClase exit.services.principal.Ejecutor Linea 149
+FileName: null Metodo: invoke0Clase sun.reflect.NativeMethodAccessorImpl Linea -2
+FileName: null Metodo: invokeClase sun.reflect.NativeMethodAccessorImpl Linea -1
+FileName: null Metodo: invokeClase sun.reflect.DelegatingMethodAccessorImpl Linea -1
+FileName: null Metodo: invokeClase java.lang.reflect.Method Linea -1
+FileName: Ejecutor.java Metodo: ejecutarClase exit.services.principal.Ejecutor Linea 183
+FileName: Ejecutor.java Metodo: ejecutarClase exit.services.principal.Ejecutor Linea 169
+FileName: Principal.java Metodo: servicioAServicioClase exit.services.principal.Principal Linea 117
+FileName: Principal.java Metodo: mainClase exit.services.principal.Principal Linea 41
+---------------------------------------------------------------------
+v750083489warg-01 de la entidad contactoCompraProducto
+FileName: AbstractJsonRestEstructura.java Metodo: <init>Clase exit.services.convertidos.csvAJson.AbstractJsonRestEstructura Linea 38
+FileName: JsonGenerico.java Metodo: <init>Clase exit.services.convertidos.csvAJson.JsonGenerico Linea 24
+FileName: JsonVTEX.java Metodo: <init>Clase exit.services.convertidos.csvAJson.JsonVTEX Linea 14
+FileName: ConvertirJsonAJson.java Metodo: convertirClase exit.services.convertidor.jsonAJson.ConvertirJsonAJson Linea 26
+FileName: GetVTEXOMSServicioAServicio.java Metodo: procesarPeticionOKClase exit.services.principal.peticiones.vtex.GetVTEXOMSServicioAServicio Linea 71
+FileName: AbstractHTTP.java Metodo: realizarPeticionClase exit.services.principal.peticiones.AbstractHTTP Linea 84
+FileName: AbstractHTTP.java Metodo: realizarPeticionClase exit.services.principal.peticiones.AbstractHTTP Linea 55
+FileName: GetVTEXOMSServicioAServicio.java Metodo: procesarPeticionOKClase exit.services.principal.peticiones.vtex.GetVTEXOMSServicioAServicio Linea 122
+FileName: AbstractHTTP.java Metodo: realizarPeticionClase exit.services.principal.peticiones.AbstractHTTP Linea 90
+FileName: AbstractHTTP.java Metodo: realizarPeticionClase exit.services.principal.peticiones.AbstractHTTP Linea 41
+FileName: Ejecutor.java Metodo: ejecutorServicioAServicioVTEXOMSClase exit.services.principal.Ejecutor Linea 149
+FileName: null Metodo: invoke0Clase sun.reflect.NativeMethodAccessorImpl Linea -2
+FileName: null Metodo: invokeClase sun.reflect.NativeMethodAccessorImpl Linea -1
+FileName: null Metodo: invokeClase sun.reflect.DelegatingMethodAccessorImpl Linea -1
+FileName: null Metodo: invokeClase java.lang.reflect.Method Linea -1
+FileName: Ejecutor.java Metodo: ejecutarClase exit.services.principal.Ejecutor Linea 183
+FileName: Ejecutor.java Metodo: ejecutarClase exit.services.principal.Ejecutor Linea 169
+FileName: Principal.java Metodo: servicioAServicioClase exit.services.principal.Principal Linea 117
+FileName: Principal.java Metodo: mainClase exit.services.principal.Principal Linea 41
+---------------------------------------------------------------------
+v750083483warg-01 de la entidad contactoCompraProducto
+FileName: AbstractJsonRestEstructura.java Metodo: <init>Clase exit.services.convertidos.csvAJson.AbstractJsonRestEstructura Linea 38
+FileName: JsonGenerico.java Metodo: <init>Clase exit.services.convertidos.csvAJson.JsonGenerico Linea 24
+FileName: JsonVTEX.java Metodo: <init>Clase exit.services.convertidos.csvAJson.JsonVTEX Linea 14
+FileName: ConvertirJsonAJson.java Metodo: convertirClase exit.services.convertidor.jsonAJson.ConvertirJsonAJson Linea 26
+FileName: GetVTEXOMSServicioAServicio.java Metodo: procesarPeticionOKClase exit.services.principal.peticiones.vtex.GetVTEXOMSServicioAServicio Linea 71
+FileName: AbstractHTTP.java Metodo: realizarPeticionClase exit.services.principal.peticiones.AbstractHTTP Linea 84
+FileName: AbstractHTTP.java Metodo: realizarPeticionClase exit.services.principal.peticiones.AbstractHTTP Linea 55
+FileName: GetVTEXOMSServicioAServicio.java Metodo: procesarPeticionOKClase exit.services.principal.peticiones.vtex.GetVTEXOMSServicioAServicio Linea 122
+FileName: AbstractHTTP.java Metodo: realizarPeticionClase exit.services.principal.peticiones.AbstractHTTP Linea 90
+FileName: AbstractHTTP.java Metodo: realizarPeticionClase exit.services.principal.peticiones.AbstractHTTP Linea 41
+FileName: Ejecutor.java Metodo: ejecutorServicioAServicioVTEXOMSClase exit.services.principal.Ejecutor Linea 149
+FileName: null Metodo: invoke0Clase sun.reflect.NativeMethodAccessorImpl Linea -2
+FileName: null Metodo: invokeClase sun.reflect.NativeMethodAccessorImpl Linea -1
+FileName: null Metodo: invokeClase sun.reflect.DelegatingMethodAccessorImpl Linea -1
+FileName: null Metodo: invokeClase java.lang.reflect.Method Linea -1
+FileName: Ejecutor.java Metodo: ejecutarClase exit.services.principal.Ejecutor Linea 183
+FileName: Ejecutor.java Metodo: ejecutarClase exit.services.principal.Ejecutor Linea 169
+FileName: Principal.java Metodo: servicioAServicioClase exit.services.principal.Principal Linea 117
+FileName: Principal.java Metodo: mainClase exit.services.principal.Principal Linea 41
+---------------------------------------------------------------------
+wrg-v800070716carg-01 de la entidad contactoCompraProducto
+FileName: AbstractJsonRestEstructura.java Metodo: <init>Clase exit.services.convertidos.csvAJson.AbstractJsonRestEstructura Linea 38
+FileName: JsonGenerico.java Metodo: <init>Clase exit.services.convertidos.csvAJson.JsonGenerico Linea 24
+FileName: JsonVTEX.java Metodo: <init>Clase exit.services.convertidos.csvAJson.JsonVTEX Linea 14
+FileName: ConvertirJsonAJson.java Metodo: convertirClase exit.services.convertidor.jsonAJson.ConvertirJsonAJson Linea 26
+FileName: GetVTEXOMSServicioAServicio.java Metodo: procesarPeticionOKClase exit.services.principal.peticiones.vtex.GetVTEXOMSServicioAServicio Linea 71
+FileName: AbstractHTTP.java Metodo: realizarPeticionClase exit.services.principal.peticiones.AbstractHTTP Linea 84
+FileName: AbstractHTTP.java Metodo: realizarPeticionClase exit.services.principal.peticiones.AbstractHTTP Linea 55
+FileName: GetVTEXOMSServicioAServicio.java Metodo: procesarPeticionOKClase exit.services.principal.peticiones.vtex.GetVTEXOMSServicioAServicio Linea 122
+FileName: AbstractHTTP.java Metodo: realizarPeticionClase exit.services.principal.peticiones.AbstractHTTP Linea 90
+FileName: AbstractHTTP.java Metodo: realizarPeticionClase exit.services.principal.peticiones.AbstractHTTP Linea 41
+FileName: Ejecutor.java Metodo: ejecutorServicioAServicioVTEXOMSClase exit.services.principal.Ejecutor Linea 149
+FileName: null Metodo: invoke0Clase sun.reflect.NativeMethodAccessorImpl Linea -2
+FileName: null Metodo: invokeClase sun.reflect.NativeMethodAccessorImpl Linea -1
+FileName: null Metodo: invokeClase sun.reflect.DelegatingMethodAccessorImpl Linea -1
+FileName: null Metodo: invokeClase java.lang.reflect.Method Linea -1
+FileName: Ejecutor.java Metodo: ejecutarClase exit.services.principal.Ejecutor Linea 183
+FileName: Ejecutor.java Metodo: ejecutarClase exit.services.principal.Ejecutor Linea 169
+FileName: Principal.java Metodo: servicioAServicioClase exit.services.principal.Principal Linea 117
+FileName: Principal.java Metodo: mainClase exit.services.principal.Principal Linea 41
+---------------------------------------------------------------------
+wrg-v800070714carg-01 de la entidad contactoCompraProducto
+FileName: AbstractJsonRestEstructura.java Metodo: <init>Clase exit.services.convertidos.csvAJson.AbstractJsonRestEstructura Linea 38
+FileName: JsonGenerico.java Metodo: <init>Clase exit.services.convertidos.csvAJson.JsonGenerico Linea 24
+FileName: JsonVTEX.java Metodo: <init>Clase exit.services.convertidos.csvAJson.JsonVTEX Linea 14
+FileName: ConvertirJsonAJson.java Metodo: convertirClase exit.services.convertidor.jsonAJson.ConvertirJsonAJson Linea 26
+FileName: GetVTEXOMSServicioAServicio.java Metodo: procesarPeticionOKClase exit.services.principal.peticiones.vtex.GetVTEXOMSServicioAServicio Linea 71
+FileName: AbstractHTTP.java Metodo: realizarPeticionClase exit.services.principal.peticiones.AbstractHTTP Linea 84
+FileName: AbstractHTTP.java Metodo: realizarPeticionClase exit.services.principal.peticiones.AbstractHTTP Linea 55
+FileName: GetVTEXOMSServicioAServicio.java Metodo: procesarPeticionOKClase exit.services.principal.peticiones.vtex.GetVTEXOMSServicioAServicio Linea 122
+FileName: AbstractHTTP.java Metodo: realizarPeticionClase exit.services.principal.peticiones.AbstractHTTP Linea 90
+FileName: AbstractHTTP.java Metodo: realizarPeticionClase exit.services.principal.peticiones.AbstractHTTP Linea 41
+FileName: Ejecutor.java Metodo: ejecutorServicioAServicioVTEXOMSClase exit.services.principal.Ejecutor Linea 149
+FileName: null Metodo: invoke0Clase sun.reflect.NativeMethodAccessorImpl Linea -2
+FileName: null Metodo: invokeClase sun.reflect.NativeMethodAccessorImpl Linea -1
+FileName: null Metodo: invokeClase sun.reflect.DelegatingMethodAccessorImpl Linea -1
+FileName: null Metodo: invokeClase java.lang.reflect.Method Linea -1
+FileName: Ejecutor.java Metodo: ejecutarClase exit.services.principal.Ejecutor Linea 183
+FileName: Ejecutor.java Metodo: ejecutarClase exit.services.principal.Ejecutor Linea 169
+FileName: Principal.java Metodo: servicioAServicioClase exit.services.principal.Principal Linea 117
+FileName: Principal.java Metodo: mainClase exit.services.principal.Principal Linea 41
+---------------------------------------------------------------------
+wrg-v800070712carg-01 de la entidad contactoCompraProducto
+FileName: AbstractJsonRestEstructura.java Metodo: <init>Clase exit.services.convertidos.csvAJson.AbstractJsonRestEstructura Linea 38
+FileName: JsonGenerico.java Metodo: <init>Clase exit.services.convertidos.csvAJson.JsonGenerico Linea 24
+FileName: JsonVTEX.java Metodo: <init>Clase exit.services.convertidos.csvAJson.JsonVTEX Linea 14
+FileName: ConvertirJsonAJson.java Metodo: convertirClase exit.services.convertidor.jsonAJson.ConvertirJsonAJson Linea 26
+FileName: GetVTEXOMSServicioAServicio.java Metodo: procesarPeticionOKClase exit.services.principal.peticiones.vtex.GetVTEXOMSServicioAServicio Linea 71
+FileName: AbstractHTTP.java Metodo: realizarPeticionClase exit.services.principal.peticiones.AbstractHTTP Linea 84
+FileName: AbstractHTTP.java Metodo: realizarPeticionClase exit.services.principal.peticiones.AbstractHTTP Linea 55
+FileName: GetVTEXOMSServicioAServicio.java Metodo: procesarPeticionOKClase exit.services.principal.peticiones.vtex.GetVTEXOMSServicioAServicio Linea 122
+FileName: AbstractHTTP.java Metodo: realizarPeticionClase exit.services.principal.peticiones.AbstractHTTP Linea 90
+FileName: AbstractHTTP.java Metodo: realizarPeticionClase exit.services.principal.peticiones.AbstractHTTP Linea 41
+FileName: Ejecutor.java Metodo: ejecutorServicioAServicioVTEXOMSClase exit.services.principal.Ejecutor Linea 149
+FileName: null Metodo: invoke0Clase sun.reflect.NativeMethodAccessorImpl Linea -2
+FileName: null Metodo: invokeClase sun.reflect.NativeMethodAccessorImpl Linea -1
+FileName: null Metodo: invokeClase sun.reflect.DelegatingMethodAccessorImpl Linea -1
+FileName: null Metodo: invokeClase java.lang.reflect.Method Linea -1
+FileName: Ejecutor.java Metodo: ejecutarClase exit.services.principal.Ejecutor Linea 183
+FileName: Ejecutor.java Metodo: ejecutarClase exit.services.principal.Ejecutor Linea 169
+FileName: Principal.java Metodo: servicioAServicioClase exit.services.principal.Principal Linea 117
+FileName: Principal.java Metodo: mainClase exit.services.principal.Principal Linea 41
+---------------------------------------------------------------------
+v750083474warg-01 de la entidad contactoCompraProducto
+FileName: AbstractJsonRestEstructura.java Metodo: <init>Clase exit.services.convertidos.csvAJson.AbstractJsonRestEstructura Linea 38
+FileName: JsonGenerico.java Metodo: <init>Clase exit.services.convertidos.csvAJson.JsonGenerico Linea 24
+FileName: JsonVTEX.java Metodo: <init>Clase exit.services.convertidos.csvAJson.JsonVTEX Linea 14
+FileName: ConvertirJsonAJson.java Metodo: convertirClase exit.services.convertidor.jsonAJson.ConvertirJsonAJson Linea 26
+FileName: GetVTEXOMSServicioAServicio.java Metodo: procesarPeticionOKClase exit.services.principal.peticiones.vtex.GetVTEXOMSServicioAServicio Linea 71
+FileName: AbstractHTTP.java Metodo: realizarPeticionClase exit.services.principal.peticiones.AbstractHTTP Linea 84
+FileName: AbstractHTTP.java Metodo: realizarPeticionClase exit.services.principal.peticiones.AbstractHTTP Linea 55
+FileName: GetVTEXOMSServicioAServicio.java Metodo: procesarPeticionOKClase exit.services.principal.peticiones.vtex.GetVTEXOMSServicioAServicio Linea 122
+FileName: AbstractHTTP.java Metodo: realizarPeticionClase exit.services.principal.peticiones.AbstractHTTP Linea 90
+FileName: AbstractHTTP.java Metodo: realizarPeticionClase exit.services.principal.peticiones.AbstractHTTP Linea 41
+FileName: Ejecutor.java Metodo: ejecutorServicioAServicioVTEXOMSClase exit.services.principal.Ejecutor Linea 149
+FileName: null Metodo: invoke0Clase sun.reflect.NativeMethodAccessorImpl Linea -2
+FileName: null Metodo: invokeClase sun.reflect.NativeMethodAccessorImpl Linea -1
+FileName: null Metodo: invokeClase sun.reflect.DelegatingMethodAccessorImpl Linea -1
+FileName: null Metodo: invokeClase java.lang.reflect.Method Linea -1
+FileName: Ejecutor.java Metodo: ejecutarClase exit.services.principal.Ejecutor Linea 183
+FileName: Ejecutor.java Metodo: ejecutarClase exit.services.principal.Ejecutor Linea 169
+FileName: Principal.java Metodo: servicioAServicioClase exit.services.principal.Principal Linea 117
+FileName: Principal.java Metodo: mainClase exit.services.principal.Principal Linea 41
+---------------------------------------------------------------------
+v750083471warg-01 de la entidad contactoCompraProducto
+FileName: AbstractJsonRestEstructura.java Metodo: <init>Clase exit.services.convertidos.csvAJson.AbstractJsonRestEstructura Linea 38
+FileName: JsonGenerico.java Metodo: <init>Clase exit.services.convertidos.csvAJson.JsonGenerico Linea 24
+FileName: JsonVTEX.java Metodo: <init>Clase exit.services.convertidos.csvAJson.JsonVTEX Linea 14
+FileName: ConvertirJsonAJson.java Metodo: convertirClase exit.services.convertidor.jsonAJson.ConvertirJsonAJson Linea 26
+FileName: GetVTEXOMSServicioAServicio.java Metodo: procesarPeticionOKClase exit.services.principal.peticiones.vtex.GetVTEXOMSServicioAServicio Linea 71
+FileName: AbstractHTTP.java Metodo: realizarPeticionClase exit.services.principal.peticiones.AbstractHTTP Linea 84
+FileName: AbstractHTTP.java Metodo: realizarPeticionClase exit.services.principal.peticiones.AbstractHTTP Linea 55
+FileName: GetVTEXOMSServicioAServicio.java Metodo: procesarPeticionOKClase exit.services.principal.peticiones.vtex.GetVTEXOMSServicioAServicio Linea 122
+FileName: AbstractHTTP.java Metodo: realizarPeticionClase exit.services.principal.peticiones.AbstractHTTP Linea 90
+FileName: AbstractHTTP.java Metodo: realizarPeticionClase exit.services.principal.peticiones.AbstractHTTP Linea 41
+FileName: Ejecutor.java Metodo: ejecutorServicioAServicioVTEXOMSClase exit.services.principal.Ejecutor Linea 149
+FileName: null Metodo: invoke0Clase sun.reflect.NativeMethodAccessorImpl Linea -2
+FileName: null Metodo: invokeClase sun.reflect.NativeMethodAccessorImpl Linea -1
+FileName: null Metodo: invokeClase sun.reflect.DelegatingMethodAccessorImpl Linea -1
+FileName: null Metodo: invokeClase java.lang.reflect.Method Linea -1
+FileName: Ejecutor.java Metodo: ejecutarClase exit.services.principal.Ejecutor Linea 183
+FileName: Ejecutor.java Metodo: ejecutarClase exit.services.principal.Ejecutor Linea 169
+FileName: Principal.java Metodo: servicioAServicioClase exit.services.principal.Principal Linea 117
+FileName: Principal.java Metodo: mainClase exit.services.principal.Principal Linea 41
+---------------------------------------------------------------------
+v750083468warg-01 de la entidad contactoCompraProducto
+FileName: AbstractJsonRestEstructura.java Metodo: <init>Clase exit.services.convertidos.csvAJson.AbstractJsonRestEstructura Linea 38
+FileName: JsonGenerico.java Metodo: <init>Clase exit.services.convertidos.csvAJson.JsonGenerico Linea 24
+FileName: JsonVTEX.java Metodo: <init>Clase exit.services.convertidos.csvAJson.JsonVTEX Linea 14
+FileName: ConvertirJsonAJson.java Metodo: convertirClase exit.services.convertidor.jsonAJson.ConvertirJsonAJson Linea 26
+FileName: GetVTEXOMSServicioAServicio.java Metodo: procesarPeticionOKClase exit.services.principal.peticiones.vtex.GetVTEXOMSServicioAServicio Linea 71
+FileName: AbstractHTTP.java Metodo: realizarPeticionClase exit.services.principal.peticiones.AbstractHTTP Linea 84
+FileName: AbstractHTTP.java Metodo: realizarPeticionClase exit.services.principal.peticiones.AbstractHTTP Linea 55
+FileName: GetVTEXOMSServicioAServicio.java Metodo: procesarPeticionOKClase exit.services.principal.peticiones.vtex.GetVTEXOMSServicioAServicio Linea 122
+FileName: AbstractHTTP.java Metodo: realizarPeticionClase exit.services.principal.peticiones.AbstractHTTP Linea 90
+FileName: AbstractHTTP.java Metodo: realizarPeticionClase exit.services.principal.peticiones.AbstractHTTP Linea 41
+FileName: Ejecutor.java Metodo: ejecutorServicioAServicioVTEXOMSClase exit.services.principal.Ejecutor Linea 149
+FileName: null Metodo: invoke0Clase sun.reflect.NativeMethodAccessorImpl Linea -2
+FileName: null Metodo: invokeClase sun.reflect.NativeMethodAccessorImpl Linea -1
+FileName: null Metodo: invokeClase sun.reflect.DelegatingMethodAccessorImpl Linea -1
+FileName: null Metodo: invokeClase java.lang.reflect.Method Linea -1
+FileName: Ejecutor.java Metodo: ejecutarClase exit.services.principal.Ejecutor Linea 183
+FileName: Ejecutor.java Metodo: ejecutarClase exit.services.principal.Ejecutor Linea 169
+FileName: Principal.java Metodo: servicioAServicioClase exit.services.principal.Principal Linea 117
+FileName: Principal.java Metodo: mainClase exit.services.principal.Principal Linea 41
+---------------------------------------------------------------------
+v750083465warg-01 de la entidad contactoCompraProducto
+FileName: AbstractJsonRestEstructura.java Metodo: <init>Clase exit.services.convertidos.csvAJson.AbstractJsonRestEstructura Linea 38
+FileName: JsonGenerico.java Metodo: <init>Clase exit.services.convertidos.csvAJson.JsonGenerico Linea 24
+FileName: JsonVTEX.java Metodo: <init>Clase exit.services.convertidos.csvAJson.JsonVTEX Linea 14
+FileName: ConvertirJsonAJson.java Metodo: convertirClase exit.services.convertidor.jsonAJson.ConvertirJsonAJson Linea 26
+FileName: GetVTEXOMSServicioAServicio.java Metodo: procesarPeticionOKClase exit.services.principal.peticiones.vtex.GetVTEXOMSServicioAServicio Linea 71
+FileName: AbstractHTTP.java Metodo: realizarPeticionClase exit.services.principal.peticiones.AbstractHTTP Linea 84
+FileName: AbstractHTTP.java Metodo: realizarPeticionClase exit.services.principal.peticiones.AbstractHTTP Linea 55
+FileName: GetVTEXOMSServicioAServicio.java Metodo: procesarPeticionOKClase exit.services.principal.peticiones.vtex.GetVTEXOMSServicioAServicio Linea 122
+FileName: AbstractHTTP.java Metodo: realizarPeticionClase exit.services.principal.peticiones.AbstractHTTP Linea 90
+FileName: AbstractHTTP.java Metodo: realizarPeticionClase exit.services.principal.peticiones.AbstractHTTP Linea 41
+FileName: Ejecutor.java Metodo: ejecutorServicioAServicioVTEXOMSClase exit.services.principal.Ejecutor Linea 149
+FileName: null Metodo: invoke0Clase sun.reflect.NativeMethodAccessorImpl Linea -2
+FileName: null Metodo: invokeClase sun.reflect.NativeMethodAccessorImpl Linea -1
+FileName: null Metodo: invokeClase sun.reflect.DelegatingMethodAccessorImpl Linea -1
+FileName: null Metodo: invokeClase java.lang.reflect.Method Linea -1
+FileName: Ejecutor.java Metodo: ejecutarClase exit.services.principal.Ejecutor Linea 183
+FileName: Ejecutor.java Metodo: ejecutarClase exit.services.principal.Ejecutor Linea 169
+FileName: Principal.java Metodo: servicioAServicioClase exit.services.principal.Principal Linea 117
+FileName: Principal.java Metodo: mainClase exit.services.principal.Principal Linea 41
+---------------------------------------------------------------------

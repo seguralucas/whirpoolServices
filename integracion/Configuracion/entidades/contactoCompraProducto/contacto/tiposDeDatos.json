@@ -12,11 +12,20 @@
 	"clientProfileData.documentType":{
 		"tipo":"cadena"	
 	},
+	
 	"clientProfileData.email":{
 		"tipo":"cadena",
 		"desencriptarMailVtex":{
 			"url":"http://conversationtracker.vtex.com.br/api/pvt/emailMapping",
 			"instancia":"whirlpoolarg,compraciertaar,compraciertacol,whirlpoolcol,kaidcol"
+		},
+		"borrarSiEsNull":"emails[0]"
+	},
+	
+		"clientProfileData.phone":{
+		"tipo":"cadena",
+		"borrarSiEsNull":"phones[0]"
 		}
-	}
+	
+	
 }

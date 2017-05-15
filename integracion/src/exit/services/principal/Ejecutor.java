@@ -23,6 +23,7 @@ import exit.services.principal.peticiones.vtex.GetVTEXOMSServicioAServicio;
 import exit.services.singletons.ApuntadorDeEntidad;
 import exit.services.singletons.ConfiguracionEntidadParticular;
 import exit.services.singletons.RecEntAct;
+import exit.services.util.JsonUtils;
 
 public class Ejecutor {
 	
@@ -39,23 +40,23 @@ public class Ejecutor {
 		   if(index>=0){
 			   String key=parametros.substring(aux+1, index);
 			   if(jsonEst.getMapCabeceraValor().get(key)!=null)
-				   parametros=parametros.replaceAll(separador+key+separador, jsonEst.getMapCabeceraValor().get(key).toString());
+				   parametros=parametros.replaceAll(JsonUtils.reemplazarCorcheteParaRegex(separador+key+separador), jsonEst.getMapCabeceraValor().get(key).toString());
 			   index = parametros.indexOf(separador, index+1);
 		   }
 		}
 		GetExistFieldURLQueryRightNow get= new GetExistFieldURLQueryRightNow();
 		String id=(String)get.realizarPeticion(EPeticiones.GET, parametros,null,null,jsonEst.getConfEntidadPart().getCabecera(), jsonEst.getConfEntidadPart());
 		if(id!=null){
-			System.out.println("Se va a actualizar el contacto con id: "+id);
+			System.out.println("Se va a actualizar la entidad: "+  jsonEst.getConfEntidadPart().getEntidadNombre()+ "con id: "+id);
 			UpdateGenericoRightNow update= new UpdateGenericoRightNow();
 			return update.realizarPeticion(EPeticiones.UPDATE, jsonEst.getConfEntidadPart().getUrl() , id, jsonEst,jsonEst.getConfEntidadPart().getCabecera(),jsonEst.getConfEntidadPart());
 		}
-		System.out.println("Se va a insertar el contacto");
+		System.out.println("Se va a insertar la entidad: "+  jsonEst.getConfEntidadPart().getEntidadNombre());
 			PostGenerico insertar= new PostGenerico();
 			return insertar.realizarPeticion(EPeticiones.POST, jsonEst.getConfEntidadPart().getUrl(), jsonEst,jsonEst.getConfEntidadPart().getCabecera());
 		}
 		catch(Exception e){
-			System.out.println("Se va a insertar el contacto");
+			System.out.println("Se va a insertar la entidad: "+  jsonEst.getConfEntidadPart().getEntidadNombre());
 			PostGenerico insertar= new PostGenerico();
 			return insertar.realizarPeticion(EPeticiones.POST, jsonEst.getConfEntidadPart().getUrl(),jsonEst,jsonEst.getConfEntidadPart().getCabecera());			
 		}
@@ -80,7 +81,7 @@ public class Ejecutor {
 		c.add(Calendar.DATE, -1*cantDias);
 		d.setTime( c.getTime().getTime() );
 		String desde=sdf.format(d);
-		return "f_creationDate=creationDate:%5B"+desde+"T02:00:00.000Z+TO+"+hasta+"T01:59:59.999Z%5D";		    
+		return "f_creationDate=creationDate:%5B"+desde+"T00:00:00.000Z+TO+"+hasta+"T23:59:59.999Z%5D";		    
 	}
 
 	private String getParametroDateMasterData(Integer cantDias){

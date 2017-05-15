@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="conditionHistory">
-		<item value="4" key="conditionHistoryEntryCount"/>
-		<item value="keyvalue!=null &amp;&amp; keyvalue.toString().equalsIgnoreCase(&quot;motivoRechazoPago&quot;)" key="conditionHistoryEntry_0"/>
-		<item value="if(keyvalue!=null)&#x0D;&#x0A;keyvalue.toString().equalsIgnoreCase(&quot;motivoRechazoPago&quot;)" key="conditionHistoryEntry_1"/>
-		<item value="keyvalue.toString().equalsIgnoreCase(&quot;motivoRechazoPago&quot;)" key="conditionHistoryEntry_2"/>
-		<item value="key.toString().equalsIgnoreCase(&quot;paymentData.transactions[0].payments[0].connectorResponses.Message&quot;)" key="conditionHistoryEntry_3"/>
+		<item value="5" key="conditionHistoryEntryCount"/>
+		<item value="key.toString().equalsIgnoreCase(&quot;propiedadesExtras.idcontactoCompraProducto/contacto&quot;)" key="conditionHistoryEntry_0"/>
+		<item value="key.toString().equalsIgnoreCase(&quot;paymentData.transactions[0].payments[0].connectorResponses.Message&quot;)" key="conditionHistoryEntry_1"/>
+		<item value="keyvalue.toString().equalsIgnoreCase(&quot;motivoRechazoPago&quot;)" key="conditionHistoryEntry_4"/>
+		<item value="keyvalue!=null &amp;&amp; keyvalue.toString().equalsIgnoreCase(&quot;motivoRechazoPago&quot;)" key="conditionHistoryEntry_2"/>
+		<item value="if(keyvalue!=null)&#x0D;&#x0A;keyvalue.toString().equalsIgnoreCase(&quot;motivoRechazoPago&quot;)" key="conditionHistoryEntry_3"/>
 	</section>
 	<section name="org.eclipse.jdt.internal.debug.ui.ExpressionInformationControlCreator$ExpressionInformationControl">
-		<item value="200" key="SashWeightTree"/>
-		<item value="200" key="SashWeightDetails"/>
+		<item value="500" key="SashWeightTree"/>
+		<item value="500" key="SashWeightDetails"/>
 		<item value="614" key="WIDTH"/>
 		<item value="194" key="HEIGHT"/>
 	</section>

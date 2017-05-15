@@ -1,0 +1,32 @@
+{
+    "type": "https://whirlpool.custhelp.com/services/rest/connect/exceptions/OSC-CREST-00017",
+    "title": "Se ha solicitado un idioma no soportado",
+    "status": 400,
+    "detail": "This interface uses es-ES language which does not match with requested language of 'application/json'",
+    "instance": "https://whirlpool.custhelp.com/services/rest/connect/v1.3/queryResults/?query=select%20id%20from%20Whirlpool.Producto%20where%20vtexId%20=%27",
+    "o:errorCode": "OSC-CREST-00017"
+}
+{
+    "type": "https://whirlpool.custhelp.com/services/rest/connect/exceptions/OSC-CREST-00017",
+    "title": "Se ha solicitado un idioma no soportado",
+    "status": 400,
+    "detail": "This interface uses es-ES language which does not match with requested language of 'application/json'",
+    "instance": "https://whirlpool.custhelp.com/services/rest/connect/v1.3/queryResults/?query=select%20id%20from%20Whirlpool.Producto%20where%20vtexId%20=%27",
+    "o:errorCode": "OSC-CREST-00017"
+}
+{
+    "type": "https://whirlpool.custhelp.com/services/rest/connect/exceptions/OSC-CREST-00017",
+    "title": "Se ha solicitado un idioma no soportado",
+    "status": 400,
+    "detail": "This interface uses es-ES language which does not match with requested language of 'application/json'",
+    "instance": "https://whirlpool.custhelp.com/services/rest/connect/v1.3/queryResults/?query=select%20id%20from%20Whirlpool.Producto%20where%20vtexId%20=%27",
+    "o:errorCode": "OSC-CREST-00017"
+}
+{
+    "type": "https://whirlpool.custhelp.com/services/rest/connect/exceptions/OSC-CREST-00017",
+    "title": "Se ha solicitado un idioma no soportado",
+    "status": 400,
+    "detail": "This interface uses es-ES language which does not match with requested language of 'application/json'",
+    "instance": "https://whirlpool.custhelp.com/services/rest/connect/v1.3/queryResults/?query=select%20id%20from%20Whirlpool.Producto%20where%20vtexId%20=%27",
+    "o:errorCode": "OSC-CREST-00017"
+}

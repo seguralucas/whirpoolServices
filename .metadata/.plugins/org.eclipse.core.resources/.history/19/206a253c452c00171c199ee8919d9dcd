@@ -1,5 +1,0 @@
-package exit.services.convertidos.csvAJson;
-
-public class JsonVTEX extends JsonGenerico{
-
-}

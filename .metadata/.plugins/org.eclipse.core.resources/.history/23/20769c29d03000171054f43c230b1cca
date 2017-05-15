@@ -1,9 +1,0 @@
-{
-    "nombre": "#items[0].name#",
-    "marca": "#items[0].additionalInfo.brandName#",
-    "nombre": "#items[0].name#",
-    "nombre": "#items[0].name#",
-    "idCompra":{"id":"#propiedadesExtras.idcontactoCompraProducto/compra#"}
-}
-
-

@@ -1,5 +1,0 @@
-package exit.services.singletons.entidadesARecuperar;
-
-public interface IPeticiones {
-
-}

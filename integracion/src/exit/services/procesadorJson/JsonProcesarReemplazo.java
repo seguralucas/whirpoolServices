@@ -6,6 +6,7 @@ import org.json.simple.JSONObject;
 import exit.services.singletons.ConfiguracionEntidadParticular;
 import exit.services.singletons.RecEntAct;
 import exit.services.singletons.RecuperadorPropierdadesJson;
+import exit.services.util.JsonUtils;
 
 public class JsonProcesarReemplazo implements IProcesadorJson {
 	private Object valorPorReemplazaR;
@@ -17,6 +18,8 @@ public class JsonProcesarReemplazo implements IProcesadorJson {
 		this.configEntidadPart=configEntidadPart;
 	}
 	
+	public static Integer ICont=0;
+	
 	@SuppressWarnings("unchecked")
 	@Override
 	public void procesarJson(JSONObject json, String keyValue) {
@@ -27,13 +30,13 @@ public class JsonProcesarReemplazo implements IProcesadorJson {
 			String valor=(String)o;
 			if(r.getRecuperadorPropiedadesJson().getTipo(cabeceraPorReemplazar).equalsIgnoreCase(RecuperadorPropierdadesJson.TIPO_CADENA)){
 				if(valor.contains(identificador+cabeceraPorReemplazar+identificador)){
-					if(valorPorReemplazaR==null && valor.replaceAll(identificador+reemplazarCorcheteParaRegex(cabeceraPorReemplazar)+identificador, "").trim().length()==0)
+					if(valorPorReemplazaR==null && valor.replaceAll(identificador+JsonUtils.reemplazarCorcheteParaRegex(cabeceraPorReemplazar)+identificador, "").trim().length()==0)
 						json.put(keyValue,null);
 					else if(valorPorReemplazaR==null){
-						json.put(keyValue, valor.replaceAll(identificador+reemplazarCorcheteParaRegex(cabeceraPorReemplazar)+identificador, ""));
+						json.put(keyValue, valor.replaceAll(identificador+JsonUtils.reemplazarCorcheteParaRegex(cabeceraPorReemplazar)+identificador, ""));
 					}
 					else
-						json.put(keyValue, valor.replaceAll(identificador+reemplazarCorcheteParaRegex(cabeceraPorReemplazar)+identificador, insertarStringNoNull((String)valorPorReemplazaR)));				
+						json.put(keyValue, valor.replaceAll(identificador+JsonUtils.reemplazarCorcheteParaRegex(cabeceraPorReemplazar)+identificador, insertarStringNoNull((String)valorPorReemplazaR)));				
 				}
 			}
 			else if(valor.equalsIgnoreCase(identificador+cabeceraPorReemplazar+identificador))
@@ -41,9 +44,7 @@ public class JsonProcesarReemplazo implements IProcesadorJson {
 		}
 	}
 	
-	private String reemplazarCorcheteParaRegex(String cadena){
-		return cadena.replaceAll("\\[", "\\\\[");
-	}
+
 	
 	@Override
 	public void procesarJson(JSONArray json, Integer index) {
@@ -54,7 +55,7 @@ public class JsonProcesarReemplazo implements IProcesadorJson {
 			String identificador=RecEntAct.getInstance().getCep().getIdentificadorAtributo();
 			String valor=(String)json.get(index);
 			if(r.getRecuperadorPropiedadesJson().getTipo(cabeceraPorReemplazar).equalsIgnoreCase(RecuperadorPropierdadesJson.TIPO_CADENA)){
-				if(valor.matches(identificador+reemplazarCorcheteParaRegex(cabeceraPorReemplazar)+identificador)){
+				if(valor.matches(identificador+JsonUtils.reemplazarCorcheteParaRegex(cabeceraPorReemplazar)+identificador)){
 					json.remove(index);
 					if(valorPorReemplazaR==null)
 						json.add(index,null);

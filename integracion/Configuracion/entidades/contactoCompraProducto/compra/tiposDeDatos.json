@@ -22,7 +22,7 @@
 		"tipo":"cadena",
 		"precioConPunto":"true"
 	},
-	"paymentData.transactions[0].payments.paymentSystemName":{
+	"paymentData.transactions[0].payments[0].paymentSystemName":{
 		"tipo":"cadena",
 		"valorPorDefault":"No hay datos"
 	},
