@@ -1,0 +1,21 @@
+package exit.services.principal;
+
+import exit.services.principal.peticiones.EPeticiones;
+import exit.services.principal.peticiones.vtex.GetVtexIdProductos;
+import exit.services.singletons.ApuntadorDeEntidad;
+import exit.services.singletons.RecEntAct;
+
+public class Principal2 {
+
+	public static void main(String[] args) {
+    	ApuntadorDeEntidad ap=ApuntadorDeEntidad.getInstance();
+    	if(ap==null)
+    		return;
+    	Integer cont=-1;
+    	while(cont!=0){
+    		GetVtexIdProductos v= new GetVtexIdProductos();
+    		cont=(Integer)v.realizarPeticion(EPeticiones.GET, "https://whirlpool.custhelp.com/services/rest/connect/v1.3/queryResults/?query=select%20vtexId%20from%20Whirlpool.Producto%20limit%2020000%20OFFSET%2040000", null, null, RecEntAct.getInstance().getCep().getSubEntidad("producto").getCabecera(), RecEntAct.getInstance().getCep().getSubEntidad("producto"));
+    	}
+   	}
+}
+

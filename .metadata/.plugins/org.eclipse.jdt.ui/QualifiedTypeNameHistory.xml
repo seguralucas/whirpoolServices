@@ -7,7 +7,6 @@
 <fullyQualifiedTypeName name="exit.services.singletons.RecuperadorMapeoCsv"/>
 <fullyQualifiedTypeName name="exit.services.singletons.RecuperadorPropierdadesJson"/>
 <fullyQualifiedTypeName name="exit.services.util.RecorrerJson"/>
-<fullyQualifiedTypeName name="exit.services.principal.peticiones.AbstractHTTP"/>
 <fullyQualifiedTypeName name="exit.services.principal.peticiones.vtex.PostVTEXGenericoContactoOrdenProducto"/>
 <fullyQualifiedTypeName name="exit.services.singletons.ConfiguracionEntidadParticular"/>
 <fullyQualifiedTypeName name="exit.services.principal.Ejecutor"/>
@@ -17,5 +16,8 @@
 <fullyQualifiedTypeName name="exit.services.singletons.RecEntAct"/>
 <fullyQualifiedTypeName name="exit.services.util.JsonUtils"/>
 <fullyQualifiedTypeName name="org.json.simple.JSONArray"/>
+<fullyQualifiedTypeName name="exit.services.principal.peticiones.AbstractHTTP"/>
+<fullyQualifiedTypeName name="exit.services.principal.peticiones.vtex.borrado.GetDniContacts"/>
+<fullyQualifiedTypeName name="exit.services.fileHandler.CSVHandler"/>
 <fullyQualifiedTypeName name="org.json.simple.JSONObject"/>
 </qualifiedTypeNameHistroy>

@@ -39,8 +39,10 @@ public class Ejecutor {
 		   index = parametros.indexOf(separador, index+1);
 		   if(index>=0){
 			   String key=parametros.substring(aux+1, index);
-			   if(jsonEst.getMapCabeceraValor().get(key)!=null)
+			   if(jsonEst.getMapCabeceraValor().get(key)!=null){
 				   parametros=parametros.replaceAll(JsonUtils.reemplazarCorcheteParaRegex(separador+key+separador), jsonEst.getMapCabeceraValor().get(key).toString());
+				   System.out.println("Filtra por: "+key+" con valor: "+jsonEst.getMapCabeceraValor().get(key).toString());
+			   }
 			   index = parametros.indexOf(separador, index+1);
 		   }
 		}

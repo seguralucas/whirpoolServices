@@ -24,9 +24,6 @@ public class Principal {
 
 	
 	public static void main(String[] args) throws Exception {
-		String a="#paymentData.transactions[0].payments[0].installments#";
-		System.out.println(a.replaceAll("#paymentData.transactions\\[0\\].payments\\[0\\].installments#", "1"));				
-
 		long time_start, time_end;
     	time_start = System.currentTimeMillis();
     	ApuntadorDeEntidad ap=ApuntadorDeEntidad.getInstance();
