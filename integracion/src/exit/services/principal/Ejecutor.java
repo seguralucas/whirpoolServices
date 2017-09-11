@@ -9,6 +9,8 @@ import java.util.Date;
 
 import org.json.simple.JSONObject;
 
+import com.csvreader.CsvWriter;
+
 import exit.services.convertidos.csvAJson.AbstractJsonRestEstructura;
 import exit.services.excepciones.ExceptionBiactiva;
 import exit.services.fileHandler.CSVHandler;
@@ -30,6 +32,7 @@ public class Ejecutor {
 
 	
 	public Object updateRecuperandoIdPorQuery(String parametros, AbstractJsonRestEstructura jsonEst){
+		String idOrder="No obtenido";
 		try{
 		String separador=jsonEst.getConfEntidadPart().getIdentificadorAtributo();
 		int aux;
@@ -41,6 +44,7 @@ public class Ejecutor {
 			   String key=parametros.substring(aux+1, index);
 			   if(jsonEst.getMapCabeceraValor().get(key)!=null){
 				   parametros=parametros.replaceAll(JsonUtils.reemplazarCorcheteParaRegex(separador+key+separador), jsonEst.getMapCabeceraValor().get(key).toString());
+				   idOrder=jsonEst.getMapCabeceraValor().get(key).toString();
 				   System.out.println("Filtra por: "+key+" con valor: "+jsonEst.getMapCabeceraValor().get(key).toString());
 			   }
 			   index = parametros.indexOf(separador, index+1);
@@ -53,15 +57,23 @@ public class Ejecutor {
 			UpdateGenericoRightNow update= new UpdateGenericoRightNow();
 			return update.realizarPeticion(EPeticiones.UPDATE, jsonEst.getConfEntidadPart().getUrl() , id, jsonEst,jsonEst.getConfEntidadPart().getCabecera(),jsonEst.getConfEntidadPart());
 		}
-		System.out.println("Se va a insertar la entidad: "+  jsonEst.getConfEntidadPart().getEntidadNombre());
+		/*System.out.println("Se va a insertar la entidad: "+  jsonEst.getConfEntidadPart().getEntidadNombre());
 			PostGenerico insertar= new PostGenerico();
-			return insertar.realizarPeticion(EPeticiones.POST, jsonEst.getConfEntidadPart().getUrl(), jsonEst,jsonEst.getConfEntidadPart().getCabecera());
+			return insertar.realizarPeticion(EPeticiones.POST, jsonEst.getConfEntidadPart().getUrl(), jsonEst,jsonEst.getConfEntidadPart().getCabecera());*/
 		}
 		catch(Exception e){
-			System.out.println("Se va a insertar la entidad: "+  jsonEst.getConfEntidadPart().getEntidadNombre());
+			CSVHandler csv= new CSVHandler();
+			try {
+				csv.escribirCSV("errorAlActualizar.csv", idOrder);
+			} catch (IOException e1) {
+				// TODO Auto-generated catch block
+				e1.printStackTrace();
+			}
+/*			System.out.println("Se va a insertar la entidad: "+  jsonEst.getConfEntidadPart().getEntidadNombre());
 			PostGenerico insertar= new PostGenerico();
-			return insertar.realizarPeticion(EPeticiones.POST, jsonEst.getConfEntidadPart().getUrl(),jsonEst,jsonEst.getConfEntidadPart().getCabecera());			
+			return insertar.realizarPeticion(EPeticiones.POST, jsonEst.getConfEntidadPart().getUrl(),jsonEst,jsonEst.getConfEntidadPart().getCabecera());			*/
 		}
+		return null;//Borrar al descomentar
 	}
 	
 	public void ejecutorGenericoCsvAServicio(AbstractJsonRestEstructura jsonEst){

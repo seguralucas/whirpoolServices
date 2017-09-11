@@ -56,7 +56,6 @@ public class GetVTEXOMSServicioAServicio  extends AbstractHTTP {
 
 					Ejecutor e= new Ejecutor();
 					AbstractJsonRestEstructura result=(AbstractJsonRestEstructura)e.ejecutar(conf.getMetodoEjecutor(),conf.getParametroEjecutor(),(AbstractJsonRestEstructura)jsonA);
-		//			AbstractJsonRestEstructura result= (AbstractJsonRestEstructura)postGenerico.realizarPeticion(EPeticiones.POST, conf.getUrl(),jsonA, RecEntAct.getInstance().getCep().getSubEntidad(subEnt).getCabecera(),conf);
 					if(result==null)
 						System.out.println("Error al insertar");
 					else{

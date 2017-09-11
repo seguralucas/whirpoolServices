@@ -1,5 +1,0 @@
-package exit.services.principal.peticiones.vtex;
-
-public class GetProductosVTEXIDAEliminar {
-
-}
